@@ -1,0 +1,140 @@
+body{
+    --slatedark: #221b32;
+    --slatemid: #564661;
+    --mediapink: rgb(254,203,230);
+    background: var(--slatedark);
+    font-family: Helvetica, sans-serif;
+    color: var(--mediapink);
+}
+
+::-moz-selection { /* Code for Firefox */
+    background: var(--slatemid);
+}
+
+::selection {
+    background: var(--slatemid);
+}
+
+h1{
+    font-size: 3vw;
+    font-weight: bolder;
+}
+
+h3{
+    font-size: 2vw;
+}
+
+p {
+    font-size: 1.2vw;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+#title{
+    text-align: center;
+    width: 50vw;
+    height: 6vw;
+    position: relative;
+    top: 0vw;
+    left: 25vw;
+    display: grid;
+    align-content: end;
+    border-bottom: solid 3px var(--mediapink);
+    padding-bottom: 0.5vw;
+}
+
+.addonSectionGrid{
+    width: 70vw;
+    position: relative;
+    left: 15vw;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    grid-template-columns: 20vw 20vw 20vw;
+}
+
+.addonCard{
+    width: 20vw;
+    height: 30vw;
+    position: relative;
+    background: var(--slatedark);
+    --this-border-radius: 1vw;
+    border-radius: var(--this-border-radius);
+    --top-color: var(--slatemid);
+    --bottom-color: var(--mediapink);
+    transition-property: --top-color;
+    transition-duration: 1s;
+}
+
+.addonCard .addonIcon{
+    width: 5vw;
+    height: 5vw;
+    position: relative;
+    top: 1vw;
+    left: 0;
+    border-radius: 1vw;
+    display:inline;
+    float: left;
+}
+
+.addonCard .addonTitle{
+    height: 5vw;
+    width: 12vw;
+    position: absolute;
+    top: 1vw;
+    margin-top: 0;
+    left: 6vw;
+    display: grid;
+    align-content: center;
+    float: left;
+    word-break: break-all;
+}
+
+.addonCardHeader{
+    height: 7vw;
+    width: 18vw;
+    left: 1vw;
+    position: relative;
+    border-bottom: solid 2px var(--mediapink);
+}
+
+.platformShelf{
+    position: relative;
+    width: 18vw;
+    left: 1vw;
+    top: 0.5vw;
+    display: grid;
+    height: 1.5vw;
+    grid-template-columns: 1.75vw 1.75vw 1.75vw;
+    justify-content: center;
+    grid-gap: 0.25vw;
+}
+
+.platformIcon{
+    width: 100%;
+    height: auto;
+}
+
+.addonDescription{
+    position: relative;
+    width: 18vw;
+    left: 1vw;
+}
+
+.addonCard::before{
+    --gradWidth: 6px;
+    content: "";
+    position: absolute;
+    left: calc(-1 * var(--gradWidth)/2);
+    top: calc(-1 * var(--gradWidth)/2);
+    width: calc(100% + var(--gradWidth));
+    height: calc(100% + var(--gradWidth));
+    border-radius: calc(var(--this-border-radius) + var(--gradWidth) / 2);
+    background: linear-gradient(0deg, var(--top-color) 0%, var(--bottom-color) 100%);
+    z-index: -1;
+}
+
+.addonCard:hover::before{
+    --top-color: var(--mediapink);
+}
+
