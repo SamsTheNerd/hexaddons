@@ -16,6 +16,20 @@ var genCard = (addon) => {
         platformIcons += `<img src="./platformIcons/${platform}Icon.png" alt="${platform} icon" class="platformIcon">`
     })
 
+    var links = ``;
+    if(addon.modrinth_url != null) {
+        links += `<a target="_blank" href="${addon.modrinth_url}" class="addonLink modrinthLink">Modrinth</a><br>`
+    }
+    if(addon.curseforge_url != null) {
+        links += `<a target="_blank" href="${addon.curseforge_url}" class="addonLink curseforgeLink">CurseForge</a><br>`
+    }
+    if(addon.book_url != null){
+        links += `<a target="_blank" href="${addon.book_url}" class="addonLink bookLink">Book</a><br>`
+    }
+    if(addon.source_url != null){
+        links += `<a target="_blank" href="${addon.source_url}" class="addonLink sourceLink">Source</a><br>`
+    }
+
     var card = `
     <div class="addonCard" id="${addon.name}Card">
         <div class="addonCardHeader">
@@ -24,6 +38,7 @@ var genCard = (addon) => {
         </div>
         <div class="platformShelf">${platformIcons}</div>
         <p class="addonDescription">${addon.description}</p>
+        <p class="linkShelf">${links}</p>
     </div>
     `
     return card;

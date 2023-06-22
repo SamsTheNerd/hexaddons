@@ -48,9 +48,10 @@ p {
     position: relative;
     left: 15vw;
     display: grid;
-    grid-auto-flow: column;
+    grid-auto-flow: row;
     justify-content: space-between;
     grid-template-columns: 20vw 20vw 20vw;
+    grid-template-rows: auto;
 }
 
 .addonCard{
@@ -62,8 +63,10 @@ p {
     border-radius: var(--this-border-radius);
     --top-color: var(--slatemid);
     --bottom-color: var(--mediapink);
-    transition-property: --top-color;
-    transition-duration: 1s;
+    --backOpacity: 0;
+    transition-property: padding-left, margin-left, padding-right, margin-right;
+    transition-duration: 0.25s;
+    margin-bottom: 4vw;
 }
 
 .addonCard .addonIcon{
@@ -75,6 +78,7 @@ p {
     border-radius: 1vw;
     display:inline;
     float: left;
+    box-shadow: 0 0 0.6vw -0.2vw var(--mediapink);
 }
 
 .addonCard .addonTitle{
@@ -88,6 +92,12 @@ p {
     align-content: center;
     float: left;
     word-break: break-all;
+}
+
+.addonCard:hover{
+    padding-left: 0.25vw;
+    margin-left: -0.25vw;
+    padding-right: 0.25vw;
 }
 
 .addonCardHeader{
@@ -105,7 +115,7 @@ p {
     top: 0.5vw;
     display: grid;
     height: 1.5vw;
-    grid-template-columns: 1.75vw 1.75vw 1.75vw;
+    grid-template-columns: repeat(auto-fit, 1.75vw);
     justify-content: center;
     grid-gap: 0.25vw;
 }
@@ -115,10 +125,24 @@ p {
     height: auto;
 }
 
-.addonDescription{
+.addonCard p{
     position: relative;
     width: 18vw;
     left: 1vw;
+}
+
+.linkShelf{
+    position: absolute !important;
+    bottom: 0;
+    transition: left 0.25s;
+}
+
+.addonCard:hover .linkShelf{
+    left: 1.25vw;
+}
+
+.addonLink{
+    color: var(--mediapink);
 }
 
 .addonCard::before{
@@ -131,10 +155,5 @@ p {
     height: calc(100% + var(--gradWidth));
     border-radius: calc(var(--this-border-radius) + var(--gradWidth) / 2);
     background: linear-gradient(0deg, var(--top-color) 0%, var(--bottom-color) 100%);
-    z-index: -1;
+    z-index: -2;
 }
-
-.addonCard:hover::before{
-    --top-color: var(--mediapink);
-}
-

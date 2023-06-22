@@ -20,5 +20,25 @@
         "platforms": ["forge", "fabric", "quilt"],
         "source_url": "https://github.com/Talia-12/MoreIotas/",
         "book_url": "https://talia-12.github.io/MoreIotas/"
+    },
+    {
+        "name": "Hexbound",
+        "description": "Adds several utility patterns/spells (eg. item types, Hex Shields), quasi-playerless casting with Figments, pattern editing, and constructs (powerful automatable golems).",
+        "modrinth_url": "https://modrinth.com/mod/hexbound/",
+        "icon_url": "./addonIcons/hexbound.webp",
+        "type": "addon",
+        "platforms": ["quilt"],
+        "source_url": "https://github.com/Cypher121/hexbound/",
+        "book_url": "https://hexbound.cypher.coffee/0.1.3+1.19.2/index.html"
+    },
+    {
+        "name": "HexTweaks",
+        "description": "Adds various (mildly opinionated) quality of life changes, as well as dictionary iotas.",
+        "modrinth_url": "https://modrinth.com/mod/hextweaks/",
+        "icon_url": "./addonIcons/hextweaks.webp",
+        "type": "addon",
+        "platforms": ["forge", "fabric", "quilt"],
+        "source_url": "https://github.com/walksanatora/HexTweaks/",
+        "book_url": "https://walksanatora.github.io/HexTweaks/"
     }
 ]
