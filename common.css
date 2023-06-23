@@ -22,6 +22,17 @@ h1{
 
 h2{
     font-size: 2.5vw;
+    text-align: center;
+    width: 50vw;
+    height: 6vw;
+    position: relative;
+    top: 0vw;
+    left: 25vw;
+    display: grid;
+    align-content: end;
+    border-bottom: solid 3px var(--mediapink);
+    padding-bottom: 0.5vw;
+    margin-top: 0;
 }
 
 h3{
@@ -45,20 +56,6 @@ p {
     align-content: end;
     border-bottom: solid 3px var(--mediapink);
     padding-bottom: 0.5vw;
-}
-
-#interop{
-    text-align: center;
-    width: 50vw;
-    height: 6vw;
-    position: relative;
-    top: 0vw;
-    left: 25vw;
-    display: grid;
-    align-content: end;
-    border-bottom: solid 3px var(--mediapink);
-    padding-bottom: 0.5vw;
-    margin-top: 0;
 }
 
 .addonSectionGrid{
@@ -175,10 +172,6 @@ p {
     font-weight: 600;
 }
 
-#interopGrid{
-    /* grid-template-rows: repeat(auto-fill, 25vw); */
-}
-
 .interopCard .addonTitle{
     left: 0vw;
     width: 18vw;
@@ -204,10 +197,29 @@ p {
     grid-template-columns: auto 2vw;
     align-content: end;
 }
- .hexProvidedSpan *{
+
+.hexProvidedSpan *{
     position: relative;
     bottom: 0;
- }
+}
+
+.toolCard{
+    min-height: 15vw;
+    height: fit-content;
+    margin-bottom: 2vw;
+}
+
+.toolCard a{
+    color: var(--mediapink);
+}
+
+.toolCard .addonTitle{
+    left: 0vw;
+    width: 18vw;
+    text-align: center;
+}
+
+
 
 .addonCard::before{
     --gradWidth: 6px;

@@ -7,6 +7,14 @@ var getAddons = () => {
     return allAddons;
 }
 
+var getTools = () => {
+    var request = new XMLHttpRequest();
+    request.open("GET", "./hextools.json", false);
+    request.send(null)
+    var allTools = JSON.parse(request.responseText);
+    return allTools;
+}
+
 
 // given an addon object make the card for it
 var genCard = (addon) => {
@@ -90,4 +98,21 @@ var genInteropCard = (addon) => {
 var putInteropCard = (addon, containerId) => {
     var container = document.getElementById(containerId);
     container.innerHTML += genInteropCard(addon);
+}
+
+var genToolCard = (tool) => {
+    var card = `
+    <div class="addonCard toolCard" id="${tool.name}Card">
+        <div class="addonCardHeader">
+            <h3 class="addonTitle"><a href="${tool.link}">${tool.name}</a></h3>
+        </div>
+        <p class="addonDescription">${tool.description}</p>
+    </div>
+    `
+    return card;
+}
+
+var putToolCard = (tool, containerId) => {
+    var container = document.getElementById(containerId);
+    container.innerHTML += genToolCard(tool);
 }

@@ -1,0 +1,42 @@
+[
+    {
+        "name": "HexBug",
+        "description": "This bot! If you're doing something Hex-related in Python, this has a lot of useful classes and methods that you can (and probably should) use.",
+        "link": "https://github.com/object-Object/HexBug"
+    },
+    {
+        "name": "Hex Studio",
+        "description": "WIP visual editor and stack simulator for writing hexes in a similar manner to using the actual mod.",
+        "link": "https://master-bw3.github.io/Hex-Studio/"
+    },
+    {
+        "name": "hex-interpreter",
+        "description": "CLI tool for parsing and displaying patterns. A modified version of its rendering code is used in HexBug.",
+        "link": "https://github.com/Robotgiggle/hex-interpreter"
+    },
+    {
+        "name": "Hex-Casting-Generator",
+        "description": "Very useful GUI tool for generating and displaying number literals.",
+        "link": "https://github.com/DaComputerNerd717/Hex-Casting-Generator"
+    },
+    {
+        "name": "hexdecode",
+        "description": "CLI tool for decoding pattern lists. HexBug's core functionality is based on this. Mostly superseded by HexBug.",
+        "link": "https://github.com/gchpaco/hexdecode"
+    },
+    {
+        "name": "hexpiler",
+        "description": "Proof-of-concept DSL for Hex Casting.",
+        "link": "https://github.com/pandaxtc/hexpiler"
+    },
+    {
+        "name": "vscode-hex-casting",
+        "description": "VSCode language features to make writing hexes easier, including highlighting, autocomplete, hover text, macro support, and more.",
+        "link": "https://github.com/object-Object/vscode-hex-casting"
+    },
+    {
+        "name": "hexnumgen",
+        "description": "Hex-Casting-Generator's number generation functionality, ported to Rust. Contains a CLI tool for generating number literals, and can also be used as a Rust library or a Python package. Used in HexBug.",
+        "link": "https://github.com/object-Object/hexnumgen-rs"
+    }
+]

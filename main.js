@@ -10,4 +10,9 @@ window.onload = () => {
             putInteropCard(addon, "interopGrid")
         }
     });
+
+    var tools = getTools();
+    tools.forEach((tool) => {
+        putToolCard(tool, "toolsGrid");
+    });
 }
