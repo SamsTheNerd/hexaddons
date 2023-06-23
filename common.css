@@ -20,6 +20,10 @@ h1{
     font-weight: bolder;
 }
 
+h2{
+    font-size: 2.5vw;
+}
+
 h3{
     font-size: 2vw;
 }
@@ -30,7 +34,7 @@ p {
     line-height: 1.4;
 }
 
-#title{
+#addons{
     text-align: center;
     width: 50vw;
     height: 6vw;
@@ -43,6 +47,20 @@ p {
     padding-bottom: 0.5vw;
 }
 
+#interop{
+    text-align: center;
+    width: 50vw;
+    height: 6vw;
+    position: relative;
+    top: 0vw;
+    left: 25vw;
+    display: grid;
+    align-content: end;
+    border-bottom: solid 3px var(--mediapink);
+    padding-bottom: 0.5vw;
+    margin-top: 0;
+}
+
 .addonSectionGrid{
     width: 70vw;
     position: relative;
@@ -51,7 +69,6 @@ p {
     grid-auto-flow: row;
     justify-content: space-between;
     grid-template-columns: 20vw 20vw 20vw;
-    grid-template-rows: auto;
 }
 
 .addonCard{
@@ -67,6 +84,8 @@ p {
     transition-property: padding-left, margin-left, padding-right, margin-right;
     transition-duration: 0.25s;
     margin-bottom: 4vw;
+    display: flex;
+    flex-direction: column;
 }
 
 .addonCard .addonIcon{
@@ -91,7 +110,7 @@ p {
     display: grid;
     align-content: center;
     float: left;
-    word-break: break-all;
+    word-break: break-word;
 }
 
 .addonCard:hover{
@@ -132,18 +151,63 @@ p {
 }
 
 .linkShelf{
-    position: absolute !important;
+    /* position: absolute !important; */
+    /* float: bottom; */
     bottom: 0;
+    height: min-content;
     transition: left 0.25s;
+    flex-grow: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-wrap: wrap;
 }
 
-.addonCard:hover .linkShelf{
-    left: 1.25vw;
+.linkShelf a {
+    width: min-content;
 }
 
 .addonLink{
     color: var(--mediapink);
 }
+
+.addonLink:hover{
+    font-weight: 600;
+}
+
+#interopGrid{
+    /* grid-template-rows: repeat(auto-fill, 25vw); */
+}
+
+.interopCard .addonTitle{
+    left: 0vw;
+    width: 18vw;
+    text-align: center;
+}
+
+.interopCard{
+    min-height: min(25vw, 100%);
+    height: fit-content;
+}
+
+.hexProvidedIcon{
+    height: 2vw;
+    /* display: inline; */
+}
+
+.hexProvidedSpan{
+    font-weight: 100;
+    font-size: 1.5vw;
+    display:grid;
+    grid-auto-flow: row;
+    grid-template-rows: 2vw;
+    grid-template-columns: auto 2vw;
+    align-content: end;
+}
+ .hexProvidedSpan *{
+    position: relative;
+    bottom: 0;
+ }
 
 .addonCard::before{
     --gradWidth: 6px;
