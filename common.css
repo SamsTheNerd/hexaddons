@@ -44,10 +44,9 @@ h4{
     text-align: center;
     width: 50vw;
     left: 25vw;
-    margin-top: -1vw;
     position: relative;
     top: 0vw;
-    margin-bottom: 3vw;
+    margin-bottom: 0vw;
     font-weight:  500;
 }
 
@@ -108,6 +107,7 @@ p {
 }
 
 .addonCard .addonIcon{
+    aspect-ratio: 1;
     width: 27%;
     position: relative;
     top: 1vw;

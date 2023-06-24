@@ -6,8 +6,11 @@ window.onload = () => {
         if(addon.type == "addon"){
             putCard(addon, "mainAddonGrid")
         }
-        if(addon.type == "interop"){
-            putInteropCard(addon, "interopGrid")
+        if(addon.type == "majorinterop"){
+            putCard(addon, "majorInteropGrid")
+        }
+        if(addon.type == "minorinterop"){
+            putInteropCard(addon, "minorInteropGrid")
         }
     });
 

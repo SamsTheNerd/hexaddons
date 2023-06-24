@@ -1,7 +1,7 @@
 [
     {
         "name": "HexBug",
-        "description": "This bot! If you're doing something Hex-related in Python, this has a lot of useful classes and methods that you can (and probably should) use.",
+        "description": "A Discord bot for Hex Casting, with commands to search/display patterns, generate numbers, and more. If you're doing something Hex-related in Python, this has a lot of useful classes and methods that you can (and probably should) use.",
         "link": "https://github.com/object-Object/HexBug"
     },
     {

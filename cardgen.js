@@ -28,16 +28,17 @@ var makeLinks = (addon) => {
             <img src="./otherIcons/CurseforgeIcon.png" title="CurseForge" alt="CurseForge Icon" class="linkIcon">
         </a>`
     }
-    if(addon.book_url != null){
-        links += `<a target="_blank" href="${addon.book_url}" class="addonLink bookLink">
-            <img src="./otherIcons/BookIcon.png" title="Book" alt="Hexcasting Guide Book Icon" class="linkIcon bookIcon">
-        </a>`
-    }
     if(addon.source_url != null){
         links += `<a target="_blank" href="${addon.source_url}" class="addonLink sourceLink">
             <img src="./otherIcons/GithubIcon.png" title="Source" alt="GitHub Icon" class="linkIcon">
         </a>`
     }
+    if(addon.book_url != null){
+        links += `<a target="_blank" href="${addon.book_url}" class="addonLink bookLink">
+            <img src="${addon.book_icon == null ? "./otherIcons/BookIcon.png" : addon.book_icon}" title="Book" alt="Hexcasting Guide Book Icon" class="linkIcon bookIcon">
+        </a>`
+    }
+    
     return links;
 }
 
@@ -55,7 +56,7 @@ var genCard = (addon) => {
     <div class="addonCard" id="${addon.name}Card">
         <div class="addonCardHeader">
             <img src="${iconUrl}" alt="${addon.name} icon" class="addonIcon">
-            <h3 class="addonTitle">${addon.name}</h3>
+            <h3 class="addonTitle${addon.hex_provided ? " hexProvidedTitle" : ""}">${addon.name}</h3>
         </div>
         <div class="platformShelf">${platformIcons}</div>
         <p class="addonDescription">${addon.description}</p>

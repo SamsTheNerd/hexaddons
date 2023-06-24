@@ -47,10 +47,12 @@
         "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/ducky-periphs",
         "modrinth_url": "https://modrinth.com/mod/ducky-periphs",
         "icon_url": "./addonIcons/duckyperiphs.webp",
-        "type": "addon",
+        "type": "majorinterop",
         "platforms": ["forge", "fabric", "quilt"],
         "source_url": "https://github.com/SamsTheNerd/ducky-periphs",
-        "book_url": "https://github.com/SamsTheNerd/ducky-periphs/wiki"
+        "book_url": "https://github.com/SamsTheNerd/ducky-periphs/wiki",
+        "book_icon": "./otherIcons/MCBookIcon.png",
+        "hex_provided": false
     },
     {
         "name": "HexKinetics",
@@ -67,16 +69,18 @@
         "description": "Provides compatibility with Ars Nouveau: adds an Archwood Staff (crafted with a source gem, not charged amethyst) and the ability to use source gems and blocks as media.",
         "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/ars-scalaes",
         "icon_url": "./addonIcons/arsscalaes.png",
-        "type": "addon",
+        "type": "majorinterop",
         "platforms": ["forge"],
-        "source_url": "https://github.com/Alexthw46/Ars-Scalaes"
+        "source_url": "https://github.com/Alexthw46/Ars-Scalaes",
+        "hex_provided": false
     },
     {
         "name": "Gravity API",
         "description": "Adds patterns that allow changing an entity's gravity direction (eg. walking on walls).",
         "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/gravityapi",
         "modrinth_url": "https://modrinth.com/mod/gravity-api",
-        "type": "interop",
+        "icon_url": "./addonIcons/gravityIcon.webp",
+        "type": "majorinterop",
         "platforms": ["fabric", "quilt"],
         "source_url": "https://github.com/Fusion-Flux/Gravity-Api",
         "hex_provided": true
@@ -86,7 +90,7 @@
         "description": "Adds the ability to use the cutting board to break down edified wood items, as well as drastically improving the Pansexual Pigment recipe. Also useful for turning amethyst blocks into shards.",
         "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/farmers-delight",
         "modrinth_url": "https://modrinth.com/mod/farmers-delight",
-        "type": "interop",
+        "type": "minorinterop",
         "platforms": ["forge", "fabric"],
         "source_url": "https://github.com/vectorwing/FarmersDelight",
         "hex_provided": true
@@ -95,17 +99,18 @@
         "name": "Switchy",
         "description": "Adds the ability to change your pigment when switching presets.",
         "modrinth_url": "https://modrinth.com/mod/switchy",
-        "type": "interop",
+        "type": "minorinterop",
         "platforms": ["quilt"],
         "source_url": "https://github.com/sisby-folk/switchy",
         "hex_provided": false
     },
     {
-        "name": "Pekhui",
+        "name": "Pehkui",
         "description": "Adds patterns that allow changing the size of entities.",
         "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/pehkui",
-        "modrinth_url": "https://modrinth.com/mod/pekhui",
-        "type": "interop",
+        "modrinth_url": "https://modrinth.com/mod/pehkui",
+        "icon_url": "./addonIcons/pehkui.webp",
+        "type": "majorinterop",
         "platforms": ["forge", "fabric", "quilt"],
         "source_url": "https://github.com/Virtuoel/Pehkui",
         "hex_provided": true
@@ -115,7 +120,7 @@
         "description": "Adds the ability to use crushing wheels to turn amethyst blocks into shards and dust.",
         "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/create",
         "modrinth_url": "https://modrinth.com/mod/create",
-        "type": "interop",
+        "type": "minorinterop",
         "platforms": ["forge", "fabric", "quilt"],
         "source_url": "https://github.com/Creators-of-Create/Create",
         "hex_provided": true
