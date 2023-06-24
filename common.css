@@ -39,6 +39,18 @@ h3{
     font-size: 2vw;
 }
 
+h4{
+    font-size: 1.5vw;
+    text-align: center;
+    width: 50vw;
+    left: 25vw;
+    margin-top: -1vw;
+    position: relative;
+    top: 0vw;
+    margin-bottom: 3vw;
+    font-weight:  500;
+}
+
 p {
     font-size: 1.2vw;
     font-weight: 400;
@@ -64,13 +76,15 @@ p {
     left: 15vw;
     display: grid;
     grid-auto-flow: row;
-    justify-content: space-between;
+    justify-content: space-around;
     grid-template-columns: 20vw 20vw 20vw;
 }
 
+
 .addonCard{
-    width: 20vw;
-    height: 30vw;
+    width: 100%;
+    height: min-content;
+    min-height: 25vw;
     position: relative;
     background: var(--slatedark);
     --this-border-radius: 1vw;
@@ -80,58 +94,65 @@ p {
     --backOpacity: 0;
     transition-property: padding-left, margin-left, padding-right, margin-right;
     transition-duration: 0.25s;
-    margin-bottom: 4vw;
+    transition-timing-function: ease-in-out;
+    margin-bottom: 10%;
     display: flex;
     flex-direction: column;
-}
-
-.addonCard .addonIcon{
-    width: 5vw;
-    height: 5vw;
-    position: relative;
-    top: 1vw;
-    left: 0;
-    border-radius: 1vw;
-    display:inline;
-    float: left;
-    box-shadow: 0 0 0.6vw -0.2vw var(--mediapink);
-}
-
-.addonCard .addonTitle{
-    height: 5vw;
-    width: 12vw;
-    position: absolute;
-    top: 1vw;
-    margin-top: 0;
-    left: 6vw;
-    display: grid;
-    align-content: center;
-    float: left;
-    word-break: break-word;
 }
 
 .addonCard:hover{
     padding-left: 0.25vw;
     margin-left: -0.25vw;
     padding-right: 0.25vw;
+    --backOpacity: 1;
 }
 
+.addonCard .addonIcon{
+    width: 27%;
+    position: relative;
+    top: 1vw;
+    left: 0;
+    border-radius: 15%;
+    margin-bottom: 5%;
+    display:inline;
+    float: left;
+    box-shadow: 0 0 0.6vw -0.2vw var(--mediapink);
+}
+
+.addonCard .addonTitle{
+    width: 66%;
+    height: auto;
+    position: relative;
+    padding-top: 10%;
+    margin-top: 0;
+    margin-bottom: 0;
+    left: 5%;
+    float: left;
+    word-break: break-word;
+    align-content: center;
+}
+
+
 .addonCardHeader{
-    height: 7vw;
-    width: 18vw;
-    left: 1vw;
+    height: max-content;
+    width: 90%;
+    left: 5%;
+    padding-bottom: 1vw;
     position: relative;
     border-bottom: solid 2px var(--mediapink);
+    display: flex;
 }
 
 .platformShelf{
     position: relative;
-    width: 18vw;
-    left: 1vw;
+    width: 90%;
+    left: 5%;
     top: 0.5vw;
     display: grid;
-    height: 1.5vw;
-    grid-template-columns: repeat(auto-fit, 1.75vw);
+    height: fit-content;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    grid-template-columns: repeat(auto-fit, 10%);
     justify-content: center;
     grid-gap: 0.25vw;
 }
@@ -143,25 +164,51 @@ p {
 
 .addonCard p{
     position: relative;
-    width: 18vw;
-    left: 1vw;
+    width: 90%;
+    left: 5%;
 }
 
 .linkShelf{
-    /* position: absolute !important; */
-    /* float: bottom; */
+    position: relative;
     bottom: 0;
+    width: 100%;
+    left: 0;
     height: min-content;
     transition: left 0.25s;
     flex-grow: 10;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 10%);
+    grid-auto-flow: row;
+    justify-content: center;
+    align-content: end;
+    grid-gap: 3%;
+    margin-bottom: 5%;
 }
 
 .linkShelf a {
-    width: min-content;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    padding-top: 10%;
+    /* transition-property: top, left, filter; */
+    transition-duration: 0.25s;
+}
+
+.linkShelf a:hover{
+    width: 110%;
+    padding-top: 0;
+    top: 5%;
+    left: -5%;
+    filter: brightness(1.1);
+}
+
+.linkIcon{
+    width: 100%;
+}
+
+.bookIcon{
+    image-rendering: pixelated;
 }
 
 .addonLink{
@@ -174,39 +221,31 @@ p {
 
 .interopCard .addonTitle{
     left: 0vw;
-    width: 18vw;
+    width: 100%;
     text-align: center;
 }
 
 .interopCard{
-    min-height: min(25vw, 100%);
-    height: fit-content;
+    /* min-height: min(25vw, 100%); */
+    min-height: 20vw;
 }
 
-.hexProvidedIcon{
-    height: 2vw;
-    /* display: inline; */
+.interopTitle{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
-.hexProvidedSpan{
-    font-weight: 100;
-    font-size: 1.5vw;
-    display:grid;
-    grid-auto-flow: row;
-    grid-template-rows: 2vw;
-    grid-template-columns: auto 2vw;
-    align-content: end;
-}
-
-.hexProvidedSpan *{
-    position: relative;
-    bottom: 0;
+.hexProvidedTitle::after{
+    content: "*";
+    width: min-content;
+    padding-left: 0;
 }
 
 .toolCard{
     min-height: 15vw;
     height: fit-content;
-    margin-bottom: 2vw;
+    /* margin-bottom: 2vw; */
 }
 
 .toolCard a{
@@ -214,11 +253,10 @@ p {
 }
 
 .toolCard .addonTitle{
-    left: 0vw;
-    width: 18vw;
+    left: 5%;
+    width: 90%;
     text-align: center;
 }
-
 
 
 .addonCard::before{
@@ -232,4 +270,98 @@ p {
     border-radius: calc(var(--this-border-radius) + var(--gradWidth) / 2);
     background: linear-gradient(0deg, var(--top-color) 0%, var(--bottom-color) 100%);
     z-index: -2;
+}
+
+.addonCard::after{
+    --gradWidth: 6px;
+    content: "";
+    position: absolute;
+    left: calc(-1 * var(--gradWidth)/2);
+    top: calc(-1 * var(--gradWidth)/2);
+    width: calc(100% + var(--gradWidth));
+    height: calc(100% + var(--gradWidth));
+    border-radius: calc(var(--this-border-radius) + var(--gradWidth) / 2);
+    background: linear-gradient(0deg, var(--bottom-color) 0%, var(--bottom-color) 100%);
+    z-index: -1;
+    opacity: var(--backOpacity);
+    transition: opacity 0.25s;
+}
+
+  
+@media (max-aspect-ratio: 1.4/1) {
+    .addonSectionGrid{
+        left: 5vw;
+        width: 90vw;
+        grid-template-columns: 40vw 40vw;
+    }
+
+    h1{
+        font-size: 6vw;
+    }
+
+    h2{
+        font-size: 4vw;
+    }
+
+    h3{
+        font-size: 4vw;
+    }
+
+    h4{
+        font-size: 2vw;
+    }
+    
+    p {
+        font-size: 2vw;
+        font-weight: 400;
+        line-height: 1.2;
+    }
+
+    .addonCard{
+        min-height: 45vw;
+    }
+
+    .interopCard{
+        min-height: 30vw;
+    }
+    
+    .toolCard{
+        min-height: 30vw;
+    }
+}
+
+@media (max-aspect-ratio: 0.85/1) {
+    .addonSectionGrid{
+        left: 5vw;
+        width: 90vw;
+        grid-template-columns: 75vw;
+    }
+
+    h1{
+        font-size: 7vw;
+    }
+
+    h2{
+        font-size: 5vw;
+    }
+
+    h3{
+        font-size: 6vw;
+    }
+
+    h4{
+        font-size: 4vw;
+    }
+    
+    p {
+        font-size: 4vw;
+    }
+
+    .addonCard{
+        min-height: 0;
+    }
+
+    .addonIcon{
+        top: 2vw !important;
+    }
 }
