@@ -36,7 +36,8 @@ var makeLinks = (addon) => {
     if(addon.book_url != null){
         links += `<a target="_blank" href="${addon.book_url}" class="addonLink bookLink">
             <img src="${addon.book_icon == null ? "./otherIcons/BookIcon.png" : addon.book_icon}" title="Book" alt="Hexcasting Guide Book Icon" class="linkIcon bookIcon">
-        </a>`
+        </a>`;
+        // links = `<div class="fakeItem"></div>` + links;
     }
     
     return links;

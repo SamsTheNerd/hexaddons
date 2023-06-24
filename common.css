@@ -185,6 +185,18 @@ p {
     margin-bottom: 5%;
 }
 
+
+.bookLink{
+    position: relative;
+    margin-left: auto;
+    margin-bottom: auto;
+}
+
+.fakeItem{
+    margin-top: auto; 
+    visibility: hidden;
+}
+
 .linkShelf a {
     width: 100%;
     position: relative;
