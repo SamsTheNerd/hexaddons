@@ -65,6 +65,16 @@
         "book_url": "https://sonunte.github.io/HexKinetics/"
     },
     {
+        "name": "Hex Gloop",
+        "description": "Gloopiest hex addon ! Adds gloopy new items and clientside conveniences",
+        "modrinth_url": "https://modrinth.com/mod/hexgloop/",
+        "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/hexgloop",
+        "icon_url": "./addonIcons/hexgloop.webp",
+        "type": "addon",
+        "platforms": ["fabric", "quilt", "forge"],
+        "source_url": "https://github.com/SamsTheNerd/HexGloop"
+    },
+    {
         "name": "Ars Scalaes",
         "description": "Provides compatibility with Ars Nouveau: adds an Archwood Staff (crafted with a source gem, not charged amethyst) and the ability to use source gems and blocks as media.",
         "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/ars-scalaes",
