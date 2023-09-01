@@ -134,5 +134,15 @@
         "platforms": ["forge", "fabric", "quilt"],
         "source_url": "https://github.com/Creators-of-Create/Create",
         "hex_provided": true
+    },
+    {
+        "name": "Hexlink",
+        "description": "Adds patterns for interfacing with blocks, items, and entities.",
+        "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/hexlink",
+        "modrinth_url": "https://modrinth.com/mod/hexlink",
+        "icon_url": "./addonIcons/hexlink.png",
+        "type": "addon",
+        "platforms": ["fabric"],
+        "source_url": "https://github.com/Jempasam/Hexlink"
     }
 ]
