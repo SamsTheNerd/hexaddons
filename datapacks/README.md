@@ -10,4 +10,12 @@ Adds lore fragments to chest loot
 
 _By KyanBirb_
 
+## No HexBook
+
+_uses `NoHexModBookOnStart.zip`_
+
+Prevents the hexbook from starting in your inventory when you join a world.
+
+_By gattsuru_
+
 

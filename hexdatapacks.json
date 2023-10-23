@@ -38,5 +38,10 @@
         "name": "Lore Fragments",
         "description": "Adds lore fragments to chest loot",
         "link": "https://github.com/SamsTheNerd/hexaddons/tree/main/datapacks/"
+    },
+    {
+        "name": "No HexBook",
+        "description": "Prevents the hexbook from starting in your inventory when you join a world.",
+        "link": "https://github.com/SamsTheNerd/hexaddons/tree/main/datapacks/"
     }
 ]
