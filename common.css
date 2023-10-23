@@ -56,6 +56,10 @@ p {
     line-height: 1.4;
 }
 
+a {
+    color: var(--mediapink);
+}
+
 #addons{
     text-align: center;
     width: 50vw;
@@ -376,4 +380,22 @@ p {
     .addonIcon{
         top: 2vw !important;
     }
+}
+
+#sourceMessage{
+    width: 50%;
+    left: 25%;
+    position: relative;
+    text-align: center;
+    font-size: 1.5vw;
+    margin-top: 5vw;
+    margin-bottom: 2vw;
+}
+
+.samtext {
+    color: #69eb96;
+}
+
+#sourceLink{
+    font-size: 1.5vw;
 }

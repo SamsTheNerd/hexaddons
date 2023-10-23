@@ -38,5 +38,22 @@
         "name": "hexnumgen",
         "description": "Hex-Casting-Generator's number generation functionality, ported to Rust. Contains a CLI tool for generating number literals, and can also be used as a Rust library or a Python package. Used in HexBug.",
         "link": "https://github.com/object-Object/hexnumgen-rs"
+    },
+    {
+        "name": "Hexagon",
+        "description": "A programming language for Hex Casting. Hexagon is a superset of the hexpattern format, adding variables, if statements, and more.",
+        "link": "https://github.com/Master-Bw3/Hexagon"
+    },
+    {
+        "name": "hexdoc",
+        "description": "Python web book docgen for Patchouli and Hex Casting.",
+        "link": "https://pypi.org/project/hexdoc/",
+        "addon": true
+    },
+    {
+        "name": "HexDummy",
+        "description": "Bare-bones template for starting a multiloader Hex Casting addon",
+        "link": "https://github.com/artynova/hexdummy",
+        "addon": true
     }
 ]

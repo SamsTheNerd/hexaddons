@@ -1,0 +1,37 @@
+[
+    {
+        "name": "flayta pack template",
+        "description": "A template datapack for making mindflay recipes",
+        "link": "https://github.com/SamsTheNerd/flayta-pack-template"
+    },
+    {
+        "name": "HexSealingFix",
+        "description": "fixes sealing focuses and spellbooks in 1.19 forge",
+        "link": "https://github.com/FractalineHue/HexSealingFix#hexsealingfix"
+    },
+    {
+        "name": "StairTags",
+        "description": "adds edified stairs to stair tags and the axe mineable tag",
+        "link": "https://github.com/beholderface/hex-datapacks"
+    },
+    {
+        "name": "HexScrollDye",
+        "description": "adds dyeing to make ancient scrolls",
+        "link": "https://github.com/beholderface/hex-datapacks"
+    },
+    {
+        "name": "information-trinkets",
+        "description": "adds trinket slots for hex lenses, create goggles, and botania monocles",
+        "link": "https://github.com/beholderface/hex-datapacks"
+    },
+    {
+        "name": "Merge Phial",
+        "description": "Adds recipes for merging phials above max capacity",
+        "link": "https://github.com/SamsTheNerd/hexaddons/tree/main/hexxycrafttweakerscripts"
+    },
+    {
+        "name": "Phial Turtle",
+        "description": "Disables the default computercraft turtle recipes and replaces them with ones requiring phials.",
+        "link": "https://github.com/SamsTheNerd/hexaddons/tree/main/hexxycrafttweakerscripts"
+    }
+]

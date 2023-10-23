@@ -16,6 +16,15 @@ window.onload = () => {
 
     var tools = getTools();
     tools.forEach((tool) => {
-        putToolCard(tool, "toolsGrid");
+        if(tool.addon){ // tool specfically for addon devs
+            putToolCard(tool, "devToolsGrid");
+        } else { // normal tool
+            putToolCard(tool, "toolsGrid");
+        }
+    });
+
+    var datapacks = getDatapacks();
+    datapacks.forEach((datapack) => {
+        putToolCard(datapack, "datapacksGrid");
     });
 }

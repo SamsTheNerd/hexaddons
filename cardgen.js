@@ -15,6 +15,14 @@ var getTools = () => {
     return allTools;
 }
 
+var getDatapacks = () => {
+    var request = new XMLHttpRequest();
+    request.open("GET", "./hexdatapacks.json", false);
+    request.send(null)
+    var allDatapacks = JSON.parse(request.responseText);
+    return allDatapacks;
+}
+
 
 var makeLinks = (addon) => {
     var links = ``;
