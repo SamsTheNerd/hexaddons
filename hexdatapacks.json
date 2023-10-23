@@ -33,5 +33,10 @@
         "name": "Phial Turtle",
         "description": "Disables the default computercraft turtle recipes and replaces them with ones requiring phials.",
         "link": "https://github.com/SamsTheNerd/hexaddons/tree/main/hexxycrafttweakerscripts"
+    },
+    {
+        "name": "Lore Fragments",
+        "description": "Adds lore fragments to chest loot",
+        "link": "https://github.com/SamsTheNerd/hexaddons/tree/main/datapacks/"
     }
 ]
