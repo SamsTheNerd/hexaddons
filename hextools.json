@@ -45,6 +45,11 @@
         "link": "https://github.com/Master-Bw3/Hexagon"
     },
     {
+        "name": "HexDrawAssist",
+        "description": "An accessibility script for people who have trouble holding down their mouse button when drawing patterns. Requires AutoHotKey v2.",
+        "link": "https://github.com/beholderface/HexDrawAssist"
+    },
+    {
         "name": "hexdoc",
         "description": "Python web book docgen for Patchouli and Hex Casting.",
         "link": "https://pypi.org/project/hexdoc/",
