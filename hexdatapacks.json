@@ -43,5 +43,10 @@
         "name": "No HexBook",
         "description": "Prevents the hexbook from starting in your inventory when you join a world.",
         "link": "https://github.com/SamsTheNerd/hexaddons/tree/main/datapacks/"
+    },
+    {
+        "name": "Merge Phial for KubeJS",
+        "description": "Adds recipes for merging phials above max capacity. Uses KubeJS",
+        "link": "https://github.com/GPeckman/hexcasting-phials"
     }
 ]

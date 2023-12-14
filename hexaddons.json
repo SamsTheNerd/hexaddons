@@ -155,5 +155,14 @@
         "type": "addon",
         "platforms": ["fabric"],
         "source_url": "https://github.com/Jempasam/Hexlink"
+    },
+    {
+        "name": "Hexlink",
+        "description": "Adds dimensional rooms that you can generate using hexes",
+        "modrinth_url": "https://modrinth.com/mod/hexdim",
+        "icon_url": "./addonIcons/hexdim.png",
+        "type": "addon",
+        "platforms": ["fabric"],
+        "source_url": "https://github.com/walksanatora/hexxy-dimensions"
     }
 ]
