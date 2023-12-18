@@ -164,5 +164,14 @@
         "type": "addon",
         "platforms": ["fabric"],
         "source_url": "https://github.com/walksanatora/hexxy-dimensions"
+    },
+    {
+        "name": "Oneironaut",
+        "description": "Adds many features related to interdimensional travel, as well as several miscellaneous ones.",
+        "modrinth_url": "https://modrinth.com/mod/oneironaut",
+        "icon_url": "./addonIcons/oneironaut.png",
+        "type": "addon",
+        "platforms": ["fabric", "quilt"],
+        "source_url": "https://github.com/beholderface/oneironaut"
     }
 ]
