@@ -169,9 +169,11 @@
         "name": "Oneironaut",
         "description": "Adds many features related to interdimensional travel, as well as several miscellaneous ones.",
         "modrinth_url": "https://modrinth.com/mod/oneironaut",
+        "curseforge_url": "https://curseforge.com/minecraft/mc-mods/oneironaut",
         "icon_url": "./addonIcons/oneironaut.png",
         "type": "addon",
         "platforms": ["fabric", "quilt"],
         "source_url": "https://github.com/beholderface/oneironaut"
+        "book_url": "https://oneironaut.hexxy.media"
     }
 ]
