@@ -173,7 +173,7 @@
         "icon_url": "./addonIcons/oneironaut.png",
         "type": "addon",
         "platforms": ["fabric", "quilt"],
-        "source_url": "https://github.com/beholderface/oneironaut"
+        "source_url": "https://github.com/beholderface/oneironaut",
         "book_url": "https://oneironaut.hexxy.media"
     }
 ]
