@@ -69,11 +69,7 @@
         "description": "Gloopiest hex addon ! Adds many gloopy new items and clientside conveniences such as spellbook menus and in-text pattern rendering.",
         "modrinth_url": "https://modrinth.com/mod/hexgloop/",
         "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/hexgloop",
-        "icon_url": "./addonIcons/hexgloop.webp",
-        "type": "addon",
-        "platforms": ["fabric", "quilt", "forge"],
-        "source_url": "https://github.com/SamsTheNerd/HexGloop",
-        "book_url": "https://hexgloop.hexxy.media"
+        "type": "addon"
     },
     {
         "name": "Mediaworks",

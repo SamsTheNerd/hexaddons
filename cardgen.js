@@ -1,9 +1,41 @@
+var ADDON_DATA = {};
 
+var ADDON_CARDS = {};
+var MAJOR_INTEROP_CARDS = {};
+var MINOR_INTEROP_CARDS = {};
+
+const ADDON_CARD_TYPES = {
+    addon: ADDON_CARDS,
+    majorinterop: MAJOR_INTEROP_CARDS,
+    minorinterop: MINOR_INTEROP_CARDS
+}
+
+const ADDON_GRIDS = {
+    addon: "mainAddonGrid",
+    majorinterop: "majorInteropGrid",
+    minorinterop: "minorInteropGrid"
+}
+
+// initializes stuff a good bit
 var getAddons = () => {
     var request = new XMLHttpRequest();
     request.open("GET", "./hexaddons.json", false);
     request.send(null)
     var allAddons = JSON.parse(request.responseText);
+    allAddons.forEach((addon) => {
+        if(ADDON_DATA[addon.name] == null){
+            ADDON_DATA[addon.name] = addon;
+            getModData(addon).then((data) => {
+                console.log(`${addon.name} data: ${data}`);
+                ADDON_DATA[addon.name] = Object.assign(ADDON_DATA[addon.name], data);
+                // maybe some 're-sort' type of function needs to be called here
+                genCard(addon);
+                displayAddonCards(addon.type);
+            });
+        }
+        genCard(addon); // just an initial thing
+    });
+    displayAddonCards();
     return allAddons;
 }
 
@@ -23,6 +55,46 @@ var getDatapacks = () => {
     return allDatapacks;
 }
 
+const SORT_FUNCTIONS = {
+    downloads: (a, b) => {
+        var aDownloads = a.downloads == null ? 0 : a.downloads;
+        var bDownloads = b.downloads == null ? 0 : b.downloads;
+        return bDownloads - aDownloads;
+    },
+
+    updated: (a, b) => {
+        return b.updated_date - a.updated_date;
+    },
+
+    newest: (a, b) => {
+        return b.published_date - a.published_date;
+    },
+
+    oldest: (a, b) => {
+        return a.published_date - b.published_date;
+    }
+}
+
+// also to resort them
+var displayAddonCards = (type = "addon", sortType = "downloads") => {
+    var containerId = ADDON_GRIDS[type];
+    document.getElementById(containerId).innerHTML = "";
+    var addons = [];
+    Object.values(ADDON_DATA).forEach((addon) => {
+        if(addon.type == type){
+            addons.push(addon);
+        }
+    });
+    addons.sort(SORT_FUNCTIONS[sortType]);
+    addons.forEach((addon) => {
+        var card = ADDON_CARD_TYPES[type][addon.name];
+        document.getElementById(containerId).innerHTML += card;
+    });
+}
+
+var sortAddons = (selectorId, type) => {
+    displayAddonCards(type, document.getElementById(selectorId).value);
+}
 
 var makeLinks = (addon) => {
     var links = ``;
@@ -55,9 +127,11 @@ var makeLinks = (addon) => {
 var genCard = (addon) => {
     var iconUrl = addon.icon_url;
     var platformIcons = ``;
-    addon.platforms.forEach((platform) => {
-        platformIcons += `<img src="./platformIcons/${platform}Icon.png" alt="${platform} icon" class="platformIcon">`
-    })
+    if(addon.platforms != null){
+        addon.platforms.forEach((platform) => {
+            platformIcons += `<img src="./platformIcons/${platform}Icon.png" alt="${platform} icon" class="platformIcon">`
+        })
+    }
 
     var links = makeLinks(addon);
 
@@ -72,6 +146,7 @@ var genCard = (addon) => {
         <div class="linkShelf">${links}</div>
     </div>
     `
+    ADDON_CARD_TYPES[addon.type][addon.name] = card;
     return card;
 }
 

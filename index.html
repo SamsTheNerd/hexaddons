@@ -12,11 +12,20 @@
     <meta property="og:image:height" content="256" />
     <meta name="theme-color" content="#221b32">
     <link rel="stylesheet" href="common.css">
+    <script src="modrinth_api.js"></script>
     <script src="cardgen.js"></script>
     <script src="main.js"></script>
 </head>
 <body>
     <h1 id="addons">Hex Addons</h1>
+    <div id="addonsOptions">
+        <select name="addon-sort-type" id="addonSortSelect" onchange="sortAddons('addonSortSelect', 'addon')">
+            <option value="downloads">Downloads</option>
+            <option value="updated">Recently Updated</option>
+            <option value="newest">Newest</option>
+            <option value="oldest">Oldest</option>
+        </select>
+    </div>
     <div id="mainAddonGrid" class="addonSectionGrid"></div>
     <h2 id="interop">Heavy Interop</h2>
     <div id="majorInteropGrid" class="addonSectionGrid"></div>
