@@ -36,7 +36,7 @@ h2{
 }
 
 h3{
-    font-size: 2vw;
+    font-size: 1.7vw;
 }
 
 h4{
@@ -51,7 +51,7 @@ h4{
 }
 
 p {
-    font-size: 1.2vw;
+    font-size: 1.1vw;
     font-weight: 400;
     line-height: 1.4;
 }
@@ -60,7 +60,17 @@ a {
     color: var(--mediapink);
 }
 
-#addons{
+select {
+    box-sizing: border-box;
+    background-color: var(--slatemid);
+    border: none;
+    color: var(--mediapink);
+    text-align: center;
+    font-weight: bold;
+    padding: 0.5vw;
+}
+
+#mainTitle{
     text-align: center;
     width: 50vw;
     height: 6vw;
@@ -73,21 +83,60 @@ a {
     padding-bottom: 0.5vw;
 }
 
-.addonSectionGrid{
-    width: 70vw;
+#nav-toc-bar{
     position: relative;
-    left: 15vw;
+    display: flex;
+    justify-content: space-between;
+    width: 50vw;
+    left: 25vw;
+}
+
+.addonSectionGrid{
+    width: 80vw;
+    position: relative;
+    left: 10vw;
     display: grid;
     grid-auto-flow: row;
     justify-content: space-around;
-    grid-template-columns: 20vw 20vw 20vw;
+    grid-template-columns: 18vw 18vw 18vw 18vw;
 }
 
+#addonsOptions{
+    position: relative;
+    width: 50vw;
+    left: 25vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    margin-bottom: 1.5vw;
+}
+
+.platformButton{
+    cursor: pointer;
+    width: 2vw;
+    margin-right: 0.5vw;
+    position: relative;
+    top: 0;
+    left: 0;
+    padding-top: 0.2vw;
+    /* transition-property: top, left, filter; */
+    transition-duration: 0.25s;
+    filter: brightness(0.75) grayscale();
+}
+
+.platformButton:hover{
+    padding-top: 0;
+    width: 2.2vw;
+    top: 0.1vw;
+    left: -0.1vw;
+    margin-right: 0.3vw;
+}
 
 .addonCard{
     width: 100%;
     height: min-content;
-    min-height: 25vw;
+    min-height: 22.5vw;
     position: relative;
     background: var(--slatedark);
     --this-border-radius: 1vw;
@@ -101,6 +150,10 @@ a {
     margin-bottom: 10%;
     display: flex;
     flex-direction: column;
+}
+
+.addonCard.filterable{
+    display: none;
 }
 
 .addonCard:hover{
@@ -121,6 +174,11 @@ a {
     display:inline;
     float: left;
     box-shadow: 0 0 0.6vw -0.2vw var(--mediapink);
+    transition: box-shadow 0.25s;
+}
+
+.addonCard:hover .addonIcon {
+    box-shadow: 0 0 0.7vw -0.2vw var(--mediapink);
 }
 
 .addonCard .addonTitle{
@@ -188,6 +246,14 @@ a {
     margin-bottom: 5%;
     margin-top: auto;
 }
+
+.cardBanner{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 25%;
+}
+
 /* 
 
 .bookLink{
@@ -303,8 +369,84 @@ a {
     transition: opacity 0.25s;
 }
 
+/* there's almost certainly a better way to do this */
+
+.forge .addonCard.forge {
+    display: flex!important;
+}
+
+.neoforge .addonCard.neoforge {
+    display: flex!important;
+}
+
+.quilt .addonCard.quilt {
+    display: flex!important;
+}
+
+.fabric .addonCard.fabric {
+    display: flex!important;
+}
+
+/* platform buttons */
+
+.forge #forgeButton {
+    filter: none;
+}
+
+.neoforge #neoforgeButton {
+    filter: none;
+}
+
+.quilt #quiltButton {
+    filter: none;
+}
+
+.fabric #fabricButton {
+    filter: none;
+}
+
+@media (max-aspect-ratio: 18/10) {
+    .addonSectionGrid{
+        left: 15vw;
+        width: 70vw;
+        grid-template-columns: 20vw 20vw 20vw;
+    }
+
+    h1{
+        font-size: 3vw;
+    }
+
+    h2{
+        font-size: 2.5vw;
+    }
+
+    h3{
+        font-size: 2vw;
+    }
+
+    h4{
+        font-size: 1.5vw;
+    }
+    
+    p {
+        font-size: 1.3vw;
+    }
+
+    .addonCard{
+        min-height: 25vw;
+    }
+
+    .interopCard{
+        min-height: 20vw;
+    }
+    
+    .toolCard{
+        min-height: 15vw;
+    }
+}
+
   
-@media (max-aspect-ratio: 1.4/1) {
+@media (max-aspect-ratio: 10/10) {
     .addonSectionGrid{
         left: 5vw;
         width: 90vw;
@@ -328,13 +470,13 @@ a {
     }
     
     p {
-        font-size: 2vw;
+        font-size: 2.25vw;
         font-weight: 400;
         line-height: 1.2;
     }
 
     .addonCard{
-        min-height: 45vw;
+        min-height: 40vw;
     }
 
     .interopCard{
@@ -346,7 +488,7 @@ a {
     }
 }
 
-@media (max-aspect-ratio: 0.85/1) {
+@media (max-aspect-ratio: 6/10) {
     .addonSectionGrid{
         left: 5vw;
         width: 90vw;

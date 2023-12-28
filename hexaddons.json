@@ -47,7 +47,7 @@
         "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/ducky-periphs",
         "modrinth_url": "https://modrinth.com/mod/ducky-periphs",
         "icon_url": "./addonIcons/duckyperiphs.webp",
-        "type": "majorinterop",
+        "type": "interop",
         "platforms": ["forge", "fabric", "quilt"],
         "source_url": "https://github.com/SamsTheNerd/ducky-periphs",
         "book_url": "https://github.com/SamsTheNerd/ducky-periphs/wiki",
@@ -66,7 +66,7 @@
     },
     {
         "name": "Hex Gloop",
-        "description": "Gloopiest hex addon ! Adds many gloopy new items and clientside conveniences such as spellbook menus and in-text pattern rendering.",
+        "description": "Gloopiest hex addon !<br>Adds many gloopy new items and clientside conveniences such as spellbook menus and in-text pattern rendering.",
         "modrinth_url": "https://modrinth.com/mod/hexgloop/",
         "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/hexgloop",
         "type": "addon"
@@ -86,7 +86,7 @@
         "description": "Provides compatibility with Ars Nouveau: adds an Archwood Staff (crafted with a source gem, not charged amethyst) and the ability to use source gems and blocks as media.",
         "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/ars-scalaes",
         "icon_url": "./addonIcons/arsscalaes.png",
-        "type": "majorinterop",
+        "type": "interop",
         "platforms": ["forge"],
         "source_url": "https://github.com/Alexthw46/Ars-Scalaes",
         "hex_provided": false
@@ -97,7 +97,7 @@
         "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/gravityapi",
         "modrinth_url": "https://modrinth.com/mod/gravity-api",
         "icon_url": "./addonIcons/gravityIcon.webp",
-        "type": "majorinterop",
+        "type": "interop",
         "platforms": ["fabric", "quilt"],
         "source_url": "https://github.com/Fusion-Flux/Gravity-Api",
         "hex_provided": true
@@ -107,7 +107,8 @@
         "description": "Adds the ability to use the cutting board to break down edified wood items, as well as drastically improving the Pansexual Pigment recipe. Also useful for turning amethyst blocks into shards.",
         "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/farmers-delight",
         "modrinth_url": "https://modrinth.com/mod/farmers-delight",
-        "type": "minorinterop",
+        "type": "interop",
+        "minor": true,
         "platforms": ["forge", "fabric"],
         "source_url": "https://github.com/vectorwing/FarmersDelight",
         "hex_provided": true
@@ -116,7 +117,8 @@
         "name": "Switchy",
         "description": "Adds the ability to change your pigment when switching presets.",
         "modrinth_url": "https://modrinth.com/mod/switchy",
-        "type": "minorinterop",
+        "type": "interop",
+        "minor": true,
         "platforms": ["quilt"],
         "source_url": "https://github.com/sisby-folk/switchy",
         "hex_provided": false
@@ -127,7 +129,7 @@
         "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/pehkui",
         "modrinth_url": "https://modrinth.com/mod/pehkui",
         "icon_url": "./addonIcons/pehkui.webp",
-        "type": "majorinterop",
+        "type": "interop",
         "platforms": ["forge", "fabric", "quilt"],
         "source_url": "https://github.com/Virtuoel/Pehkui",
         "hex_provided": true
@@ -137,7 +139,8 @@
         "description": "Adds the ability to use crushing wheels to turn amethyst blocks into shards and dust.",
         "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/create",
         "modrinth_url": "https://modrinth.com/mod/create",
-        "type": "minorinterop",
+        "type": "interop",
+        "minor": true,
         "platforms": ["forge", "fabric", "quilt"],
         "source_url": "https://github.com/Creators-of-Create/Create",
         "hex_provided": true

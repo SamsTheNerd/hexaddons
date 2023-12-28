@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
-    <title>Hex Addons</title>
-    <meta property="og:title" content="Hex Addons" />
+    <title>Hex Additions</title>
+    <meta property="og:title" content="Hex Additions" />
     <meta property="og:description" content="Hex-related addons, mods, and tools" />
     <meta property="og:url" content="https://hexxy.media/addons" />
     <link rel="icon" type="image/x-icon" href="./hexfavicon.png">
@@ -16,9 +16,20 @@
     <script src="cardgen.js"></script>
     <script src="main.js"></script>
 </head>
-<body>
-    <h1 id="addons">Hex Addons</h1>
+<body id="body">
+    <h1 id="mainTitle">Hex Additions</h1>
+    <div id="nav-toc-bar">
+        <a href="#addons">Addons</a>
+        <a href="#interop">Interop</a>
+        <a href="#datapacks">Data Packs</a>
+        <a href="#tools">Tools</a>
+        <a href="#devTools">Dev Tools</a>
+    </div>
+    <h2 id="addons">Addons</h1>
     <div id="addonsOptions">
+        <div id="addonPlatformButtons">
+
+        </div>
         <select name="addon-sort-type" id="addonSortSelect" onchange="sortAddons('addonSortSelect', 'addon')">
             <option value="downloads">Downloads</option>
             <option value="updated">Recently Updated</option>
@@ -27,11 +38,8 @@
         </select>
     </div>
     <div id="mainAddonGrid" class="addonSectionGrid"></div>
-    <h2 id="interop">Heavy Interop</h2>
-    <div id="majorInteropGrid" class="addonSectionGrid"></div>
-    <h4 id="interopNote"> * Interop Provided By Hex Casting</h3>
-    <h2 id="interop">Light Interop</h2>
-    <div id="minorInteropGrid" class="addonSectionGrid"></div>
+    <h2 id="interop">Interop</h2>
+    <div id="interopGrid" class="addonSectionGrid"></div>
     <h4 id="interopNote"> * Interop Provided By Hex Casting</h3>
     <h2 id="datapacks">Data Packs</h2>
     <div id="datapacksGrid" class="addonSectionGrid"></div>
