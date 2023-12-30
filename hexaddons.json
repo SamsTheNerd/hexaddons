@@ -174,5 +174,11 @@
         "platforms": ["fabric", "quilt"],
         "source_url": "https://github.com/beholderface/oneironaut",
         "book_url": "https://oneironaut.hexxy.media"
+    },
+    {
+        "name": "Hex Research",
+        "modrinth_url": "https://modrinth.com/mod/hex-research",
+        "type": "addon",
+        "description": "Provides alternative ways to accomplish Hexcasting progression"
     }
 ]
