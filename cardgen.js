@@ -140,6 +140,10 @@ const SORT_FUNCTIONS = {
 
     oldest: (a, b) => {
         return a.published_date - b.published_date;
+    }, 
+
+    alphabetical: (a,b) => {
+        return a.name.localeCompare(b.name);
     }
 }
 
