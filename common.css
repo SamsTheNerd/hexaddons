@@ -101,6 +101,14 @@ select:hover {
     padding-bottom: 0.5vw;
 }
 
+#hexplanation{
+    width: 50vw;
+    position: relative;
+    left: 25vw;
+    text-align: center;
+    top: -1em;
+}
+
 .sectionHeader{
     display: flex;
     justify-content: center;
@@ -252,6 +260,7 @@ select:hover {
     margin-bottom: 5%;
     display:inline;
     float: left;
+    align-self: start;
     box-shadow: 0 0 0.6vw -0.2vw var(--mediapink);
     transition: box-shadow 0.25s;
 }
@@ -406,7 +415,7 @@ select:hover {
     width: min-content;
     vertical-align: 0.25em;
     font-size: 0.7em;
-    padding-left: 0.1em;
+    padding-left: 0.2em;
 }
 
 .toolCard{

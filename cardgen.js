@@ -226,8 +226,14 @@ var genCard = (addon) => {
     if(Date.now() - addon.published_date < DAY * 30){
         banner = `<img src="./otherIcons/new_banner.svg" class="newBanner cardBanner">`;
     } else if(Date.now() - addon.updated_date < DAY * 7){
-        banner = `<img src="./otherIcons/update_banner.svg" class="updateBanner cardBanner">`;
+        // gloopdate banner !!
+        if(addon.name == "Hex Gloop"){
+            banner = `<img src="./otherIcons/gloopdate_banner.svg" class="updateBanner gloopdateBanner cardBanner">`;
+        } else {
+            banner = `<img src="./otherIcons/update_banner.svg" class="updateBanner cardBanner">`;
+        }
     }
+    
 
     var card = `
     <div class="addonCard ${platformClasses} ${addon.type}TypeCard" id="${addon.name}Card">
