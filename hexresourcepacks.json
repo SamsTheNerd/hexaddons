@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Hexture Backport",
+        "modrinth_url": "https://modrinth.com/resourcepack/hexture-backport"
+    },
+    {
+        "name": "3D Staves",
+        "curseforge_url": "https://www.curseforge.com/minecraft/texture-packs/custom-3d-staves-for-hex-casting",
+        "icon_url": "./addonIcons/3dStaves.png",
+        "description": "Adds 3d models for staves."
+    }
+]

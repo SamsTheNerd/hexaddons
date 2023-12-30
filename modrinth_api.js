@@ -3,9 +3,10 @@ var fetchFullModData = (modid) => {
     .then((response) => response.json());
 }
 
-const modrinthRE = new RegExp(".*modrinth\.com\/mod\/([a-zA-Z\-]+).*");
+const modrinthRE = new RegExp(".*modrinth\.com\/(?:(?:mod)|(?:resourcepack))\/([a-zA-Z\-]+).*");
 
 var idFromUrl = (url) => {
+    console.log(url);
     return url.match(modrinthRE)[1];
 }
 
@@ -21,7 +22,8 @@ var getModData = (addon) => {
                 downloads: data["downloads"],
                 game_versions: data["game_versions"],
                 published_date: Date.parse(data["published"]),
-                updated_date: Date.parse(data["updated"])
+                updated_date: Date.parse(data["updated"]),
+                description: data["description"],
             };
         });
     } else {

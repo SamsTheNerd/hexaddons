@@ -3,17 +3,59 @@ var ADDON_DATA = {};
 var ADDON_CARDS = {};
 var INTEROP_CARDS = {};
 
+var RESOURCE_PACK_DATA = {};
+var RESOURCE_PACK_CARDS = {};
+
+
 const ADDON_CARD_TYPES = {
     addon: ADDON_CARDS,
-    interop: INTEROP_CARDS
+    interop: INTEROP_CARDS,
+    resourcepack: RESOURCE_PACK_CARDS
 }
 
 const ADDON_GRIDS = {
     addon: "mainAddonGrid",
     interop: "interopGrid",
+    resourcepack: "resourcepacksGrid",
+}
+
+const DATA_HOLDERS = {
+    addon: ADDON_DATA,
+    interop: ADDON_DATA,
+    resourcepack: RESOURCE_PACK_DATA
 }
 
 const PLATFORMS = ["fabric", "forge", "neoforge", "quilt"];
+
+var handleAddonData = (addon, data) => {
+    var dataHolder = DATA_HOLDERS[addon.type];
+    console.log(`${addon.name} data: ${data}`);
+    Object.keys(data).forEach((key) => {
+        // do some nonsense to get as many platforms as possible
+        if( key == "platforms"){
+            var platforms = [];
+            if(data[key] != null){
+                data[key].forEach((platform) => {
+                    if(!platforms.includes(platform))
+                        platforms.push(platform);
+                });
+            }
+            if(dataHolder[addon.name][key] != null){
+                dataHolder[addon.name][key].forEach((platform) => {
+                    if(!platforms.includes(platform))
+                        platforms.push(platform);
+                });
+            }
+            dataHolder[addon.name][key] = platforms;
+        } else if(data[key] != null && dataHolder[addon.name][key] == null){
+            if(key == "book_url" && addon.type != "addon") dataHolder[addon.name]["book_icon"] = "./otherIcons/MCBookIcon.png" // so interop wikis aren't hex books
+            dataHolder[addon.name][key] = data[key];
+        }
+    });
+    // maybe some 're-sort' type of function needs to be called here
+    genCard(addon);
+    displayAddonCards(addon.type);
+}
 
 // initializes stuff a good bit
 var getAddons = () => {
@@ -25,32 +67,7 @@ var getAddons = () => {
         if(ADDON_DATA[addon.name] == null){
             ADDON_DATA[addon.name] = addon;
             getModData(addon).then((data) => {
-                console.log(`${addon.name} data: ${data}`);
-                Object.keys(data).forEach((key) => {
-                    // do some nonsense to get as many platforms as possible
-                    if( key == "platforms"){
-                        var platforms = [];
-                        if(data[key] != null){
-                            data[key].forEach((platform) => {
-                                if(!platforms.includes(platform))
-                                    platforms.push(platform);
-                            });
-                        }
-                        if(ADDON_DATA[addon.name][key] != null){
-                            ADDON_DATA[addon.name][key].forEach((platform) => {
-                                if(!platforms.includes(platform))
-                                    platforms.push(platform);
-                            });
-                        }
-                        ADDON_DATA[addon.name][key] = platforms;
-                    } else if(data[key] != null && ADDON_DATA[addon.name][key] == null){
-                        if(key == "book_url" && addon.type != "addon") ADDON_DATA[addon.name]["book_icon"] = "./otherIcons/MCBookIcon.png" // so interop wikis aren't hex books
-                        ADDON_DATA[addon.name][key] = data[key];
-                    }
-                });
-                // maybe some 're-sort' type of function needs to be called here
-                genCard(addon);
-                displayAddonCards(addon.type);
+                handleAddonData(addon, data, ADDON_DATA);
             });
         }
         genCard(addon); // just an initial thing
@@ -72,6 +89,27 @@ var getDatapacks = () => {
     request.open("GET", "./hexdatapacks.json", false);
     request.send(null)
     var allDatapacks = JSON.parse(request.responseText);
+    return allDatapacks;
+}
+
+// these also want to use modrinth style stuff
+var getResourcePacks = () => {
+    var request = new XMLHttpRequest();
+    request.open("GET", "./hexresourcepacks.json", false);
+    request.send(null)
+    var allDatapacks = JSON.parse(request.responseText);
+    allDatapacks.forEach((addon) => {
+        addon.type = "resourcepack";
+        if(RESOURCE_PACK_DATA[addon.name] == null){
+            RESOURCE_PACK_DATA[addon.name] = addon;
+            getModData(addon).then((data) => {
+                data.platforms = [];
+                handleAddonData(addon, data, RESOURCE_PACK_DATA);
+            });
+        }
+        genCard(addon); // just an initial thing
+    });
+    displayAddonCards("resourcepack");
     return allDatapacks;
 }
 
@@ -110,7 +148,9 @@ var displayAddonCards = (type = "addon", sortType = "downloads") => {
     var containerId = ADDON_GRIDS[type];
     document.getElementById(containerId).innerHTML = "";
     var addons = [];
-    Object.values(ADDON_DATA).forEach((addon) => {
+    var dataHolder = DATA_HOLDERS[type];
+
+    Object.values(dataHolder).forEach((addon) => {
         if(addon.type == type){
             addons.push(addon);
         }
@@ -186,7 +226,7 @@ var genCard = (addon) => {
     }
 
     var card = `
-    <div class="addonCard ${platformClasses}" id="${addon.name}Card">
+    <div class="addonCard ${platformClasses} ${addon.type}TypeCard" id="${addon.name}Card">
         <div class="addonCardHeader">
             <img src="${iconUrl}" alt="${addon.name} icon" class="addonIcon">
             <h3 class="addonTitle${addon.hex_provided ? " hexProvidedTitle" : ""}">${addon.name}</h3>
