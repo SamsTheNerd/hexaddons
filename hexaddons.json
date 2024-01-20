@@ -180,5 +180,16 @@
         "modrinth_url": "https://modrinth.com/mod/hex-research",
         "type": "addon",
         "description": "Provides alternative ways to accomplish Hexcasting progression"
+    },
+    {
+        "name": "Hextended Staves",
+        "modrinth_url": "https://modrinth.com/mod/hextended-staves",
+        "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/hextended-staves",
+        "type": "addon"
+    },
+    {
+        "name": "Intarsia",
+        "modrinth_url": "https://modrinth.com/mod/intarsia",
+        "type": "addon"
     }
 ]
