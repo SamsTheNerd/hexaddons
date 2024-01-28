@@ -1,6 +1,6 @@
-# Hexxycraft Crafttweaker Scripts
+# HexxyCraft CraftTweaker Scripts
 
-These [craft tweaker](https://modrinth.com/mod/crafttweaker) scripts were originally made for the hexxycraft server. They've been rehosted here for convenience but you can find them in their original home [here](https://github.com/HexxyCraft/modpack/tree/master/scripts).
+These [CraftTweaker](https://modrinth.com/mod/crafttweaker) scripts were originally made for the HexxyCraft server. They've been rehosted here for convenience but you can find them in their original home [here](https://github.com/HexxyCraft/modpack/tree/13ff7938c02066e30644153c03eb80011247cfb6/scripts).
 
 ## Merge Phial
 
