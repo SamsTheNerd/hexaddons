@@ -191,5 +191,10 @@
         "name": "Intarsia",
         "modrinth_url": "https://modrinth.com/mod/intarsia",
         "type": "addon"
+    },
+    {
+        "name": "Hex VR",
+        "modrinth_url":"https://modrinth.com/mod/hexvr",
+        "type": "addon"
     }
 ]
