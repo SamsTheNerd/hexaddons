@@ -197,5 +197,11 @@
         "modrinth_url":"https://modrinth.com/mod/hexvr",
         "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/hexvr",
         "type": "addon"
+    },
+    {
+        "name": "Hex Keys",
+        "modrinth_url":"https://modrinth.com/mod/hexkeys",
+        "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/hex-keys",
+        "type": "addon"
     }
 ]
