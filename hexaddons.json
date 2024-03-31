@@ -208,5 +208,10 @@
         "name": "Hex Pigment Plus",
         "modrinth_url":"https://modrinth.com/mod/hexpigmentplus",
         "type": "addon"
+    },
+    {
+        "name": "Hexical",
+        "modrinth_url":"https://modrinth.com/mod/hexical",
+        "type": "addon"
     }
 ]
