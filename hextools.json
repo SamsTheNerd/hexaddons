@@ -58,7 +58,7 @@
     {
         "name": "HexDummy",
         "description": "Bare-bones template for starting a multiloader Hex Casting addon",
-        "link": "https://github.com/artynova/hexdummy",
+        "link": "https://github.com/FallingColors/hexdummy",
         "addon": true
     }
 ]
