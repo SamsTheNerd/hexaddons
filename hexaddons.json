@@ -213,5 +213,10 @@
         "name": "Hexical",
         "modrinth_url":"https://modrinth.com/mod/hexical",
         "type": "addon"
+    },
+    {
+        "name": "Hex Ways",
+        "modrinth_url":"https://modrinth.com/mod/hex-ways",
+        "type": "addon"
     }
 ]
