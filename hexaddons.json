@@ -218,5 +218,11 @@
         "name": "Hex Ways",
         "modrinth_url":"https://modrinth.com/mod/hex-ways",
         "type": "addon"
+    },
+    {
+        "name": "HexCircus",
+        "modrinth_url":"https://modrinth.com/mod/hex-circus",
+        "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/hexcircus",
+        "type": "addon"
     }
 ]
