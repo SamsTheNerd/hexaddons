@@ -224,5 +224,11 @@
         "modrinth_url":"https://modrinth.com/mod/hex-circus",
         "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/hexcircus",
         "type": "addon"
+    },
+    {
+        "name": "HexDebug",
+        "modrinth_url":"https://modrinth.com/mod/hexdebug",
+        "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/hexdebug",
+        "type": "addon"
     }
 ]
