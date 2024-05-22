@@ -230,5 +230,10 @@
         "modrinth_url":"https://modrinth.com/mod/hexdebug",
         "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/hexdebug",
         "type": "addon"
+    },
+    {
+        "name": "HexShield",
+        "modrinth_url":"https://modrinth.com/mod/hexshield",
+        "type": "addon"
     }
 ]
