@@ -235,5 +235,10 @@
         "name": "HexShield",
         "modrinth_url":"https://modrinth.com/mod/hexshield",
         "type": "addon"
+    },
+    {
+        "name": "HexecuteIf",
+        "modrinth_url": "https://modrinth.com/mod/hexecuteif",
+        "type": "addon"
     }
 ]
