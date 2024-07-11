@@ -228,7 +228,7 @@
     },
     {
         "name": "Complex Hex",
-        "description": "Adds questionably useful patterns such as Quaternions and ways to manipulate Display Entities",
+        "description": "Adds patterns & things such as Quaternions and ways to manipulate Display Entities",
         "modrinth_url": "https://modrinth.com/mod/complex-hex",
         "type": "addon"
     }
