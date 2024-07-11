@@ -230,8 +230,6 @@
         "name": "Complex Hex",
         "description": "Adds questionably useful patterns such as Quaternions and ways to manipulate Display Entities",
         "modrinth_url": "https://modrinth.com/mod/complex-hex",
-        "type": "addon",
-        "platforms": ["fabric"],
-        "source_url": "https://github.com/kineticneticat/ComplexHex"
+        "type": "addon"
     }
 ]
