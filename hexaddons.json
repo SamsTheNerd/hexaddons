@@ -225,5 +225,11 @@
         "name": "HexShield",
         "modrinth_url":"https://modrinth.com/mod/hexshield",
         "type": "addon"
+    },
+    {
+        "name": "Complex Hex",
+        "description": "Adds patterns & things such as Quaternions and ways to manipulate Display Entities",
+        "modrinth_url": "https://modrinth.com/mod/complex-hex",
+        "type": "addon"
     }
 ]
