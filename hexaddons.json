@@ -231,5 +231,10 @@
         "description": "Adds patterns & things such as Quaternions and ways to manipulate Display Entities",
         "modrinth_url": "https://modrinth.com/mod/complex-hex",
         "type": "addon"
+    },
+    {
+        "name": "Merling's Grace",
+        "modrinth_url": "https://modrinth.com/mod/merlingsgrace",
+        "type": "addon"
     }
 ]
