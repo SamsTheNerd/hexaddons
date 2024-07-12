@@ -236,5 +236,12 @@
         "name": "Merling's Grace",
         "modrinth_url": "https://modrinth.com/mod/merlingsgrace",
         "type": "addon"
+    },
+    {
+        "name": "Ephemera",
+        "modrinth_url": "https://modrinth.com/mod/ephemera",
+        "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/ephemera",
+        "description": "An assortment of features such as conjurable armor, tools for interacting with links, and plasma beams",
+        "type": "addon"
     }
 ]
