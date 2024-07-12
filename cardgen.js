@@ -124,6 +124,40 @@ const interopSort = (a, b) => {
 }
 
 const SORT_FUNCTIONS = {
+    featured: (a, b) => {
+        // prioritize newly released/updated mods
+        var aNewish = Date.now() - a.published_date < DAY * 14;
+
+        var aNewness = Date.now() - a.published_date;
+        var bNewness = Date.now() - b.published_date;
+
+        var aUpdatedness = Date.now() - a.updated_date;
+        var bUpdatedness = Date.now() - b.updated_date;
+
+        var isANew = (aNewness < DAY * 30);
+        var isBNew = (bNewness < DAY * 30);
+
+        var isAUpdated = (aUpdatedness < DAY * 7);
+        var isBUpdated = (bUpdatedness < DAY * 7);
+
+        var rlyOld = DAY * 1000;
+
+        // // this will put new addons first always
+        // var aScore = - ( (aNewness < DAY * 30 ? aNewness : rlyOld) + (aUpdatedness < DAY * 7 ? aUpdatedness * 36 : rlyOld) )
+        // var bScore = - ( (bNewness < DAY * 30 ? bNewness : rlyOld) + (bUpdatedness < DAY * 7 ? bUpdatedness * 36 : rlyOld) )
+
+        // if(aScore != bScore) return bScore - aScore;
+
+        // one or both of these is new, prioritize newer release (ignoring potentially newer updates)
+        if(isANew || isBNew) return b.published_date - a.published_date; 
+
+        // one or both is recently updated (but not newly released), prioritize newer update
+        if(isAUpdated || isBUpdated) return b.updated_date - a.updated_date
+
+        // fallback to downloads if they're not new
+        return SORT_FUNCTIONS.downloads(a,b);
+    },
+
     downloads: (a, b) => {
         var aDownloads = a.downloads == null ? 0 : a.downloads;
         var bDownloads = b.downloads == null ? 0 : b.downloads;
@@ -148,7 +182,7 @@ const SORT_FUNCTIONS = {
 }
 
 // also to resort them
-var displayAddonCards = (type = "addon", sortType = "downloads") => {
+var displayAddonCards = (type = "addon", sortType = "featured") => {
     var containerId = ADDON_GRIDS[type];
     document.getElementById(containerId).innerHTML = "";
     var addons = [];
