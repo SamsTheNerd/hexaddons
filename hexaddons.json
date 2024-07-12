@@ -243,5 +243,11 @@
         "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/ephemera",
         "description": "An assortment of features such as conjurable armor, tools for interacting with links, and plasma beams",
         "type": "addon"
+    },
+    {
+        "name": "Hexbound (fork)",
+        "modrinth_url": "https://modrinth.com/mod/hexbound-fork",
+        "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/hexbound-fork",
+        "type": "addon"
     }
 ]
