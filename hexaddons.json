@@ -249,5 +249,11 @@
         "modrinth_url": "https://modrinth.com/mod/hexbound-fork",
         "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/hexbound-fork",
         "type": "addon"
+    },
+    {
+        "name": "HexJS",
+        "modrinth_url": "https://modrinth.com/mod/hexjs",
+        "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/hexjs",
+        "type": "addon"
     }
 ]
