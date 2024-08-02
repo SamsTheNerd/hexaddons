@@ -255,5 +255,10 @@
         "modrinth_url": "https://modrinth.com/mod/hexjs",
         "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/hexjs",
         "type": "addon"
+    },
+    {
+        "name": "Hexcellular",
+        "modrinth_url": "https://modrinth.com/mod/hexcellular",
+        "type": "addon"
     }
 ]
