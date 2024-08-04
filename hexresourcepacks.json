@@ -8,5 +8,11 @@
         "curseforge_url": "https://www.curseforge.com/minecraft/texture-packs/custom-3d-staves-for-hex-casting",
         "icon_url": "./addonIcons/3dStaves.png",
         "description": "Adds 3d models for staves."
+    },
+    {
+        "name": "Stupid Wisp SHUT UP!",
+        "curseforge_url": "https://curseforge.com/minecraft/texture-packs/stupid-wisp-shut-up",
+        "icon_url": "./addonIcons/wispsilence.jpg",
+        "description": "Disables wisp casting noises."
     }
 ]
