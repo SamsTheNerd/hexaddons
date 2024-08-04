@@ -15,3 +15,9 @@ If the resulting phial would be over 200k it instead returns two full phials wit
 _uses `turtle_phial.zs`_
 
 Disables the default computercraft turtle recipes and replaces them with ones requiring phials. 
+
+## Seal Fix
+
+_uses `shibva_seal_fix.zs`_
+
+This one comes from shibva, not hexxycraft. Adds focus and spellbook sealing recipes. Does not show up properly in EMI.
