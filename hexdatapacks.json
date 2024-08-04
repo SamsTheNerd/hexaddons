@@ -51,7 +51,7 @@
     },
     {
         "name": "Seal Fix CT",
-        "description": "A craft tweaker script for fixing hex sealing recipes.",
+        "description": "A craft tweaker script for fixing hex sealing recipes on 1.19.2",
         "link": "https://github.com/SamsTheNerd/hexaddons/tree/main/hexxycrafttweakerscripts"
     }
 ]

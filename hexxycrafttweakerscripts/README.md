@@ -20,4 +20,4 @@ Disables the default computercraft turtle recipes and replaces them with ones re
 
 _uses `shibva_seal_fix.zs`_
 
-This one comes from shibva, not hexxycraft. Adds focus and spellbook sealing recipes. Does not show up properly in EMI.
+This one comes from shibva, not hexxycraft. Adds/fixes focus and spellbook sealing recipes for forge 1.19.2. Does not show up properly in EMI.
