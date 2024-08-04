@@ -60,5 +60,10 @@
         "description": "Bare-bones template for starting a multiloader Hex Casting addon",
         "link": "https://github.com/FallingColors/hexdummy",
         "addon": true
+    },
+    {
+        "name": "HexCC",
+        "description": "A C inspired language that compiles down to Hex",
+        "link": "https://gitlab.com/eleksploded/hexcc/"
     }
 ]
