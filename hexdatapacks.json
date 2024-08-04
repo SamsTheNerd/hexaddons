@@ -48,5 +48,10 @@
         "name": "Merge Phial for KubeJS",
         "description": "Adds recipes for merging phials above max capacity. Uses KubeJS",
         "link": "https://github.com/GPeckman/hexcasting-phials"
+    },
+    {
+        "name": "Seal Fix CT",
+        "description": "A craft tweaker script for fixing hex sealing recipes.",
+        "link": "https://github.com/SamsTheNerd/hexaddons/tree/main/hexxycrafttweakerscripts"
     }
 ]
