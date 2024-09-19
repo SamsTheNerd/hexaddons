@@ -1,23 +1,13 @@
 [
     {
         "name": "HexGender",
-        "description": "This is a mod which adds multiple new Hexcastng patterns for changing a player's gender ingame via Wildfire's Female Gender Mod",
         "modrinth_url": "https://modrinth.com/mod/hexgender",
-        "icon_url": "./addonIcons/hexgender.webp",
-        "type": "addon",
-        "platforms": ["forge","fabric"],
-        "source_url": "https://github.com/TechTastic/HexGender",
-        "book_url": "https://techtastic.github.io/HexGender/v/latest/master/en_us/"
+        "type": "addon"
     },
     {
         "name": "Hexxy Skies (Hex Sky)",
-        "description": "A Hexcasting x Valkyrien Skies interop and compat mod",
         "modrinth_url": "https://modrinth.com/mod/hexsky",
-        "icon_url": "./addonIcons/hexsky.png",
-        "type": "addon",
-        "platforms": ["forge","fabric"],
-        "source_url": "https://github.com/walksanatora/hexsky",
-        "book_url": "https://walksanatora.github.io/hexsky/v/latest/master/en_us/"
+        "type": "addon"
     },
     {
         "name": "Hexal",
