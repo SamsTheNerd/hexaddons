@@ -1,5 +1,15 @@
 [
     {
+        "name": "HexGender",
+        "modrinth_url": "https://modrinth.com/mod/hexgender",
+        "type": "addon"
+    },
+    {
+        "name": "Hexxy Skies (Hex Sky)",
+        "modrinth_url": "https://modrinth.com/mod/hexsky",
+        "type": "addon"
+    },
+    {
         "name": "Hexal",
         "description": "Adds many utility patterns/spells (eg. entity health, item smelting), autonomous casting with wisps, and powerful item manipulation/storage.",
         "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/hexal/",
