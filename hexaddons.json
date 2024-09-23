@@ -1,5 +1,10 @@
 [
     {
+        "name": "HexWeb",
+        "modrinth_url": "https://modrinth.com/mod/hexweb",
+        "type": "addon"
+    },
+    {
         "name": "HexGender",
         "modrinth_url": "https://modrinth.com/mod/hexgender",
         "type": "addon"
