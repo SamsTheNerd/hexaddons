@@ -161,6 +161,14 @@
         "source_url": "https://github.com/Jempasam/Hexlink"
     },
     {
+        "name": "Xeh Tascing",
+        "description": "Cool and random stuff for Hexcasting, taken from Hexlink.",
+        "modrinth_url": "https://modrinth.com/mod/xehtascing",
+        "icon_url": "./addonIcons/xehtascing.png",
+        "type": "addon",
+        "platforms": ["fabric"]
+    },
+    {
         "name": "Hexxy Dimension",
         "description": "Adds dimensional rooms that you can generate using hexes",
         "modrinth_url": "https://modrinth.com/mod/hexdim",
