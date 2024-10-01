@@ -162,11 +162,8 @@
     },
     {
         "name": "Xeh Tascing",
-        "description": "Cool and random stuff for Hexcasting, taken from Hexlink.",
         "modrinth_url": "https://modrinth.com/mod/xehtascing",
-        "icon_url": "./addonIcons/xehtascing.webp",
-        "type": "addon",
-        "platforms": ["fabric"]
+        "type": "addon"
     },
     {
         "name": "Hexxy Dimension",
