@@ -161,6 +161,11 @@
         "source_url": "https://github.com/Jempasam/Hexlink"
     },
     {
+        "name": "Xeh Tascing",
+        "modrinth_url": "https://modrinth.com/mod/xehtascing",
+        "type": "addon"
+    },
+    {
         "name": "Hexxy Dimension",
         "description": "Adds dimensional rooms that you can generate using hexes",
         "modrinth_url": "https://modrinth.com/mod/hexdim",
