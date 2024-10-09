@@ -19,43 +19,27 @@
         "description": "Adds many utility patterns/spells (eg. entity health, item smelting), autonomous casting with wisps, and powerful item manipulation/storage.",
         "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/hexal/",
         "modrinth_url": "https://modrinth.com/mod/hexal/",
-        "icon_url": "./addonIcons/hexal.webp",
-        "type": "addon",
-        "platforms": ["forge", "fabric", "quilt"],
-        "source_url": "https://github.com/Talia-12/Hexal/",
-        "book_url": "https://talia-12.github.io/Hexal/"
+        "type": "addon"
     },
     {
         "name": "MoreIotas",
         "description": "Adds matrix and string iotas, allowing things like complex calculations and chat commands.",
         "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/moreiotas/",
         "modrinth_url": "https://modrinth.com/mod/moreiotas/",
-        "icon_url": "./addonIcons/moreIotas.webp",
-        "type": "addon",
-        "platforms": ["forge", "fabric", "quilt"],
-        "source_url": "https://github.com/Talia-12/MoreIotas/",
-        "book_url": "https://talia-12.github.io/MoreIotas/"
+        "type": "addon"
     },
     {
         "name": "HexTweaks",
         "description": "Adds various (mildly opinionated) quality of life changes, as well as dictionary iotas.",
         "modrinth_url": "https://modrinth.com/mod/hextweaks/",
-        "icon_url": "./addonIcons/hextweaks.webp",
-        "type": "addon",
-        "platforms": ["forge", "fabric", "quilt"],
-        "source_url": "https://github.com/walksanatora/HexTweaks/",
-        "book_url": "https://walksanatora.github.io/HexTweaks/"
+        "type": "addon"
     },
     {
         "name": "Ducky Peripherals",
         "description": "Adds the Focal Port, which allows direct data transfer between Hex Casting and ComputerCraft. Also allows wrapping spell circles and akashic libraries as peripherals.",
         "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/ducky-periphs",
         "modrinth_url": "https://modrinth.com/mod/ducky-periphs",
-        "icon_url": "./addonIcons/duckyperiphs.webp",
         "type": "interop",
-        "platforms": ["forge", "fabric", "quilt"],
-        "source_url": "https://github.com/SamsTheNerd/ducky-periphs",
-        "book_url": "https://github.com/SamsTheNerd/ducky-periphs/wiki",
         "book_icon": "./otherIcons/MCBookIcon.png",
         "hex_provided": false
     },
@@ -63,11 +47,7 @@
         "name": "HexKinetics",
         "description": "Adds patterns and spells related to vectors and dynamics.",
         "modrinth_url": "https://modrinth.com/mod/hexkinetics/",
-        "icon_url": "./addonIcons/hexkinetics.webp",
-        "type": "addon",
-        "platforms": ["fabric", "quilt"],
-        "source_url": "https://github.com/Sonunte/HexKinetics/",
-        "book_url": "https://sonunte.github.io/HexKinetics/"
+        "type": "addon"
     },
     {
         "name": "Hex Gloop",
@@ -80,11 +60,7 @@
         "name": "Mediaworks",
         "description": "Adds QOL features and new spells. Create HUD's and become a ghost!",
         "modrinth_url": "https://modrinth.com/mod/mediaworks",
-        "icon_url": "./addonIcons/mediaworks.png",
-        "type": "addon",
-        "platforms": ["fabric", "quilt", "forge"],
-        "source_url": "https://github.com/artynova/mediaworks/",
-        "book_url": "https://artynova.github.io/mediaworks/"
+        "type": "addon"
     },
     {
         "name": "Ars Scalaes",
@@ -101,10 +77,7 @@
         "description": "Adds patterns that allow changing an entity's gravity direction (eg. walking on walls).",
         "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/gravityapi",
         "modrinth_url": "https://modrinth.com/mod/gravity-api",
-        "icon_url": "./addonIcons/gravityIcon.webp",
         "type": "interop",
-        "platforms": ["fabric", "quilt"],
-        "source_url": "https://github.com/Fusion-Flux/Gravity-Api",
         "hex_provided": true
     },
     {
@@ -114,8 +87,6 @@
         "modrinth_url": "https://modrinth.com/mod/farmers-delight",
         "type": "interop",
         "minor": true,
-        "platforms": ["forge", "fabric"],
-        "source_url": "https://github.com/vectorwing/FarmersDelight",
         "hex_provided": true
     },
     {
@@ -124,8 +95,6 @@
         "modrinth_url": "https://modrinth.com/mod/switchy",
         "type": "interop",
         "minor": true,
-        "platforms": ["quilt"],
-        "source_url": "https://github.com/sisby-folk/switchy",
         "hex_provided": false
     },
     {
@@ -133,10 +102,7 @@
         "description": "Adds patterns that allow changing the size of entities.",
         "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/pehkui",
         "modrinth_url": "https://modrinth.com/mod/pehkui",
-        "icon_url": "./addonIcons/pehkui.webp",
         "type": "interop",
-        "platforms": ["forge", "fabric", "quilt"],
-        "source_url": "https://github.com/Virtuoel/Pehkui",
         "hex_provided": true
     },
     {
@@ -146,8 +112,6 @@
         "modrinth_url": "https://modrinth.com/mod/create",
         "type": "interop",
         "minor": true,
-        "platforms": ["forge", "fabric", "quilt"],
-        "source_url": "https://github.com/Creators-of-Create/Create",
         "hex_provided": true
     },
     {
@@ -155,10 +119,7 @@
         "description": "Adds patterns for interfacing with blocks, items, and entities.",
         "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/hexlink",
         "modrinth_url": "https://modrinth.com/mod/hexlink",
-        "icon_url": "./addonIcons/hexlink.png",
-        "type": "addon",
-        "platforms": ["fabric"],
-        "source_url": "https://github.com/Jempasam/Hexlink"
+        "type": "addon"
     },
     {
         "name": "Xeh Tascing",
@@ -169,21 +130,14 @@
         "name": "Hexxy Dimension",
         "description": "Adds dimensional rooms that you can generate using hexes",
         "modrinth_url": "https://modrinth.com/mod/hexdim",
-        "icon_url": "./addonIcons/hexdim.png",
-        "type": "addon",
-        "platforms": ["fabric"],
-        "source_url": "https://github.com/walksanatora/hexxy-dimensions"
+        "type": "addon"
     },
     {
         "name": "Oneironaut",
         "description": "Adds many features related to interdimensional travel, as well as several miscellaneous ones.",
         "modrinth_url": "https://modrinth.com/mod/oneironaut",
         "curseforge_url": "https://curseforge.com/minecraft/mc-mods/oneironaut",
-        "icon_url": "./addonIcons/oneironaut.png",
-        "type": "addon",
-        "platforms": ["fabric", "quilt"],
-        "source_url": "https://github.com/beholderface/oneironaut",
-        "book_url": "https://oneironaut.hexxy.media"
+        "type": "addon"
     },
     {
         "name": "Hex Research",
