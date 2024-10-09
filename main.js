@@ -2,27 +2,61 @@
 var putPlatformButtons = () => {
     var platformButtons = "";
     PLATFORMS.forEach((platform) => {
-        document.getElementById("body").classList.add(platform);
         platformButtons += `<img src="./platformIcons/${platform}Icon.png" class="platformButton" id="${platform}Button" onclick="togglePlatform('${platform}')">`
     })
-    document.getElementById("addonPlatformButtons").innerHTML = platformButtons;
+    var versionButtons = "";
+    GAME_VERSIONS.forEach((version) => {
+        versionButtons += `<img src="./versionIcons/${version}.png" class="platformButton" id="v${version}Button" onclick="toggleVersion('${version}')">`
+    })
+    document.getElementById("addonPlatformButtons").innerHTML = platformButtons + `<div class="platformDivider bigDivider"></div>` + versionButtons;
+    updateFilterStyling();
+}
+
+var SELECTED_PLATFORMS = [];
+var SELECTED_VERSIONS = [];
+
+var updateFilterStyling = () => {
+    var platsToUse = SELECTED_PLATFORMS
+    var versionsToUse = SELECTED_VERSIONS
+    if(platsToUse.length == 0) platsToUse = PLATFORMS
+    if(versionsToUse.length == 0) versionsToUse = GAME_VERSIONS
+
+    var filterStyle = ``;
+
+    for(const plat of platsToUse){
+        for(const vers of versionsToUse){
+            filterStyle += `.addonCard.${plat}.v${vers} { display: flex!important; } \n`
+        }
+    }
+    for(const plat of platsToUse){
+        filterStyle += `#${plat}Button { filter: none; } \n`
+    }
+    for(const vers of versionsToUse){
+        filterStyle += `#v${vers}Button { filter: none; } \n`
+    }
+    document.getElementById("cardFilterStyle").innerHTML = filterStyle;
 }
 
 var togglePlatform = (platform) => {
-    var othersSelected = false;
-    PLATFORMS.forEach((otherPlatform) => {
-        if(otherPlatform != platform && document.getElementById("body").classList.contains(otherPlatform)){
-            othersSelected = true;
-        }
-        document.getElementById("body").classList.remove(otherPlatform);
-    });
-    if(othersSelected){
-        document.getElementById("body").classList.add(platform);
+    /** expected behavior:
+     * click = toggle
+     * none selected = no filtering (rather than filter none)
+     */
+    if(SELECTED_PLATFORMS.includes(platform)){
+        SELECTED_PLATFORMS = SELECTED_PLATFORMS.filter(p => p != platform)
     } else {
-        PLATFORMS.forEach((otherPlatform) => {
-            document.getElementById("body").classList.add(otherPlatform);
-        });
+        SELECTED_PLATFORMS.push(platform);
     }
+    updateFilterStyling();
+}
+
+var toggleVersion = (version) => {
+    if(SELECTED_VERSIONS.includes(version)){
+        SELECTED_VERSIONS = SELECTED_VERSIONS.filter(v => v != version)
+    } else {
+        SELECTED_VERSIONS.push(version);
+    }
+    updateFilterStyling();
 }
 
 const SECTION_HEADER_NAMES = {
@@ -63,8 +97,11 @@ var putSectionIcons = () => {
 }
 
 window.onload = () => {
+
+    putPlatformButtons();
+
     var addons = getAddons();
-    
+
     var tools = getTools();
     tools.forEach((tool) => {
         if(tool.addon){ // tool specfically for addon devs
@@ -73,8 +110,6 @@ window.onload = () => {
             putToolCard(tool, "toolsGrid");
         }
     });
-
-    putPlatformButtons();
 
     var resourcepacks = getResourcePacks();
 

@@ -26,6 +26,14 @@ const DATA_HOLDERS = {
 }
 
 const PLATFORMS = ["fabric", "forge", "neoforge", "quilt"];
+const GAME_VERSIONS = ["1-18-2", "1-19-2", "1-20-1"];
+// yeah, this is stupid, i'm fully aware, but i figure 
+const GAME_VERSIONS_MAP = {
+    "1.18.2": "1-18-2",
+    "1.19.2": "1-19-2",
+    "1.20":   "1-20-1",
+    "1.20.1": "1-20-1"
+}
 
 var handleAddonData = (addon, data) => {
     var dataHolder = DATA_HOLDERS[addon.type];
@@ -50,6 +58,17 @@ var handleAddonData = (addon, data) => {
         } else if(data[key] != null && dataHolder[addon.name][key] == null){
             if(key == "book_url" && addon.type != "addon") dataHolder[addon.name]["book_icon"] = "./otherIcons/MCBookIcon.png" // so interop wikis aren't hex books
             dataHolder[addon.name][key] = data[key];
+        } 
+        if(key == "game_versions"){
+            var versions = {};
+            data[key].forEach((version) => {
+                if(GAME_VERSIONS_MAP[version] != null){
+                    versions[GAME_VERSIONS_MAP[version]] = true;
+                } else {
+                    console.warn(`${addon.name} has hex-less version: ${version}`);
+                }
+            })
+            dataHolder[addon.name][key] = Object.keys(versions);
         }
     });
     // maybe some 're-sort' type of function needs to be called here
@@ -252,6 +271,20 @@ var genCard = (addon) => {
     if(addon.type == "addon"){
         platformClasses += " filterable"
     }
+    var versionIcons = ``;
+    var versionClasses = ``;
+    if(addon.game_versions != null){
+        addon.game_versions.sort();
+        addon.game_versions.forEach((version) => {
+            versionIcons += `<img src="./versionIcons/${version}.png" alt="${version} icon" class="versionIcon">`
+            versionClasses += ` v${version}`;
+        })
+    }
+
+    var platformDivider = "";
+    if(versionIcons != "" && platformIcons != ""){
+        platformDivider = `<div class="platformDivider"></div>`
+    }
 
     var links = makeLinks(addon);
 
@@ -270,12 +303,12 @@ var genCard = (addon) => {
     
 
     var card = `
-    <div class="addonCard ${platformClasses} ${addon.type}TypeCard" id="${addon.name}Card">
+    <div class="addonCard ${platformClasses} ${versionClasses} ${addon.type}TypeCard" id="${addon.name}Card">
         <div class="addonCardHeader">
             <img src="${iconUrl}" alt="${addon.name} icon" class="addonIcon">
             <h3 class="addonTitle${addon.hex_provided ? " hexProvidedTitle" : ""}">${addon.name}</h3>
         </div>
-        <div class="platformShelf">${platformIcons}</div>
+        <div class="platformShelf">${platformIcons} ${platformDivider} ${versionIcons}</div>
         <p class="addonDescription">${addon.description}</p>
         <div class="linkShelf">${links}</div>
         ${banner}

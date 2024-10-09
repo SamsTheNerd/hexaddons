@@ -195,6 +195,7 @@ select:hover {
     width: auto;
     grid-auto-flow: column;
     justify-items: space-between;
+    align-items: center;
 }
 
 .platformButton{
@@ -312,6 +313,13 @@ select:hover {
     height: auto;
 }
 
+.versionIcon{
+    width: 100%;
+    height: auto;
+    -webkit-filter: drop-shadow(0 0 1px var(--mediapink));
+    filter: drop-shadow(0 0 1px var(--mediapink));
+}
+
 .addonCard p{
     position: relative;
     width: 90%;
@@ -341,19 +349,6 @@ select:hover {
     bottom: 0;
     width: 25%;
 }
-
-/* 
-
-.bookLink{
-    position: relative;
-    margin-left: auto;
-    margin-bottom: auto;
-}
-
-.fakeItem{
-    margin-top: auto; 
-    visibility: hidden;
-} */
 
 .linkShelf a {
     width: 100%;
@@ -463,40 +458,18 @@ select:hover {
     transition: opacity 0.25s;
 }
 
-/* there's almost certainly a better way to do this */
-
-.forge .addonCard.forge {
-    display: flex!important;
+.platformDivider{
+    width: 2px;
+    background-color: var(--mediapink);
+    height: 75%;
+    align-self: center;
+    justify-self: center;
 }
 
-.neoforge .addonCard.neoforge {
-    display: flex!important;
-}
-
-.quilt .addonCard.quilt {
-    display: flex!important;
-}
-
-.fabric .addonCard.fabric {
-    display: flex!important;
-}
-
-/* platform buttons */
-
-.forge #forgeButton {
-    filter: none;
-}
-
-.neoforge #neoforgeButton {
-    filter: none;
-}
-
-.quilt #quiltButton {
-    filter: none;
-}
-
-.fabric #fabricButton {
-    filter: none;
+.platformDivider.bigDivider{
+    margin-right: 8px;
+    height: 60% !important;
+    margin-bottom: 0.5em;
 }
 
 @media (max-aspect-ratio: 18/10) {
