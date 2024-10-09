@@ -234,5 +234,11 @@
         "name": "Hexcellular",
         "modrinth_url": "https://modrinth.com/mod/hexcellular",
         "type": "addon"
+    },
+    {
+        "name": "Hex Conjuring",
+        "modrinth_url": "https://modrinth.com/mod/hex-conjuring",
+        "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/hex-conjuring",
+        "type": "addon"
     }
 ]
