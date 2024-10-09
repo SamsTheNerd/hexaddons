@@ -2,11 +2,11 @@
 var putPlatformButtons = () => {
     var platformButtons = "";
     PLATFORMS.forEach((platform) => {
-        platformButtons += `<img src="./platformIcons/${platform}Icon.png" class="platformButton" id="${platform}Button" onclick="togglePlatform('${platform}')">`
+        platformButtons += `<img src="./platformIcons/${platform}Icon.png" class="platformButton" id="${platform}Button" onclick="togglePlatform('${platform}')" title="filter for ${platform}">`
     })
     var versionButtons = "";
     GAME_VERSIONS.forEach((version) => {
-        versionButtons += `<img src="./versionIcons/${version}.png" class="platformButton" id="v${version}Button" onclick="toggleVersion('${version}')">`
+        versionButtons += `<img src="./versionIcons/${version}.png" class="platformButton" id="v${version}Button" onclick="toggleVersion('${version}')" title="filter for v${version.replaceAll("-", ".")}">`
     })
     document.getElementById("addonPlatformButtons").innerHTML = platformButtons + `<div class="platformDivider bigDivider"></div>` + versionButtons;
     updateFilterStyling();

@@ -264,7 +264,7 @@ var genCard = (addon) => {
     if(addon.platforms != null){
         addon.platforms.sort();
         addon.platforms.forEach((platform) => {
-            platformIcons += `<img src="./platformIcons/${platform}Icon.png" alt="${platform} icon" class="platformIcon">`
+            platformIcons += `<img src="./platformIcons/${platform}Icon.png" alt="${platform} icon" class="platformIcon" title="available for ${platform}">`
             platformClasses += ` ${platform}`;
         })
     }
@@ -276,7 +276,7 @@ var genCard = (addon) => {
     if(addon.game_versions != null){
         addon.game_versions.sort();
         addon.game_versions.forEach((version) => {
-            versionIcons += `<img src="./versionIcons/${version}.png" alt="${version} icon" class="versionIcon">`
+            versionIcons += `<img src="./versionIcons/${version}.png" alt="${version} icon" class="versionIcon" title="available for v${version.replaceAll("-", ".")}">`
             versionClasses += ` v${version}`;
         })
     }
