@@ -240,5 +240,17 @@
         "modrinth_url": "https://modrinth.com/mod/hex-conjuring",
         "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/hex-conjuring",
         "type": "addon"
+    },
+    {
+        "name": "Hex-Ars Linker",
+        "modrinth_url": "https://modrinth.com/mod/hex-ars-linker",
+        "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/hex-ars-linker",
+        "type": "interop"
+    },
+    {
+        "name": "HexParse",
+        "modrinth_url": "https://modrinth.com/mod/hexparse",
+        "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/hexparse",
+        "type": "addon"
     }
 ]
