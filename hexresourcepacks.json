@@ -4,6 +4,11 @@
         "modrinth_url": "https://modrinth.com/resourcepack/hexture-backport"
     },
     {
+        "name": "Better Hex Particle",
+        "modrinth_url": "https://modrinth.com/resourcepack/better-hex-particle",
+        "description": "Makes the hex particle more pixelated."
+    },
+    {
         "name": "3D Staves",
         "curseforge_url": "https://www.curseforge.com/minecraft/texture-packs/custom-3d-staves-for-hex-casting",
         "icon_url": "./addonIcons/3dStaves.png",
