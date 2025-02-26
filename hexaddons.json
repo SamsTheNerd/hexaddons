@@ -1,11 +1,25 @@
 [
     {
+        "name": "Dynamic Trees - Hexcasting",
+        "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/dynamic-trees-hexcasting",
+        "modrinth_url": "https://modrinth.com/mod/dynamic-trees-hexcasting",
+        "type": "addon"
+    },
+    {
+        "name": "HexMapping",
+        "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/hexmapping",
+        "modrinth_url": "https://modrinth.com/mod/hexmapping",
+        "type": "addon"
+    },
+    {
         "name": "HexWeb",
+        "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/hexweb",
         "modrinth_url": "https://modrinth.com/mod/hexweb",
         "type": "addon"
     },
     {
         "name": "HexGender",
+        "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/hexgender",
         "modrinth_url": "https://modrinth.com/mod/hexgender",
         "type": "addon"
     },
