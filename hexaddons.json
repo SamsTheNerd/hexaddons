@@ -3,7 +3,7 @@
         "name": "Dynamic Trees - Hexcasting",
         "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/dynamic-trees-hexcasting",
         "modrinth_url": "https://modrinth.com/mod/dynamic-trees-hexcasting",
-        "type": "addon"
+        "type": "interop"
     },
     {
         "name": "HexMapping",
