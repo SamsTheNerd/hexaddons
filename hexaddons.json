@@ -263,5 +263,10 @@
         "name": "Hex Cassettes",
         "modrinth_url": "https://modrinth.com/mod/hexcassettes",
         "type": "addon"
+    },
+    {
+        "name": "Phlexiful",
+        "modrinth_url": "https://modrinth.com/mod/phlexiful",
+        "type": "addon"
     }
 ]
