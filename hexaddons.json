@@ -268,6 +268,12 @@
         "type": "addon"
     },
     {
+        "name": "HexFlow",
+        "modrinth_url": "https://modrinth.com/mod/hexflow",
+        "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/hexflow",
+        "type": "addon"
+    },
+    {
         "name": "Hex Thingy",
         "modrinth_url": "https://modrinth.com/mod/hexthingy",
         "description": "Adds a Vex to Allay spell, a damage spell, and a few other bits.",
