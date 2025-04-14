@@ -288,5 +288,10 @@
         "name": "Phlexiful",
         "modrinth_url": "https://modrinth.com/mod/phlexiful",
         "type": "addon"
+    },
+    {
+        "name": "Hex Machina",
+        "modrinth_url": "https://modrinth.com/mod/hex-machina",
+        "type": "addon"
     }
 ]
