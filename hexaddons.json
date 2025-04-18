@@ -218,6 +218,7 @@
         "name": "Complex Hex",
         "description": "Adds patterns & things such as Quaternions and ways to manipulate Display Entities",
         "modrinth_url": "https://modrinth.com/mod/complex-hex",
+        "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/complex-hex",
         "type": "addon"
     },
     {
@@ -292,6 +293,34 @@
     {
         "name": "Hex Machina",
         "modrinth_url": "https://modrinth.com/mod/hex-machina",
+        "type": "addon"
+    },
+    {
+        "name": "Hexchanting",
+        "modrinth_url": "https://modrinth.com/mod/hexchanting",
+        "type": "addon"
+    },
+    {
+        "name": "HexOverpowered",
+        "modrinth_url": "https://modrinth.com/mod/hexoverpowered",
+        "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/hexoverpowered",
+        "type": "addon",
+        "description": "Adds OP mechanics such as displaying spells in casting items, removing vanilla restrictions, mote nexus GUI/hopper, and more."
+    },
+    {
+        "name": "Hextrogen",
+        "modrinth_url": "https://modrinth.com/mod/hextrogen",
+        "type": "interop"
+    },
+    {
+        "name": "Hexxy Attributes",
+        "modrinth_url": "https://modrinth.com/mod/hexxyattributes",
+        "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/hexxy-attributes",
+        "type": "addon"
+    },
+    {
+        "name": "Hexcasting Media Display",
+        "modrinth_url": "https://modrinth.com/mod/hexcasting-media-display",
         "type": "addon"
     }
 ]

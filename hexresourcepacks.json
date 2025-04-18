@@ -4,6 +4,10 @@
         "modrinth_url": "https://modrinth.com/resourcepack/hexture-backport"
     },
     {
+        "name": "Amethyst Frames",
+        "modrinth_url": "https://modrinth.com/resourcepack/amethyst-frames"
+    },
+    {
         "name": "Better Hex Particle",
         "modrinth_url": "https://modrinth.com/resourcepack/better-hex-particle",
         "description": "Makes the hex particle more pixelated."
