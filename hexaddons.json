@@ -9,7 +9,7 @@
         "name": "HexMapping",
         "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/hexmapping",
         "modrinth_url": "https://modrinth.com/mod/hexmapping",
-        "type": "addon"
+        "type": "interop"
     },
     {
         "name": "HexWeb",
@@ -21,12 +21,12 @@
         "name": "HexGender",
         "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/hexgender",
         "modrinth_url": "https://modrinth.com/mod/hexgender",
-        "type": "addon"
+        "type": "interop"
     },
     {
         "name": "Hexxy Skies (Hex Sky)",
         "modrinth_url": "https://modrinth.com/mod/hexsky",
-        "type": "addon"
+        "type": "interop"
     },
     {
         "name": "Hexal",
@@ -195,7 +195,7 @@
     {
         "name": "Hex Ways",
         "modrinth_url":"https://modrinth.com/mod/hex-ways",
-        "type": "addon"
+        "type": "interop"
     },
     {
         "name": "HexCircus",
@@ -243,7 +243,7 @@
         "name": "HexJS",
         "modrinth_url": "https://modrinth.com/mod/hexjs",
         "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/hexjs",
-        "type": "addon"
+        "type": "interop"
     },
     {
         "name": "Hexcellular",
