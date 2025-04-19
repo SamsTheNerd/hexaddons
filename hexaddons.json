@@ -322,5 +322,10 @@
         "name": "Hexcasting Media Display",
         "modrinth_url": "https://modrinth.com/mod/hexcasting-media-display",
         "type": "addon"
+    },
+    {
+        "name": "Hexpats",
+        "modrinth_url": "https://modrinth.com/mod/hexpats",
+        "type": "addon"
     }
 ]
