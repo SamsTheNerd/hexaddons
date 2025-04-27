@@ -23,5 +23,9 @@
         "curseforge_url": "https://curseforge.com/minecraft/texture-packs/stupid-wisp-shut-up",
         "icon_url": "./addonIcons/wispsilence.jpg",
         "description": "Disables wisp casting noises."
+    },
+    {
+        "name": "Retextured Hexxy Dimentions Block",
+        "modrinth_url": "https://modrinth.com/resourcepack/rhdb"
     }
 ]
