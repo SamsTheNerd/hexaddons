@@ -327,5 +327,12 @@
         "name": "Hexpats",
         "modrinth_url": "https://modrinth.com/mod/hexpats",
         "type": "addon"
+    },
+	{
+        "name": "HexStruction",
+        "description": "Adds Structure iotas to consume, manipulate, view, and place regions of the world itself.",
+        "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/hexstruction",
+        "modrinth_url": "https://modrinth.com/mod/hexstruction",
+        "type": "addon"
     }
 ]
