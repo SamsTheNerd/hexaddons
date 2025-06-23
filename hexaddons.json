@@ -334,5 +334,12 @@
         "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/hexstruction",
         "modrinth_url": "https://modrinth.com/mod/hexstruction",
         "type": "addon"
+    },
+	{
+        "name": "Moves the Mind",
+        "description": "Moving Media Moves the Mind, as they say. And boy can you move media. Adds a suite of patterns to summon and control Carpetmod player entities.",
+        "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/moves-the-mind",
+        "modrinth_url": "https://modrinth.com/mod/moves-the-mind",
+        "type": "interop"
     }
 ]
