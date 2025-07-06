@@ -49,6 +49,13 @@
         "type": "addon"
     },
     {
+        "name": "HexMu",
+        "description": "Adds a few miscellaneous mostly iota-related patterns.",
+	"source_name": "Codeberg",
+	"source_url": "https://codeberg.org/poollovernathan/hexmu",
+        "type": "addon"
+    },
+    {
         "name": "Ducky Peripherals",
         "description": "Adds the Focal Port, which allows direct data transfer between Hex Casting and ComputerCraft. Also allows wrapping spell circles and akashic libraries as peripherals.",
         "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/ducky-periphs",
