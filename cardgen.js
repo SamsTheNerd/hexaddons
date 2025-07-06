@@ -289,7 +289,7 @@ var makeLinks = (addon) => {
     }
     if(addon.source_url != null){
         links += `<a target="_blank" href="${addon.source_url}" class="addonLink sourceLink">
-            <img src="./otherIcons/GithubIcon.png" title="Source" alt="GitHub Icon" class="linkIcon">
+            <img src="./otherIcons/${addon.source_name || "GitHub"}Icon.png" title="Source" alt="${addon.source_name || "GitHub"} Icon" class="linkIcon">
         </a>`
     }
     if(addon.book_url != null){
