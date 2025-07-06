@@ -3,7 +3,7 @@ var fetchFullModData = (modid) => {
     .then((response) => response.json());
 }
 
-const modrinthRE = new RegExp(".*modrinth\.com\/(?:(?:mod)|(?:resourcepack))\/([a-zA-Z\-]+).*");
+const modrinthRE = new RegExp(".*modrinth\.com\/(?:(?:mod)|(?:resourcepack))\/([0-9a-zA-Z\-]+).*");
 var slugsToNames = {};
 
 var idFromUrl = (url) => {
