@@ -30,6 +30,7 @@ var getModDataMulti =(addons) => {
         var dataObj = {};
         for(const data of datas){
             dataObj[slugsToNames[data.slug]] = {
+                team_id: data["team"],
                 icon_url: data["icon_url"],
                 platforms: data["loaders"],
                 source_url: data["source_url"],
@@ -40,6 +41,21 @@ var getModDataMulti =(addons) => {
                 updated_date: Date.parse(data["updated"]),
                 description: data["description"],
             }
+        }
+        return dataObj;
+    })
+}
+
+var getTeamDataMulti =(teamIds) => {
+    var teamIdsStr = teamIds.map(s => `"${s}"`).join(",");
+    return fetch(`https://api.modrinth.com/v2/teams?ids=[${teamIdsStr}]`)
+    .then(response => response.json())
+    .then(datas => {
+        var dataObj = {};
+        for(const data of datas){
+            if(data.length == 0) continue;
+            teamId = data[0].team_id
+            dataObj[teamId] = data.flatMap(role => role.user.username);
         }
         return dataObj;
     })

@@ -84,7 +84,8 @@
         "type": "interop",
         "platforms": ["forge"],
         "source_url": "https://github.com/Alexthw46/Ars-Scalaes",
-        "hex_provided": false
+        "hex_provided": false,
+        "authors": ["alexth99"]
     },
     {
         "name": "Gravity API",

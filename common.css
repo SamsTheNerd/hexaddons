@@ -269,7 +269,7 @@ select:hover {
     box-shadow: 0 0 0.7rem -0.2rem var(--mediapink);
 }
 
-.addonCard .addonTitle{
+.addonCard .addonSubheader{
     width: 66%;
     height: auto;
     position: relative;
@@ -279,7 +279,30 @@ select:hover {
     left: 5%;
     float: left;
     word-break: break-word;
+    justify-content: start;
+    align-content: start;
+    display: flex;
+    flex-direction: column;
+}
+
+.addonCard .addonTitle{
+    margin-bottom:0;
+    margin-top: 0;
     align-content: center;
+}
+
+.addonAuthor{
+    font-style: italic;
+}
+
+.toolCard .addonTitle{
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+    left: 5%;
+    width: 66%;
+    height: auto;
+    position: relative;
+    padding-top: 10%;
 }
 
 
@@ -494,4 +517,12 @@ select:hover {
 
 #sourceLink{
     font-size: 1.5rem;
+}
+
+/* 
+author specific styling here because i think that's fun
+*/
+
+.authorSpecific-SamsTheNerd{
+    color: #69eb96;
 }

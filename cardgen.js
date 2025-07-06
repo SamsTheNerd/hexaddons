@@ -6,6 +6,8 @@ var INTEROP_CARDS = {};
 var RESOURCE_PACK_DATA = {};
 var RESOURCE_PACK_CARDS = {};
 
+var TEAM_DATA = {};
+var AUTHOR_DISPLAY_DATA = undefined
 
 const ADDON_CARD_TYPES = {
     addon: ADDON_CARDS,
@@ -43,6 +45,28 @@ var handleMultiAddonData = (dataHolder, datas) => {
         handleAddonData(addon, datas[dataName])
     }
     Object.keys(addonTypes).map(t => displayAddonCards(t))
+    getTeamDataMulti(Object.values(datas).map(d => d.team_id)).then(handleTeamDataUpdate);
+}
+
+function refreshAllCards(){
+    for(const dataHolderType of Object.keys(DATA_HOLDERS)){
+        var dataHolder = DATA_HOLDERS[dataHolderType];
+        for(const addon of Object.values(dataHolder)){
+            genCard(addon);
+        }
+        displayAddonCards(dataHolderType)
+    }
+}
+
+var handleTeamDataUpdate = (teamData) => {
+    for(const teamId of Object.keys(teamData)){
+        if(!TEAM_DATA[teamId]) TEAM_DATA[teamId] = []
+        for(const member of teamData[teamId]){
+            if(TEAM_DATA[teamId].includes(member)) continue;
+            TEAM_DATA[teamId].push(member);
+        }
+    }
+    refreshAllCards();
 }
 
 var handleAddonData = (addon, data) => {
@@ -142,6 +166,18 @@ var getResourcePacks = () => {
     getModDataMulti(allDatapacks).then( datas => handleMultiAddonData(RESOURCE_PACK_DATA, datas));
     displayAddonCards("resourcepack");
     return allDatapacks;
+}
+
+var getAuthorData = () => {
+    if(AUTHOR_DISPLAY_DATA) return AUTHOR_DISPLAY_DATA;
+    var request = new XMLHttpRequest();
+    request.open("GET", "./authordata.json", false);
+    request.send(null)
+    AUTHOR_DISPLAY_DATA = JSON.parse(request.responseText);
+    for(const authorId of Object.keys(AUTHOR_DISPLAY_DATA)){
+        AUTHOR_DISPLAY_DATA[authorId].id = authorId;
+    }
+    return AUTHOR_DISPLAY_DATA;
 }
 
 // sort interop addons first by minor or not (so push ones that mostly just add recipes to the bottom) then by download count
@@ -313,12 +349,45 @@ var genCard = (addon) => {
         }
     }
     
+    var authorStr = "";
+    var authors = []
+    if(addon.authors) authors = authors = authors.concat(addon.authors.map(author => {
+        if(getAuthorData()[author]) return getAuthorData()[author]
+        return {
+            display: author
+        }
+    }));
+    // console.log(TEAM_DATA[addon.team_id])
+    if(TEAM_DATA[addon.team_id]){
+        authors = authors.concat(TEAM_DATA[addon.team_id].map(author => {
+            var authData = {
+                id: author,
+                display: author,
+                url: `https://modrinth.com/user/${author}`
+            };
+            if(getAuthorData()[author]){
+                Object.assign(authData, getAuthorData()[author])
+            }
+            return authData;
+        }));
+    }
+    // console.log(authors);
+    authorStr = authors.map(member => {
+        if(member.url){
+            return `<a target="_blank" class="addonAuthor authorSpecific-${member.id}" href="${member.url}">${member.display}</a>`
+        } else {
+            return `<p class="addonAuthor authorSpecific-${member.id}">${member.display}</p>`
+        }
+    }).join("")
 
     var card = `
     <div class="addonCard ${platformClasses} ${versionClasses} ${addon.type}TypeCard" id="${addon.name}Card">
         <div class="addonCardHeader">
             <img src="${iconUrl}" alt="${addon.name} icon" class="addonIcon">
-            <h3 class="addonTitle${addon.hex_provided ? " hexProvidedTitle" : ""}">${addon.name}</h3>
+            <div class="addonSubheader">
+                <h3 class="addonTitle${addon.hex_provided ? " hexProvidedTitle" : ""}">${addon.name}</h3>
+                ${authorStr}
+            </div>
         </div>
         <div class="platformShelf">${platformIcons} ${platformDivider} ${versionIcons}</div>
         <p class="addonDescription">${addon.description}</p>
@@ -333,37 +402,6 @@ var genCard = (addon) => {
 var putCard = (addon, containerId) => {
     var container = document.getElementById(containerId);
     container.innerHTML += genCard(addon);
-}
-
-var genInteropCard = (addon) => {
-    var platformIcons = ``;
-    addon.platforms.forEach((platform) => {
-        platformIcons += `<img src="./platformIcons/${platform}Icon.png" alt="${platform} icon" class="platformIcon">`
-    })
-    // if(addon.hex_provided){
-    //     platformIcons += "<span class='hexProvidedSpan'>|<img src='./otherIcons/hexxy.png' title='Hex Provided' alt='Hex Provided' class='platformIcon'></span>";
-    // }
-
-    var links = makeLinks(addon);
-    
-
-    var card = `
-    <div class="addonCard interopCard" id="${addon.name}Card">
-        <div class="addonCardHeader">
-            <h3 class="addonTitle${addon.hex_provided ? " hexProvidedTitle" : ""}">${addon.name}
-            </h3>
-        </div>
-        <div class="platformShelf">${platformIcons}</div>
-        <p class="addonDescription">${addon.description}</p>
-        <div class="linkShelf">${links}</div>
-    </div>
-    `
-    return card;
-}
-
-var putInteropCard = (addon, containerId) => {
-    var container = document.getElementById(containerId);
-    container.innerHTML += genInteropCard(addon);
 }
 
 var genToolCard = (tool) => {
