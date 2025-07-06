@@ -18,12 +18,12 @@ body{
 }
 
 h1{
-    font-size: 3vw;
+    font-size: 3rem;
     font-weight: bolder;
 }
 
 h2{
-    font-size: 2.5vw;
+    font-size: 2.5rem;
     text-align: center;
     width: 50vw;
     position: relative;
@@ -38,11 +38,11 @@ h2{
 }
 
 h3{
-    font-size: 1.7vw;
+    font-size: 1.7rem;
 }
 
 h4{
-    font-size: 1.5vw;
+    font-size: 1.5rem;
     text-align: center;
     width: 50vw;
     left: 25vw;
@@ -53,13 +53,13 @@ h4{
 }
 
 p {
-    font-size: 1.1vw;
+    font-size: 1.1rem;
     font-weight: 400;
     line-height: 1.4;
 }
 
 :root {
-    font-size: 1.1vw;
+    font-size: 0.9em;
 }
 
 a {
@@ -171,8 +171,8 @@ select:hover {
     left: 10vw;
     display: grid;
     grid-auto-flow: row;
-    justify-content: space-around;
-    grid-template-columns: 18vw 18vw 18vw 18vw;
+    justify-content: space-between;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
 }
 
 #addonsOptions{
@@ -187,7 +187,7 @@ select:hover {
 }
 
 #addonSortSelect{
-    margin-bottom: 1.25em;
+    margin-bottom: 1.5rem;
 }
 
 #addonPlatformButtons{
@@ -195,13 +195,13 @@ select:hover {
     width: auto;
     grid-auto-flow: column;
     justify-items: space-between;
-    align-items: center;
+    align-items: start;
 }
 
 .platformButton{
     cursor: pointer;
     aspect-ratio: 1 / 1;
-    width: 2em;
+    width: 2rem;
     margin-right: 0.5em;
     position: relative;
     top: 0;
@@ -215,19 +215,19 @@ select:hover {
 
 .platformButton:hover{
     margin-top: 0;
-    width: 2.2em;
+    width: 2.2rem;
     top: 0.1em;
-    left: -0.1em;
-    margin-right: 0.3em;
+    left: -0.1rem;
+    margin-right: 0.3rem;
 }
 
 .addonCard{
-    width: 100%;
+    width: 93%;
     height: min-content;
-    min-height: 22.5vw;
+    min-height: 95%;
     position: relative;
     background: var(--slatedark);
-    --this-border-radius: 1vw;
+    --this-border-radius: 1rem;
     border-radius: var(--this-border-radius);
     --top-color: var(--slatemid);
     --bottom-color: var(--mediapink);
@@ -245,29 +245,28 @@ select:hover {
 }
 
 .addonCard:hover{
-    padding-left: 0.25vw;
-    margin-left: -0.25vw;
-    padding-right: 0.25vw;
+    padding-left: 0.25rem;
+    margin-left: -0.25rem;
+    padding-right: 0.25rem;
     --backOpacity: 1;
 }
 
 .addonCard .addonIcon{
     aspect-ratio: 1;
     width: 27%;
+    height: 100%;
     position: relative;
-    top: 1vw;
+    top: 1rem;
     left: 0;
     border-radius: 15%;
-    margin-bottom: 5%;
-    display:inline;
-    float: left;
-    align-self: start;
-    box-shadow: 0 0 0.6vw -0.2vw var(--mediapink);
+    margin-bottom: 1rem;
+    box-shadow: 0 0 0.6rem -0.2rem var(--mediapink);
     transition: box-shadow 0.25s;
+    image-rendering: pixelated;
 }
 
 .addonCard:hover .addonIcon {
-    box-shadow: 0 0 0.7vw -0.2vw var(--mediapink);
+    box-shadow: 0 0 0.7rem -0.2rem var(--mediapink);
 }
 
 .addonCard .addonTitle{
@@ -288,7 +287,7 @@ select:hover {
     height: max-content;
     width: 90%;
     left: 5%;
-    padding-bottom: 1vw;
+    padding-bottom: 1rem;
     position: relative;
     border-bottom: solid 2px var(--mediapink);
     display: flex;
@@ -303,9 +302,9 @@ select:hover {
     height: fit-content;
     margin-bottom: 0;
     padding-bottom: 0;
-    grid-template-columns: repeat(auto-fit, 10%);
+    grid-template-columns: repeat(auto-fit, 2rem);
     justify-content: center;
-    grid-gap: 0.25vw;
+    grid-gap: 0.25rem;
 }
 
 .platformIcon{
@@ -414,9 +413,8 @@ select:hover {
 }
 
 .toolCard{
-    min-height: 15vw;
+    /* min-height: 15vw; */
     height: fit-content;
-    /* margin-bottom: 2vw; */
 }
 
 .toolCard a{
@@ -472,134 +470,11 @@ select:hover {
     margin-bottom: 0.5em;
 }
 
-@media (max-aspect-ratio: 18/10) {
-    .addonSectionGrid{
-        left: 15vw;
-        width: 70vw;
-        grid-template-columns: 20vw 20vw 20vw;
-    }
+@media (width <= 81rem) {
 
-    h1{
-        font-size: 3vw;
-    }
-
-    h2{
-        font-size: 2.5vw;
-    }
-
-    h3{
-        font-size: 2vw;
-    }
-
-    h4{
-        font-size: 1.5vw;
-    }
-    
-    p {
-        font-size: 1.3vw;
-    }
-
-    :root{
-        font-size: 1.3vw;
-    }
-
-    .addonCard{
-        min-height: 25vw;
-    }
-
-    .interopCard{
-        min-height: 20vw;
-    }
-    
-    .toolCard{
-        min-height: 15vw;
-    }
-}
-
-  
-@media (max-aspect-ratio: 10/10) {
     .addonSectionGrid{
         left: 5vw;
         width: 90vw;
-        grid-template-columns: 40vw 40vw;
-    }
-
-    h1{
-        font-size: 6vw;
-    }
-
-    h2{
-        font-size: 4vw;
-    }
-
-    h3{
-        font-size: 4vw;
-    }
-
-    h4{
-        font-size: 2vw;
-    }
-    
-    p {
-        font-size: 2.25vw;
-        font-weight: 400;
-        line-height: 1.2;
-    }
-
-    :root {
-        font-size: 2.25vw;
-    }
-
-    .addonCard{
-        min-height: 40vw;
-    }
-
-    .interopCard{
-        min-height: 30vw;
-    }
-    
-    .toolCard{
-        min-height: 30vw;
-    }
-}
-
-@media (max-aspect-ratio: 4/10) {
-    .addonSectionGrid{
-        left: 5vw;
-        width: 90vw;
-        grid-template-columns: 75vw;
-    }
-
-    h1{
-        font-size: 7vw;
-    }
-
-    h2{
-        font-size: 5vw;
-    }
-
-    h3{
-        font-size: 6vw;
-    }
-
-    h4{
-        font-size: 4vw;
-    }
-    
-    p {
-        font-size: 4vw;
-    }
-
-    :root {
-        font-size: 4vw;
-    }
-
-    .addonCard{
-        min-height: 0;
-    }
-
-    .addonIcon{
-        top: 2vw !important;
     }
 }
 
@@ -608,7 +483,7 @@ select:hover {
     left: 25%;
     position: relative;
     text-align: center;
-    font-size: 1.5vw;
+    font-size: 1.5rem;
     margin-top: 5vw;
     margin-bottom: 2vw;
 }
@@ -618,5 +493,5 @@ select:hover {
 }
 
 #sourceLink{
-    font-size: 1.5vw;
+    font-size: 1.5rem;
 }
