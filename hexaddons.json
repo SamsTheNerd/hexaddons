@@ -341,5 +341,43 @@
         "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/moves-the-mind",
         "modrinth_url": "https://modrinth.com/mod/moves-the-mind",
         "type": "interop"
+    },
+    {
+        "name": "Iotic Blocks",
+        "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/ioticblocks",
+        "modrinth_url": "https://modrinth.com/mod/ioticblocks",
+        "type": "addon"
+    },
+    {
+        "name": "HexText",
+        "modrinth_url": "https://modrinth.com/mod/hextext",
+        "type": "addon"
+    },
+    {
+        "name": "Hierophantics",
+        "curseforge_url": "https://curseforge.com/minecraft/mc-mods/hierophantics",
+        "modrinth_url": "https://modrinth.com/mod/hierophantics",
+        "type": "addon"
+    },
+    {
+        "name": "Caduceus",
+        "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/caduceus",
+        "modrinth_url": "https://modrinth.com/mod/caduceus",
+        "type": "addon"
+    },
+    {
+        "name": "HexCreating",
+        "modrinth_url": "https://modrinth.com/mod/hexcreating",
+        "type": "interop"
+    },
+    {
+        "name": "HexDeco",
+        "modrinth_url": "https://modrinth.com/mod/hexdeco",
+        "type": "addon"
+    },
+    {
+        "name": "Help From Hexxy",
+        "modrinth_url": "https://modrinth.com/mod/help-from-hexxy",
+        "type": "addon"
     }
 ]
