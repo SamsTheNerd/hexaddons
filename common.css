@@ -297,7 +297,7 @@ select:hover {
     position: relative;
     width: 90%;
     left: 5%;
-    top: 0.5vw;
+    top: 0.5rem;
     display: grid;
     height: fit-content;
     margin-bottom: 0;
