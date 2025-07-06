@@ -35,9 +35,19 @@ const GAME_VERSIONS_MAP = {
     "1.20.1": "1-20-1"
 }
 
+var handleMultiAddonData = (dataHolder, datas) => {
+    var addonTypes = {};
+    for(const dataName of Object.keys(datas)){
+        var addon = dataHolder[dataName]
+        addonTypes[addon.type] = true;
+        handleAddonData(addon, datas[dataName])
+    }
+    Object.keys(addonTypes).map(t => displayAddonCards(t))
+}
+
 var handleAddonData = (addon, data) => {
     var dataHolder = DATA_HOLDERS[addon.type];
-    console.log(`${addon.name} data: ${data}`);
+    // console.log(`${addon.name} data: ${data}`);
     Object.keys(data).forEach((key) => {
         // do some nonsense to get as many platforms as possible
         if( key == "platforms"){
@@ -65,7 +75,7 @@ var handleAddonData = (addon, data) => {
                 if(GAME_VERSIONS_MAP[version] != null){
                     versions[GAME_VERSIONS_MAP[version]] = true;
                 } else {
-                    console.warn(`${addon.name} has hex-less version: ${version}`);
+                    // console.warn(`${addon.name} has hex-less version: ${version}`);
                 }
             })
             dataHolder[addon.name][key] = Object.keys(versions);
@@ -73,7 +83,7 @@ var handleAddonData = (addon, data) => {
     });
     // maybe some 're-sort' type of function needs to be called here
     genCard(addon);
-    displayAddonCards(addon.type);
+    // displayAddonCards(addon.type);
 }
 
 // initializes stuff a good bit
@@ -85,13 +95,14 @@ var getAddons = () => {
     allAddons.forEach((addon) => {
         if(ADDON_DATA[addon.name] == null){
             ADDON_DATA[addon.name] = addon;
-            getModData(addon).then((data) => {
-                handleAddonData(addon, data, ADDON_DATA);
-            });
+            // getModData(addon).then((data) => {
+            //     handleAddonData(addon, data, ADDON_DATA);
+            // });
         }
         genCard(addon); // just an initial thing
     });
     displayAddonCards();
+    getModDataMulti(allAddons).then( datas => handleMultiAddonData(ADDON_DATA, datas));
     return allAddons;
 }
 
@@ -121,13 +132,14 @@ var getResourcePacks = () => {
         addon.type = "resourcepack";
         if(RESOURCE_PACK_DATA[addon.name] == null){
             RESOURCE_PACK_DATA[addon.name] = addon;
-            getModData(addon).then((data) => {
-                data.platforms = [];
-                handleAddonData(addon, data, RESOURCE_PACK_DATA);
-            });
+            // getModData(addon).then((data) => {
+            //     data.platforms = [];
+            //     handleAddonData(addon, data, RESOURCE_PACK_DATA);
+            // });
         }
         genCard(addon); // just an initial thing
     });
+    getModDataMulti(allDatapacks).then( datas => handleMultiAddonData(RESOURCE_PACK_DATA, datas));
     displayAddonCards("resourcepack");
     return allDatapacks;
 }
