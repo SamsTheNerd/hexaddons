@@ -89,7 +89,7 @@
     },
     {
         "name": "Gravity API",
-        "description": "Adds patterns that allow changing an entity's gravity direction (eg. walking on walls).",
+        "description": "Adds patterns that allow changing an entity's gravity direction (eg. walking on walls). Kinda broken in 1.19.2 and removed in 1.20",
         "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/gravityapi",
         "modrinth_url": "https://modrinth.com/mod/gravity-api",
         "type": "interop",
