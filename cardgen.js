@@ -8,6 +8,7 @@ var RESOURCE_PACK_CARDS = {};
 
 var TEAM_DATA = {};
 var AUTHOR_DISPLAY_DATA = undefined
+var LINK_MATCHERS = undefined
 
 const ADDON_CARD_TYPES = {
     addon: ADDON_CARDS,
@@ -180,6 +181,15 @@ var getAuthorData = () => {
     return AUTHOR_DISPLAY_DATA;
 }
 
+var getLinkMatchers = () => {
+    if(LINK_MATCHERS) return LINK_MATCHERS;
+    var request = new XMLHttpRequest();
+    request.open("GET", "./linkmatchers.json", false);
+    request.send(null)
+    LINK_MATCHERS = JSON.parse(request.responseText);
+    return LINK_MATCHERS;
+}
+
 // sort interop addons first by minor or not (so push ones that mostly just add recipes to the bottom) then by download count
 const interopSort = (a, b) => {
     if(a.minor == b.minor){
@@ -288,8 +298,20 @@ var makeLinks = (addon) => {
         </a>`
     }
     if(addon.source_url != null){
+        var sourceIcon;
+        if(addon.source_icon_url){
+            sourceIcon = addon.source_icon_url;
+        } else {
+            sourceIcon = "/otherIcons/GitHubIcon.png"; // idk valid fallback
+            for(const linkType of getLinkMatchers()){
+                if(new RegExp(linkType.matcher).test(addon.source_url)){
+                    sourceIcon = linkType.icon;
+                    break;
+                }
+            }
+        }
         links += `<a target="_blank" href="${addon.source_url}" class="addonLink sourceLink">
-            <img src="./otherIcons/GithubIcon.png" title="Source" alt="GitHub Icon" class="linkIcon">
+            <img src="${sourceIcon}" title="Source" alt="GitHub Icon" class="linkIcon">
         </a>`
     }
     if(addon.book_url != null){
@@ -376,7 +398,7 @@ var genCard = (addon) => {
         if(member.url){
             return `<a target="_blank" class="addonAuthor authorSpecific-${member.id}" href="${member.url}">${member.display}</a>`
         } else {
-            return `<p class="addonAuthor authorSpecific-${member.id}">${member.display}</p>`
+            return `<a class="addonAuthor authorSpecific-${member.id}">${member.display}</a>`
         }
     }).join("")
 

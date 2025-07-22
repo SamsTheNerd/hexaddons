@@ -380,5 +380,31 @@
         "name": "Help From Hexxy",
         "modrinth_url": "https://modrinth.com/mod/help-from-hexxy",
         "type": "addon"
+    },
+    {
+        "name": "Hexportation",
+        "modrinth_url": "https://modrinth.com/mod/hexportation",
+        "type": "addon"
+    },
+    {
+        "name": "Heartxxy",
+        "modrinth_url": "https://modrinth.com/mod/heartxxy",
+        "type": "addon"
+    },
+    {
+        "name": "Appendhextome",
+        "type": "addon",
+        "description": "Kubejs based addon. Store iotas in your appendix! Die of appendicitis! Hear gross sounds!",
+        "icon_url": "./addonIcons/appendhextome.png",
+        "platforms": ["forge", "fabric"],
+        "game_versions": ["1-20-1"],
+        "source_url": "https://github.com/Dryym/appendhextome_kubejs/",
+        "authors": ["Dryym"]
+    },
+    {
+        "name": "HexMu",
+        "description": "Adds a few miscellaneous mostly iota-related patterns.",
+        "source_url": "https://codeberg.org/poollovernathan/hexmu",
+        "type": "addon"
     }
 ]

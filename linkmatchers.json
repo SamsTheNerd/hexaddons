@@ -1,0 +1,10 @@
+[
+    {
+        "matcher": "https:\\/\\/github\\.com",
+        "icon": "/otherIcons/GithubIcon.png"
+    },
+    {
+        "matcher": "https:\\/\\/codeberg\\.org",
+        "icon": "/otherIcons/CodebergIcon.png"
+    }
+]
