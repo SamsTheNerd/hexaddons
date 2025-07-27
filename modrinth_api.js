@@ -37,7 +37,7 @@ var getModDataMulti =(addons) => {
                 book_url: data["wiki_url"],
                 downloads: data["downloads"],
                 game_versions: data["game_versions"],
-                published_date: Date.parse(data["published"]),
+                published_date: Date.parse(data["approved"] || data["published"]),
                 updated_date: Date.parse(data["updated"]),
                 description: data["description"],
             }
