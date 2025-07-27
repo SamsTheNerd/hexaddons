@@ -406,5 +406,11 @@
         "description": "Adds a few miscellaneous mostly iota-related patterns.",
         "source_url": "https://codeberg.org/poollovernathan/hexmu",
         "type": "addon"
+    },
+    {
+        "name": "Slate Works",
+        "description": "Adds many new blocks and spells to Spell Circles.",
+        "modrinth_url": "https://modrinth.com/mod/slate-works",
+        "type": "addon"
     }
 ]
