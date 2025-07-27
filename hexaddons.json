@@ -411,9 +411,6 @@
         "name": "Slate Works",
         "description": "Adds many new blocks and spells to Spell Circles.",
         "modrinth_url": "https://modrinth.com/mod/slate-works",
-        "source_url": "https://github.com/Stick404/hexaddons/tree/slate_works",
-        "platforms": ["fabric"],
-        "game_versions": ["1-12-1"],
         "type": "addon"
     }
 ]
