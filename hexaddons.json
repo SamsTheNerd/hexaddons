@@ -412,5 +412,11 @@
         "description": "Adds many new blocks and spells to Spell Circles.",
         "modrinth_url": "https://modrinth.com/mod/slate-works",
         "type": "addon"
+    },
+    {
+        "name": "Lesser Teleport",
+        "description": "Ports Lesser Teleport from HexKinetics to 1.20.1 fabric.",
+        "modrinth_url": "https://modrinth.com/mod/lesser-teleport",
+        "type": "addon"
     }
 ]
