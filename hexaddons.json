@@ -418,5 +418,11 @@
         "description": "Ports Lesser Teleport from HexKinetics to 1.20.1 fabric.",
         "modrinth_url": "https://modrinth.com/mod/lesser-teleport",
         "type": "addon"
+    },
+    {
+        "name": "Lapisworks",
+        "description": "Enchant yourself. (optional; you're already enchanting)",
+        "modrinth_url": "https://modrinth.com/mod/lapisworks",
+        "type": "addon"
     }
 ]
