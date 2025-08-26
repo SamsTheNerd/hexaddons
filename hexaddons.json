@@ -418,5 +418,15 @@
         "description": "Ports Lesser Teleport from HexKinetics to 1.20.1 fabric.",
         "modrinth_url": "https://modrinth.com/mod/lesser-teleport",
         "type": "addon"
+    },
+    {
+        "name": "HexConnect",
+        "modrinth_url": "https://modrinth.com/mod/hexconnect",
+        "type": "addon"
+    },
+    {
+        "name": "Lapisworks",
+        "modrinth_url": "https://modrinth.com/mod/lapisworks",
+        "type": "addon"
     }
 ]
