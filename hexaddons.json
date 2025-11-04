@@ -428,5 +428,10 @@
         "name": "Lapisworks",
         "modrinth_url": "https://modrinth.com/mod/lapisworks",
         "type": "addon"
+    },
+    {
+        "name": "Hex Spell Wheel",
+        "modrinth_url": "https://modrinth.comd/mod/hex-spell-wheel",
+        "type": "addon"
     }
 ]
