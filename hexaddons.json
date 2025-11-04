@@ -420,8 +420,17 @@
         "type": "addon"
     },
     {
+<<<<<<< HEAD
         "name": "Lapisworks",
         "description": "Enchant yourself. (optional; you're already enchanting)",
+=======
+        "name": "HexConnect",
+        "modrinth_url": "https://modrinth.com/mod/hexconnect",
+        "type": "addon"
+    },
+    {
+        "name": "Lapisworks",
+>>>>>>> cc6df77ffc8c4e4a0b53ce50e52bcd9702e664dc
         "modrinth_url": "https://modrinth.com/mod/lapisworks",
         "type": "addon"
     }
