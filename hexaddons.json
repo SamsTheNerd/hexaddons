@@ -433,5 +433,11 @@
         "name": "Hex Spell Wheel",
         "modrinth_url": "https://modrinth.com/mod/hex-spell-wheel",
         "type": "addon"
+    },
+    {
+        "name": "Hexcessible",
+        "modrinth_url": "https://modrinth.com/mod/hexcessible",
+        "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/hexcessible",
+        "type": "addon"
     }
 ]
