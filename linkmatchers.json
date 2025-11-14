@@ -6,5 +6,9 @@
     {
         "matcher": "https:\\/\\/codeberg\\.org",
         "icon": "/otherIcons/CodebergIcon.png"
+    },
+    {
+        "matcher": "https:\\/\\/gitlab\\.com",
+        "icon": "/otherIcons/GitlabIcon.png"
     }
 ]
