@@ -295,7 +295,7 @@ var makeLinks = (addon) => {
         if(addon.source_icon_url){
             sourceIcon = addon.source_icon_url;
         } else {
-            sourceIcon = "/otherIcons/GitHubIcon.png"; // idk valid fallback
+            sourceIcon = "/otherIcons/GithubIcon.png"; // idk valid fallback
             for(const linkType of getLinkMatchers()){
                 if(new RegExp(linkType.matcher).test(addon.source_url)){
                     sourceIcon = linkType.icon;
