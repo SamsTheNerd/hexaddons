@@ -439,5 +439,10 @@
         "modrinth_url": "https://modrinth.com/mod/hexcessible",
         "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/hexcessible",
         "type": "addon"
+    },
+    {
+        "name": "Hexic",
+        "modrinth_url": "https://modrinth.com/mod/hexic",
+        "type": "addon"
     }
 ]
