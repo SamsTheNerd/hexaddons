@@ -444,5 +444,10 @@
         "name": "Hexic",
         "modrinth_url": "https://modrinth.com/mod/hexic",
         "type": "addon"
+    },
+    {
+        "name": "Yet Another Hex Addon",
+        "modrinth_url": "https://modrinth.com/mod/yaha",
+        "type": "addon"
     }
 ]
