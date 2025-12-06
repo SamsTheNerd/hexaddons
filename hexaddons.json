@@ -449,5 +449,10 @@
         "name": "Yet Another Hex Addon",
         "modrinth_url": "https://modrinth.com/mod/yaha",
         "type": "addon"
+    },
+    {
+        "name": "Hex SBM",
+        "modrinth_url": "https://modrinth.com/mod/hexsbm",
+        "type": "addon"
     }
 ]
