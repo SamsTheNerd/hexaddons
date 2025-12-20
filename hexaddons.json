@@ -454,5 +454,15 @@
         "name": "Hex SBM",
         "modrinth_url": "https://modrinth.com/mod/hexsbm",
         "type": "addon"
+    },
+    {
+        "name": "HexxyPlanes",
+        "modrinth_url": "https://modrinth.com/mod/hexxyplanes",
+        "type": "addon"
+    },
+    {
+        "name": "HexThings",
+        "modrinth_url": "https://modrinth.com/mod/hexthings",
+        "type": "addon"
     }
 ]
