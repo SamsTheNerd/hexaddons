@@ -458,11 +458,13 @@
     {
         "name": "HexxyPlanes",
         "modrinth_url": "https://modrinth.com/mod/hexxyplanes",
+        "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/hexxyplanes",
         "type": "addon"
     },
     {
         "name": "HexThings",
         "modrinth_url": "https://modrinth.com/mod/hexthings",
+        "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/hexthings",
         "type": "addon"
     }
 ]
