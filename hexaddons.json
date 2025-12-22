@@ -468,5 +468,10 @@
         "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/hexthings",
         "type": "addon",
         "authors": ["Sevens"]
+    },
+    {
+        "name": "Hexodus",
+        "modrinth_url": "https://modrinth.com/mod/hexodus",
+        "type": "addon"
     }
 ]
