@@ -459,19 +459,17 @@
         "name": "HexxyPlanes",
         "modrinth_url": "https://modrinth.com/mod/hexxyplanes",
         "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/hexxyplanes",
-        "type": "addon",
-        "authors": ["Sevens"]
+        "type": "addon"
     },
     {
         "name": "HexThings",
         "modrinth_url": "https://modrinth.com/mod/hexthings",
         "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/hexthings",
-        "type": "addon",
-        "authors": ["Sevens"]
+        "type": "addon"
     },
     {
         "name": "Hexodus",
         "modrinth_url": "https://modrinth.com/mod/hexodus",
-        "type": "addon"
+        "type": "interop"
     }
 ]
