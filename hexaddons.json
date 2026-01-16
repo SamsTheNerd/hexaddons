@@ -471,5 +471,10 @@
         "name": "Hexodus",
         "modrinth_url": "https://modrinth.com/mod/hexodus",
         "type": "interop"
+    },
+    {
+        "name": "Iotaworks",
+        "modrinth_url": "https://modrinth.com/mod/iotaworks",
+        "type": "addon"
     }
 ]
