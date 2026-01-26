@@ -528,7 +528,7 @@ author specific styling here because i think that's fun
 }
 .authorSpecific-Teal_Wolf_25{
     background: linear-gradient(to right, #007f7f, #00ffff);
-    text-decoration: wavy;
+    text-decoration: none;
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
