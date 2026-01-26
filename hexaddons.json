@@ -478,5 +478,15 @@
         "name": "Iotaworks",
         "modrinth_url": "https://modrinth.com/mod/iotaworks",
         "type": "addon"
+    },
+    {
+        "name": "Hexdentity",
+        "modrinth_url": "https://modrinth.com/mod/hexdentity",
+        "type": "addon"
+    },
+    {
+        "name": "aBitMoreHex: Recasted",
+        "modrinth_url": "https://modrinth.com/mod/abitmorehex-recasted",
+        "type": "addon"
     }
 ]
