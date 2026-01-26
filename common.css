@@ -527,5 +527,6 @@ author specific styling here because i think that's fun
     color: #69eb96;
 }
 .authorSpecific-Teal_Wolf_25{
-    color: #007f7f;
+    color: linear-gradient(to right, #007f7f, #00ffff);
+    text-decoration: wavy;
 }
