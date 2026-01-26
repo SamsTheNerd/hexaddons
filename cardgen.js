@@ -322,6 +322,9 @@ const DAY = 1000 * 60 * 60 * 24;
 // given an addon object make the card for it
 var genCard = (addon) => {
     var iconUrl = addon.icon_url;
+    if(iconUrl == null||iconUrl == undefined){
+        iconUrl = "./otherIcons/hexxy.png"
+    }
     var platformIcons = ``;
     var platformClasses = ``;
     if(addon.platforms != null){
