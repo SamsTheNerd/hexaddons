@@ -33,6 +33,7 @@
         "description": "Adds many utility patterns/spells (eg. entity health, item smelting), autonomous casting with wisps, and powerful item manipulation/storage.",
         "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/hexal/",
         "modrinth_url": "https://modrinth.com/mod/hexal/",
+        "book_url": "https://hexal.hexxy.media",
         "type": "addon"
     },
     {
@@ -40,6 +41,7 @@
         "description": "Adds matrix and string iotas, allowing things like complex calculations and chat commands.",
         "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/moreiotas/",
         "modrinth_url": "https://modrinth.com/mod/moreiotas/",
+        "book_url": "https://moreiotas.hexxy.media",
         "type": "addon"
     },
     {
