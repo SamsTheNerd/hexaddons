@@ -323,7 +323,7 @@ const DAY = 1000 * 60 * 60 * 24;
 var genCard = (addon) => {
     var iconUrl = addon.icon_url;
     if(iconUrl == null||iconUrl == undefined){
-        iconUrl = "./otherIcons/hexxy.png"
+        iconUrl = "./otherIcons/hexxy_question.png"
     }
     var platformIcons = ``;
     var platformClasses = ``;
