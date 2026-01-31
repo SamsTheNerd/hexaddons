@@ -493,6 +493,7 @@
         "name": "Hex Ways (1.20)",
         "modrinth_url": "https://modrinth.com/mod/hex-ways-1.20",
         "type": "interop",
-        "description":"An addon for Hex Casting that lets you make Portals with Immersive Portals. (Fork of Hex Ways to 1.20)"
+        "description":"An addon for Hex Casting that lets you make Portals with Immersive Portals. (Fork of Hex Ways to 1.20)",
+        "book_url":"https://shadowcube264.github.io/hexways-1.20.1/v/1.0.1/1.0/en_us/"
     }
 ]
