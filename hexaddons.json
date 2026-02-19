@@ -370,11 +370,6 @@
         "type": "addon"
     },
     {
-        "name": "HexCreating",
-        "modrinth_url": "https://modrinth.com/mod/hexcreating",
-        "type": "interop"
-    },
-    {
         "name": "HexDeco",
         "modrinth_url": "https://modrinth.com/mod/hexdeco",
         "type": "addon"
