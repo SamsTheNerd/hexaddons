@@ -573,5 +573,10 @@
         "modrinth_url": "https://modrinth.com/mod/hexstages",
         "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/hexstages",
         "type": "interop"
+    },
+    {
+        "name": "TeekasPaste",
+        "modrinth_url": "https://modrinth.com/mod/teekaspaste",
+        "type": "addon"
     }
 ]
