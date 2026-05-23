@@ -29,13 +29,15 @@ const DATA_HOLDERS = {
 }
 
 const PLATFORMS = ["fabric", "forge", "neoforge", "quilt"];
-const GAME_VERSIONS = ["1-18-2", "1-19-2", "1-20-1"];
+const GAME_VERSIONS = ["1-18-2", "1-19-2", "1-20-1", "1-21-1"];
 // yeah, this is stupid, i'm fully aware, but i figure 
 const GAME_VERSIONS_MAP = {
     "1.18.2": "1-18-2",
     "1.19.2": "1-19-2",
     "1.20":   "1-20-1",
-    "1.20.1": "1-20-1"
+    "1.20.1": "1-20-1",
+    "1.21":   "1-21-1",
+    "1.21.1": "1-21-1"
 }
 
 var handleMultiAddonData = (dataHolder, datas) => {
