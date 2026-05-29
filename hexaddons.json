@@ -577,10 +577,5 @@
         "name": "HexIntent",
         "modrinth_url": "https://modrinth.com/mod/hexintent",
         "type": "addon"
-    },
-    {
-        "name": "Hex Cassettes (Forge Fork)",
-        "modrinth_url": "https://modrinth.com/mod/hexcassettes-(forge-fork)",
-        "type": "addon"
     }
 ]
