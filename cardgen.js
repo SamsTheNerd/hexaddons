@@ -29,13 +29,14 @@ const DATA_HOLDERS = {
 }
 
 const PLATFORMS = ["fabric", "forge", "neoforge", "quilt"];
-const GAME_VERSIONS = ["1-18-2", "1-19-2", "1-20-1"];
-// yeah, this is stupid, i'm fully aware, but i figure 
+const GAME_VERSIONS = ["1-18-2", "1-19-2", "1-20-1", "1-21-1"];
+// yeah, this is stupid, i'm fully aware, but i figure
 const GAME_VERSIONS_MAP = {
     "1.18.2": "1-18-2",
     "1.19.2": "1-19-2",
     "1.20":   "1-20-1",
-    "1.20.1": "1-20-1"
+    "1.20.1": "1-20-1",
+    "1.21.1": "1-21-1"
 }
 
 var handleMultiAddonData = (dataHolder, datas) => {
@@ -93,7 +94,7 @@ var handleAddonData = (addon, data) => {
         } else if(data[key] != null && dataHolder[addon.name][key] == null){
             if(key == "book_url" && addon.type != "addon") dataHolder[addon.name]["book_icon"] = "./otherIcons/MCBookIcon.png" // so interop wikis aren't hex books
             dataHolder[addon.name][key] = data[key];
-        } 
+        }
         if(key == "game_versions"){
             var versions = {};
             data[key].forEach((version) => {
@@ -219,7 +220,7 @@ const SORT_FUNCTIONS = {
         var isBUpdated = (bUpdatedness < DAY * 7);
 
         // one or both of these is new, prioritize newer release (ignoring potentially newer updates)
-        if(isANew || isBNew) return aNewness - bNewness; 
+        if(isANew || isBNew) return aNewness - bNewness;
 
         // one or both is recently updated (but not newly released), prioritize newer update
         if(isAUpdated || isBUpdated) return aUpdatedness - bUpdatedness
@@ -244,7 +245,7 @@ const SORT_FUNCTIONS = {
 
     oldest: (a, b) => {
         return a.published_date - b.published_date;
-    }, 
+    },
 
     alphabetical: (a,b) => {
         return a.name.localeCompare(b.name);
@@ -313,7 +314,7 @@ var makeLinks = (addon) => {
         </a>`;
         // links = `<div class="fakeItem"></div>` + links;
     }
-    
+
     return links;
 }
 
@@ -366,7 +367,7 @@ var genCard = (addon) => {
             banner = `<img src="./otherIcons/update_banner.svg" class="updateBanner cardBanner">`;
         }
     }
-    
+
     var authorStr = "";
     var authors = []
     if(addon.authors) authors = authors = authors.concat(addon.authors.map(author => {
