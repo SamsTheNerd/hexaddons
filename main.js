@@ -82,6 +82,11 @@ const SECTION_HEADER_ICONS = {
     devTools: "./otherIcons/creative_unlocker.png"
 }
 
+const month = new Date().getMonth()
+if (month == 5) {
+  SECTION_HEADER_ICONS["addons"] = "./otherIcons/queerxxy.png"
+}
+
 // add icons + toc
 var putSectionIcons = () => {
     var tocElements = "";
