@@ -582,5 +582,15 @@
         "name": "Fishcasting",
         "modrinth_url": "https://modrinth.com/mod/fishcasting",
         "type": "interop"
+    },
+    {
+        "name": "Minihex",
+        "modrinth_url": "https://modrinth.com/mod/minihex",
+        "type": "addon"
+    },
+    {
+        "name": "Hexssence",
+        "modrinth_url": "https://modrinth.com/mod/hexssence",
+        "type": "addon"
     }
 ]
