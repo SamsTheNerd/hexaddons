@@ -592,5 +592,10 @@
         "name": "Hexssence",
         "modrinth_url": "https://modrinth.com/mod/hexssence",
         "type": "addon"
+    },
+    {
+        "name": "Hexpose",
+        "modrinth_url": "https://modrinth.com/mod/hexpose",
+        "type": "addon"
     }
 ]
