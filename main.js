@@ -83,8 +83,10 @@ const SECTION_HEADER_ICONS = {
 }
 
 const month = new Date().getMonth()
-if (month == 5) {
+if (month === 5) {
   SECTION_HEADER_ICONS["addons"] = "./otherIcons/queerxxy.png"
+} else if (month === 9) {
+  SECTION_HEADER_ICONS["addons"] = "./otherIcons/bibically_accurater_hexxy.png"
 }
 
 // add icons + toc
