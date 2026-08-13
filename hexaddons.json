@@ -597,5 +597,10 @@
         "name": "Hexpose",
         "modrinth_url": "https://modrinth.com/mod/hexpose",
         "type": "addon"
+    },
+    {
+        "name": "Almightly Staff",
+        "modrinth_url": "https://modrinth.com/mod/almightly-staff",
+        "type": "addon"
     }
 ]
