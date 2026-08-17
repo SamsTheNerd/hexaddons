@@ -80,7 +80,7 @@ const SECTION_HEADER_ICONS = {
     datapacks: "./otherIcons/command_block.gif",
     resourcepacks: "./otherIcons/painting.png",
     tools: "./otherIcons/diamond_pickaxe.png",
-    modpacks: "./otherIcons/akashic_library.png",
+    modpacks: "./otherIcons/akashic_bookshelf.png",
     devTools: "./otherIcons/creative_unlocker.png"
 }
 

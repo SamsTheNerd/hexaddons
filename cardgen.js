@@ -181,11 +181,12 @@ var getModpacks = () => {
     request.open("GET", "./hexmodpacks.json", false);
     request.send(null)
     var allModpacks = JSON.parse(request.responseText);
-    allModpacks.forEach((modpack) => {
-        if(MODPACK_DATA[modpack.name] == null){
-            MODPACK_DATA[modpack.name] = modpack;
+    allModpacks.forEach((addon) => {
+        addon.type = "modpack";
+        if(MODPACK_DATA[addon.name] == null){
+            MODPACK_DATA[addon.name] = addon;
         }
-        genCard(modpack);
+        genCard(addon);
     });
     getModDataMulti(allModpacks).then( datas => handleMultiAddonData(MODPACK_DATA, datas));
     displayAddonCards("modpack");
