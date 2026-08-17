@@ -6,6 +6,9 @@ var INTEROP_CARDS = {};
 var RESOURCE_PACK_DATA = {};
 var RESOURCE_PACK_CARDS = {};
 
+var MODPACK_DATA = {};
+var MODPACK_CARDS = {};
+
 var TEAM_DATA = {};
 var AUTHOR_DISPLAY_DATA = undefined
 var LINK_MATCHERS = undefined
@@ -13,19 +16,22 @@ var LINK_MATCHERS = undefined
 const ADDON_CARD_TYPES = {
     addon: ADDON_CARDS,
     interop: INTEROP_CARDS,
-    resourcepack: RESOURCE_PACK_CARDS
+    resourcepack: RESOURCE_PACK_CARDS,
+    modpack: MODPACK_CARDS
 }
 
 const ADDON_GRIDS = {
     addon: "mainAddonGrid",
     interop: "interopGrid",
     resourcepack: "resourcepacksGrid",
+    modpack: "modpacksGrid",
 }
 
 const DATA_HOLDERS = {
     addon: ADDON_DATA,
     interop: ADDON_DATA,
-    resourcepack: RESOURCE_PACK_DATA
+    resourcepack: RESOURCE_PACK_DATA,
+    modpack: MODPACK_DATA,
 }
 
 const PLATFORMS = ["fabric", "forge", "neoforge", "quilt"];
@@ -153,8 +159,8 @@ var getResourcePacks = () => {
     var request = new XMLHttpRequest();
     request.open("GET", "./hexresourcepacks.json", false);
     request.send(null)
-    var allDatapacks = JSON.parse(request.responseText);
-    allDatapacks.forEach((addon) => {
+    var allResourcePacks = JSON.parse(request.responseText);
+    allResourcePacks.forEach((addon) => {
         addon.type = "resourcepack";
         if(RESOURCE_PACK_DATA[addon.name] == null){
             RESOURCE_PACK_DATA[addon.name] = addon;
@@ -165,9 +171,26 @@ var getResourcePacks = () => {
         }
         genCard(addon); // just an initial thing
     });
-    getModDataMulti(allDatapacks).then( datas => handleMultiAddonData(RESOURCE_PACK_DATA, datas));
+    getModDataMulti(allResourcePacks).then( datas => handleMultiAddonData(RESOURCE_PACK_DATA, datas));
     displayAddonCards("resourcepack");
-    return allDatapacks;
+    return allResourcePacks;
+}
+
+var getModpacks = () => {
+    var request = new XMLHttpRequest();
+    request.open("GET", "./hexmodpacks.json", false);
+    request.send(null)
+    var allModpacks = JSON.parse(request.responseText);
+    allModpacks.forEach((addon) => {
+        addon.type = "modpack";
+        if(MODPACK_DATA[addon.name] == null){
+            MODPACK_DATA[addon.name] = addon;
+        }
+        genCard(addon);
+    });
+    getModDataMulti(allModpacks).then( datas => handleMultiAddonData(MODPACK_DATA, datas));
+    displayAddonCards("modpack");
+    return allModpacks;
 }
 
 var getAuthorData = () => {
@@ -291,6 +314,11 @@ var makeLinks = (addon) => {
             <img src="./otherIcons/CurseforgeIcon.png" title="CurseForge" alt="CurseForge Icon" class="linkIcon">
         </a>`
     }
+    if(addon.release_url != null && addon.type == "modpack") {
+        links += `<a target="_blank" href="${addon.release_url}" class="addonLink releaseLink">
+            <img src="./otherIcons/PackwizIcon.png" title="Packwiz" alt="Packwiz Icon" class="linkIcon">
+        </a>` // I am quite aware not all modpacks that aren't Modrinth or CurseForge are Packwiz but it feels like a safe fallback
+    }
     if(addon.source_url != null){
         var sourceIcon;
         if(addon.source_icon_url){
@@ -335,7 +363,7 @@ var genCard = (addon) => {
             platformClasses += ` ${platform}`;
         })
     }
-    if(addon.type == "addon"){
+    if((addon.type == "addon"||addon.type == "modpack") && addon.platforms != null && addon.platforms.length > 0){
         platformClasses += " filterable"
     }
     var versionIcons = ``;
