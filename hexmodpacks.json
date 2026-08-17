@@ -1,0 +1,72 @@
+[
+  {
+    "name": "HexxyTest 3",
+    "release_url": "https://github.com/ChloeTax/hexxytest3/raw/refs/heads/main/pack.zip",
+    "platforms": ["fabric"],
+    "game_versions": ["1-20-1"],
+    "source_url": "https://github.com/ChloeTax/hexxytest3",
+    "authors": ["Chloetax"],
+    "icon_url": "https://private-user-images.githubusercontent.com/119641630/408841463-9fdd7f5e-a74a-47f2-ac5f-bb37c400f3b0.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODY5NTkyMzgsIm5iZiI6MTc4Njk1ODkzOCwicGF0aCI6Ii8xMTk2NDE2MzAvNDA4ODQxNDYzLTlmZGQ3ZjVlLWE3NGEtNDdmMi1hYzVmLWJiMzdjNDAwZjNiMC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwODE3JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDgxN1QwOTI4NThaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1kZDM4NzkzYmFlOGY1YTJhYmM4MWE5YTViOWRhZmNmYzQ4ZTg4YmZmYTkxNDQzNmVmNTViYzNhZmEwMDZlM2RlJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZwbmcifQ.S4nSzgM9JDG3djolbZmks8d4YPfNtMXTpyNsuBeMzKg",
+    "description": "a 1.20 fabric modpack for the hex server (season 3)"
+  },
+  {
+    "name": "HexxyTest 4",
+    "release_url": "https://hexxytest.hexxy.media/packdownload/hexxy4.zip",
+    "platforms": ["fabric"],
+    "game_versions": ["1-20-1"],
+    "source_url": "https://github.com/ChloeTax/hexxy4",
+    "authors": ["Chloetax"],
+    "description": "a 1.20 fabric modpack for the hex server (season 4)",
+    "icon_url": "https://github.com/ChloeTax/hexxytest3/blob/main/icon.png?raw=true"
+  },
+  {
+    "name": "HexxyTest 5",
+    "release_url": "https://hexxytest.hexxy.media/packdownload/hexxy5.zip",
+    "platforms": ["fabric"],
+    "game_versions": ["1-21-1"],
+    "source_url": "https://github.com/ChloeTax/hexxy4",
+    "authors": ["Chloetax"],
+    "description": "a 1.20 fabric modpack for the hex server (season 5)",
+    "icon_url": "https://github.com/ChloeTax/hexxytest3/blob/main/icon.png?raw=true"
+  },
+  {
+    "name": "Hexwoven",
+    "modrinth_url": "https://modrinth.com/modpack/hexwoven",
+    "release_url": "https://git.tw25.net/teal-wolf-25/Hexwoven/releases/download/latest/Hexwoven.zip"
+  },
+  {
+    "name": "May's Magic Modpack",
+    "modrinth_url": "https://modrinth.com/modpack/mays-magic-modpack"
+  },
+  {
+    "name": "Create-Magic",
+    "modrinth_url": "https://modrinth.com/modpack/create-magic1"
+  },
+  {
+    "name": "Hex Adventure",
+    "curseforge_url": "https://www.curseforge.com/minecraft/modpacks/hex-adventure",
+    "description": "This modpack is in the open world, focusing on Hex Casting and its addons.",
+    "platforms": ["fabric"],
+    "game_versions": ["1-19-2"],
+    "authors": ["KhoKhomI"],
+    "icon_url": "https://media.forgecdn.net/avatars/thumbnails/1068/416/64/64/638602902068421334.jpeg"
+  },
+  {
+    "name": "Arcane Isles",
+    "curseforge_url": "https://www.curseforge.com/minecraft/modpacks/arcane-isles",
+    "description": "A magical skyblock showcasing Ars Nouveau and Hex Casting",
+    "platforms": ["forge"],
+    "game_versions": ["1-19-2"],
+    "authors": ["baileyholl2"],
+    "icon_url": "https://media.forgecdn.net/avatars/thumbnails/773/318/64/64/638114294955141628.png"
+  },
+  {
+    "name": "Mags&Tech",
+    "curseforge_url": "https://www.curseforge.com/minecraft/modpacks/mags-tech",
+    "description": "This mod pack is a good choice for confrontation or co-survival and advancement in technology and magic. In this mod pack, the main mods are Hex casting and Mekanism, and there are also additions in the field of realism, such as Physic, etc.",
+    "platforms": ["forge"],
+    "game_versions": ["1-20-1"],
+    "authors": ["vladimir_hans"],
+    "icon_url": "https://media.forgecdn.net/avatars/thumbnails/1890/223/64/64/639182502797875709.webp"
+  }
+]

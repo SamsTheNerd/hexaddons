@@ -316,7 +316,7 @@ var makeLinks = (addon) => {
     }
     if(addon.release_url != null && addon.type == "modpack") {
         links += `<a target="_blank" href="${addon.release_url}" class="addonLink releaseLink">
-            <img src="./otherIcons/PackwizIcon.png" title="Packwiz" alt="Packwix Icon" class="linkIcon">
+            <img src="./otherIcons/PackwizIcon.png" title="Packwiz" alt="Packwiz Icon" class="linkIcon">
         </a>` // I am quite aware not all modpacks that aren't Modrinth or CurseForge are Packwiz but it feels like a safe fallback
     }
     if(addon.source_url != null){
@@ -363,7 +363,7 @@ var genCard = (addon) => {
             platformClasses += ` ${platform}`;
         })
     }
-    if(addon.type == "addon"||addon.type == "modpack"){
+    if((addon.type == "addon"||addon.type == "modpack") && addon.platforms != null && addon.platforms.length > 0){
         platformClasses += " filterable"
     }
     var versionIcons = ``;
