@@ -65,6 +65,7 @@ const SECTION_HEADER_NAMES = {
     datapacks: "Data Packs",
     resourcepacks: "Resource Packs",
     tools: "Tools",
+    modpacks: "Modpacks",
     devTools: "Addon Dev Tools"
 }
 
@@ -79,6 +80,7 @@ const SECTION_HEADER_ICONS = {
     datapacks: "./otherIcons/command_block.gif",
     resourcepacks: "./otherIcons/painting.png",
     tools: "./otherIcons/diamond_pickaxe.png",
+    modpacks: "./otherIcons/akashic_library.png",
     devTools: "./otherIcons/creative_unlocker.png"
 }
 
@@ -125,6 +127,8 @@ window.onload = () => {
     datapacks.forEach((datapack) => {
         putToolCard(datapack, "datapacksGrid");
     });
+
+    var modpacks = getModpacks();
 
     putSectionIcons();
 
