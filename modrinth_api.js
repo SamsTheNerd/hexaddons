@@ -11,39 +11,54 @@ var idFromUrl = (url) => {
     return url.match(modrinthRE)[1];
 }
 
-// takes an array of addons, returns a promise with a map of addon ids -> modrinth data
-var getModDataMulti =(addons) => {
-    var addonSlugs = [];
-    // console.log(addons)
-    for(const addon of addons){
-        // console.log(addon);
-        if(addon.modrinth_url != null){
-            var slug = idFromUrl(addon.modrinth_url);
-            slugsToNames[slug] = addon.name;
-            addonSlugs.push(slug);
-        }
-    }
-    var addonSlugsStr = addonSlugs.map(s => `"${s}"`).join(",");
-    return fetch(`https://api.modrinth.com/v2/projects?ids=[${addonSlugsStr}]`)
-    .then(response => response.json())
-    .then(datas => {
-        var dataObj = {};
-        for(const data of datas){
-            dataObj[slugsToNames[data.slug]] = {
-                team_id: data["team"],
-                icon_url: data["icon_url"],
-                platforms: data["loaders"],
-                source_url: data["source_url"],
-                book_url: data["wiki_url"],
-                downloads: data["downloads"],
-                game_versions: data["game_versions"],
-                published_date: Date.parse(data["approved"] || data["published"]),
-                updated_date: Date.parse(data["updated"]),
-                description: data["description"],
-            }
-        }
-        return dataObj;
-    })
+/**
+ * Gets the team slug for a given project.
+ * @param {*} project
+ * @returns {Promise<string>}
+ */
+async function getTeam(project) {
+  if (project.organization !== null) {
+    const team = await (await fetch(`https://api.modrinth.com/v3/organization/${project.organization}`)).json();
+    return team["team_id"]
+  } else {
+    return project["team"];
+  }
+}
+
+/**
+ * takes an array of addons, returns a promise with a map of addon ids -> modrinth data
+ * @params {Array<Record<string, any>>} addons
+ * @returns {Promise<{[key: string]: any}>}
+ */
+async function getModDataMulti(addons) {
+  const addonSlugs = addons.map(addon => {
+    if (addon.modrinth_url == null) return;
+    const slug = idFromUrl(addon.modrinth_url);
+    slugsToNames[slug] = addon.name;
+    return slug;
+  });
+
+  const addonSlugsForSearch = addonSlugs.filter(s => s != null).map(s => `"${s}"`).join(",");
+
+  const projects = await (await fetch(`https://api.modrinth.com/v2/projects?ids=[${addonSlugsForSearch}]`)).json();
+
+  const dataRecord = {};
+  for (const project of projects) {
+    dataRecord[slugsToNames[project.slug]] = {
+      team_id: await getTeam(project),
+      icon_url: project["icon_url"],
+      platforms: project["loaders"],
+      source_url: project["source_url"],
+      book_url: project["wiki_url"],
+      downloads: project["downloads"],
+      game_versions: project["game_versions"],
+      published_date: Date.parse(project["approved"] || project["published"]),
+      updated_date: Date.parse(project["updated"]),
+      description: project["description"]
+    };
+  }
+
+  return dataRecord;
 }
 
 var getTeamDataMulti =(teamIds) => {
@@ -54,7 +69,7 @@ var getTeamDataMulti =(teamIds) => {
         var dataObj = {};
         for(const data of datas){
             if(data.length == 0) continue;
-            teamId = data[0].team_id
+            let teamId = data[0].team_id
             dataObj[teamId] = data.flatMap(role => role.user.username);
         }
         return dataObj;
