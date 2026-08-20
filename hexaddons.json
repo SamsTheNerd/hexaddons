@@ -602,5 +602,15 @@
         "name": "Almightly Staff",
         "modrinth_url": "https://modrinth.com/mod/almightly-staff",
         "type": "addon"
+    },
+    {
+        "name": "MieHex",
+        "modrinth_url": "https://modrinth.com/mod/miehex",
+        "type": "addon"
+    },
+    {
+        "name": "MieHex:Revolution",
+        "modrinth_url": "https://modrinth.com/mod/miehexrevolution",
+        "type": "addon"
     }
 ]
