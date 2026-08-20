@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans&display=swap');
+
 body{
     --slatedark: #221b32;
     --slatemid: #564661;
@@ -545,10 +547,16 @@ author specific styling here because i think that's fun
 .authorSpecific-SamsTheNerd{
     color: #69eb96;
 }
+
 .authorSpecific-Teal_Wolf_25{
-    background: linear-gradient(to right, #007f7f, #00ffff);
+    background: linear-gradient(to right, #7fff7f, #00ffff, #007f7f, #0000ff, #000040);
     text-decoration: wavy underline;
+    font-family: "Shantell Sans", sans-serif;
     color: #007f7f3a;
     -webkit-background-clip: text;
     background-clip: text;
+}
+
+.authorSpecific-poolcritter{
+    color: #00d996;
 }
