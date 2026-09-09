@@ -40,5 +40,9 @@
     {
         "name": "Psionic HexCasting", 
         "modrinth_url": "https://modrinth.com/resourcepack/psionic-hexcasting"
+    },
+    {
+        "name": "Clericat Impetus for Hexcasting",
+        "modrinth_url": "https://modrinth.com/resourcepack/clericat-impetus-for-hexcasting"
     }
 ]
