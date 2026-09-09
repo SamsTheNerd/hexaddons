@@ -607,5 +607,11 @@
         "name": "MieHex:Revolution",
         "modrinth_url": "https://modrinth.com/mod/miehexrevolution",
         "type": "addon"
+    },
+    {
+        "name": "HexMinline",
+        "modrinth_url": "https://modrinth.com/mod/hexminline",
+        "type": "addon"
     }
+
 ]
