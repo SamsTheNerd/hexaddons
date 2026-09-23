@@ -532,7 +532,7 @@
         "name": "HexJSNeo",
         "curseforge_url": "https://www.curseforge.com/minecraft/mc-mods/hexjsneo",
         "modrinth_url": "https://modrinth.com/mod/hexjsneo",
-        "type": "addon"
+        "type": "interop"
     },
     {
       "name": "Focalworks",
