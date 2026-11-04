@@ -618,6 +618,10 @@
         "name": "HexMinline",
         "modrinth_url": "https://modrinth.com/mod/hexminline",
         "type": "addon"
+    },
+    {
+        "name": "Hive Queen",
+        "modrinth_url": "https://modrinth.com/mod/hivequeen",
+        "type": "addon"
     }
-
 ]
