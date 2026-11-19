@@ -24,9 +24,9 @@
     "release_url": "https://hexxytest.hexxy.media/packdownload/hexxy5.zip",
     "platforms": ["fabric"],
     "game_versions": ["1-21-1"],
-    "source_url": "https://github.com/ChloeTax/hexxy4",
+    "source_url": "https://github.com/ChloeTax/hexxy5",
     "authors": ["Chloetax"],
-    "description": "a 1.20 fabric modpack for the hex server (season 5)",
+    "description": "a 1.21 fabric modpack for the hex server (season 5)",
     "icon_url": "https://github.com/ChloeTax/hexxytest3/blob/main/icon.png?raw=true"
   },
   {
