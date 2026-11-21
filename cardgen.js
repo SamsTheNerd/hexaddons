@@ -396,6 +396,12 @@ var genCard = (addon) => {
         }
     }
 
+    var bot_notice = "";
+
+    if (addon.ai_used) {
+        bot_notice = `<img src="./otherIcons/robot.svg" class="botIcon">`;
+    }
+
     var authorStr = "";
     var authors = []
     if(addon.authors) authors = authors = authors.concat(addon.authors.map(author => {
@@ -439,6 +445,7 @@ var genCard = (addon) => {
         <div class="platformShelf">${platformIcons} ${platformDivider} ${versionIcons}</div>
         <p class="addonDescription">${addon.description}</p>
         <div class="linkShelf">${links}</div>
+        ${bot_notice}
         ${banner}
     </div>
     `

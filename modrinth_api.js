@@ -25,6 +25,21 @@ async function getTeam(project) {
   }
 }
 
+async function getAI(project) {
+    const response = await (await fetch(`https://api.modrinth.com/v3/project/${project.slug}/disclosures`));
+    if (!response.ok) return false;
+
+    const data = await response.json();
+    const disclosures = data.disclosures ?? [];
+
+    const aiUses = ["code", "art"];
+    return disclosures.some(d =>
+        d.type === "ai_content" &&
+        Array.isArray(d.uses) &&
+        d.uses.some(use => aiUses.includes(use))
+    );
+}
+
 /**
  * takes an array of addons, returns a promise with a map of addon ids -> modrinth data
  * @params {Array<Record<string, any>>} addons
@@ -42,23 +57,28 @@ async function getModDataMulti(addons) {
 
   const projects = await (await fetch(`https://api.modrinth.com/v2/projects?ids=[${addonSlugsForSearch}]`)).json();
 
-  const dataRecord = {};
-  for (const project of projects) {
-    dataRecord[slugsToNames[project.slug]] = {
-      team_id: await getTeam(project),
-      icon_url: project["icon_url"],
-      platforms: project["loaders"],
-      source_url: project["source_url"],
-      book_url: project["wiki_url"],
-      downloads: project["downloads"],
-      game_versions: project["game_versions"],
-      published_date: Date.parse(project["approved"] || project["published"]),
-      updated_date: Date.parse(project["updated"]),
-      description: project["description"]
-    };
-  }
+  const entries = await Promise.all(projects.map(async (project) => {
+      const [team_id, ai_used] = await Promise.all([
+          getTeam(project),
+          getAI(project),
+      ]);
 
-  return dataRecord;
+      return [slugsToNames[project.slug], {
+          team_id,
+          ai_used,
+          icon_url: project["icon_url"],
+          platforms: project["loaders"],
+          source_url: project["source_url"],
+          book_url: project["wiki_url"],
+          downloads: project["downloads"],
+          game_versions: project["game_versions"],
+          published_date: Date.parse(project["approved"] || project["published"]),
+          updated_date: Date.parse(project["updated"]),
+          description: project["description"]
+      }];
+  }));
+
+  return Object.fromEntries(entries);
 }
 
 var getTeamDataMulti =(teamIds) => {

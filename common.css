@@ -374,6 +374,13 @@ select:hover {
     width: 25%;
 }
 
+.botIcon{
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 10%;
+}
+
 .linkShelf a {
     width: 100%;
     position: relative;
