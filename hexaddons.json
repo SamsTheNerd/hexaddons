@@ -623,5 +623,15 @@
         "name": "Hive Queen",
         "modrinth_url": "https://modrinth.com/mod/hivequeen",
         "type": "addon"
+    },
+    {
+        "name": "Hexcassettes (Ported)",
+        "modrinth_url": "https://modrinth.com/mod/hexcassettes-ported",
+        "type": "addon"
+    },
+    {
+        "name": "Configu-cast",
+        "modrinth_url": "https://modrinth.com/mod/configucast",
+        "type": "addon"
     }
 ]
