@@ -399,7 +399,7 @@ var genCard = (addon) => {
     var bot_notice = "";
 
     if (addon.ai_used) {
-        bot_notice = `<img src="./otherIcons/robot.svg" class="botIcon">`;
+        bot_notice = `<img src="./otherIcons/robot.svg" class="botIcon" title="AI Assisted">`;
     }
 
     var authorStr = "";
