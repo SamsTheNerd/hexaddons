@@ -1,12 +1,12 @@
-var fetchFullModData = (modid) => {
-    return fetch(`https://api.modrinth.com/v2/project/${modid}`)
-    .then((response) => response.json());
-}
+// let fetchFullModData = (modid) => {
+//     return fetch(`https://api.modrinth.com/v2/project/${modid}`)
+//     .then((response) => response.json());
+// }
 
-const modrinthRE = new RegExp(".*modrinth\.com\/(?:(?:mod)|(?:resourcepack)|(?:modpack))\/([0-9a-zA-Z\-]+).*");
-var slugsToNames = {};
+const modrinthRE = new RegExp(".*modrinth.com/(?:mod|resourcepack|modpack)/([0-9a-zA-Z-]+).*");
+let slugsToNames = {};
 
-var idFromUrl = (url) => {
+let idFromUrl = (url) => {
     // console.log(url);
     return url.match(modrinthRE)[1];
 }
@@ -81,14 +81,14 @@ async function getModDataMulti(addons) {
   return Object.fromEntries(entries);
 }
 
-var getTeamDataMulti =(teamIds) => {
-    var teamIdsStr = teamIds.map(s => `"${s}"`).join(",");
+let getTeamDataMulti =(teamIds) => {
+    let teamIdsStr = teamIds.map(s => `"${s}"`).join(",");
     return fetch(`https://api.modrinth.com/v2/teams?ids=[${teamIdsStr}]`)
     .then(response => response.json())
     .then(datas => {
-        var dataObj = {};
+        let dataObj = {};
         for(const data of datas){
-            if(data.length == 0) continue;
+            if(data.length === 0) continue;
             let teamId = data[0].team_id
             dataObj[teamId] = data.flatMap(role => role.user.username);
         }
@@ -97,24 +97,24 @@ var getTeamDataMulti =(teamIds) => {
 }
 
 // returns a promise with the parsed data that we actually want
-var getModData = (addon) => {
-    if(addon.modrinth_url != null){
-        return fetchFullModData(idFromUrl(addon.modrinth_url)).then((data) => {
-            return {
-                icon_url: data["icon_url"],
-                platforms: data["loaders"],
-                source_url: data["source_url"],
-                book_url: data["wiki_url"],
-                downloads: data["downloads"],
-                game_versions: data["game_versions"],
-                published_date: Date.parse(data["published"]),
-                updated_date: Date.parse(data["updated"]),
-                description: data["description"],
-            };
-        });
-    } else {
-        return new Promise((resolve, reject) => {
-            resolve({});
-        });
-    }
-}
+// let getModData = (addon) => {
+//     if(addon.modrinth_url != null){
+//         return fetchFullModData(idFromUrl(addon.modrinth_url)).then((data) => {
+//             return {
+//                 icon_url: data["icon_url"],
+//                 platforms: data["loaders"],
+//                 source_url: data["source_url"],
+//                 book_url: data["wiki_url"],
+//                 downloads: data["downloads"],
+//                 game_versions: data["game_versions"],
+//                 published_date: Date.parse(data["published"]),
+//                 updated_date: Date.parse(data["updated"]),
+//                 description: data["description"],
+//             };
+//         });
+//     } else {
+//         return new Promise((resolve, reject) => {
+//             resolve({});
+//         });
+//     }
+// }

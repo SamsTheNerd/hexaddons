@@ -1,17 +1,17 @@
-var ADDON_DATA = {};
+let ADDON_DATA = {};
 
-var ADDON_CARDS = {};
-var INTEROP_CARDS = {};
+let ADDON_CARDS = {};
+let INTEROP_CARDS = {};
 
-var RESOURCE_PACK_DATA = {};
-var RESOURCE_PACK_CARDS = {};
+let RESOURCE_PACK_DATA = {};
+let RESOURCE_PACK_CARDS = {};
 
-var MODPACK_DATA = {};
-var MODPACK_CARDS = {};
+let MODPACK_DATA = {};
+let MODPACK_CARDS = {};
 
-var TEAM_DATA = {};
-var AUTHOR_DISPLAY_DATA = undefined
-var LINK_MATCHERS = undefined
+let TEAM_DATA = {};
+let AUTHOR_DISPLAY_DATA = undefined
+let LINK_MATCHERS = undefined
 
 const ADDON_CARD_TYPES = {
     addon: ADDON_CARDS,
@@ -36,7 +36,7 @@ const DATA_HOLDERS = {
 
 const PLATFORMS = ["fabric", "forge", "neoforge", "quilt"];
 const GAME_VERSIONS = ["1-18-2", "1-19-2", "1-20-1", "1-21-1"];
-// yeah, this is stupid, i'm fully aware, but i figure
+// yeah, this is stupid, I'm fully aware, but I figure
 const GAME_VERSIONS_MAP = {
     "1.18.2": "1-18-2",
     "1.19.2": "1-19-2",
@@ -45,10 +45,10 @@ const GAME_VERSIONS_MAP = {
     "1.21.1": "1-21-1"
 }
 
-var handleMultiAddonData = (dataHolder, datas) => {
-    var addonTypes = {};
+let handleMultiAddonData = (dataHolder, datas) => {
+    let addonTypes = {};
     for(const dataName of Object.keys(datas)){
-        var addon = dataHolder[dataName]
+        let addon = dataHolder[dataName]
         addonTypes[addon.type] = true;
         handleAddonData(addon, datas[dataName])
     }
@@ -58,7 +58,7 @@ var handleMultiAddonData = (dataHolder, datas) => {
 
 function refreshAllCards(){
     for(const dataHolderType of Object.keys(DATA_HOLDERS)){
-        var dataHolder = DATA_HOLDERS[dataHolderType];
+        let dataHolder = DATA_HOLDERS[dataHolderType];
         for(const addon of Object.values(dataHolder)){
             genCard(addon);
         }
@@ -66,7 +66,7 @@ function refreshAllCards(){
     }
 }
 
-var handleTeamDataUpdate = (teamData) => {
+let handleTeamDataUpdate = (teamData) => {
     for(const teamId of Object.keys(teamData)){
         if(!TEAM_DATA[teamId]) TEAM_DATA[teamId] = []
         for(const member of teamData[teamId]){
@@ -77,13 +77,13 @@ var handleTeamDataUpdate = (teamData) => {
     refreshAllCards();
 }
 
-var handleAddonData = (addon, data) => {
-    var dataHolder = DATA_HOLDERS[addon.type];
+let handleAddonData = (addon, data) => {
+    let dataHolder = DATA_HOLDERS[addon.type];
     // console.log(`${addon.name} data: ${data}`);
     Object.keys(data).forEach((key) => {
         // do some nonsense to get as many platforms as possible
-        if( key == "platforms"){
-            var platforms = [];
+        if( key === "platforms"){
+            let platforms = [];
             if(data[key] != null){
                 data[key].forEach((platform) => {
                     if(!platforms.includes(platform))
@@ -98,11 +98,11 @@ var handleAddonData = (addon, data) => {
             }
             dataHolder[addon.name][key] = platforms;
         } else if(data[key] != null && dataHolder[addon.name][key] == null){
-            if(key == "book_url" && addon.type != "addon") dataHolder[addon.name]["book_icon"] = "./otherIcons/MCBookIcon.png" // so interop wikis aren't hex books
+            if(key === "book_url" && addon.type !== "addon") dataHolder[addon.name]["book_icon"] = "./otherIcons/MCBookIcon.png" // so interop wikis aren't hex books
             dataHolder[addon.name][key] = data[key];
         }
-        if(key == "game_versions"){
-            var versions = {};
+        if(key === "game_versions"){
+            let versions = {};
             data[key].forEach((version) => {
                 if(GAME_VERSIONS_MAP[version] != null){
                     versions[GAME_VERSIONS_MAP[version]] = true;
@@ -119,11 +119,11 @@ var handleAddonData = (addon, data) => {
 }
 
 // initializes stuff a good bit
-var getAddons = () => {
-    var request = new XMLHttpRequest();
+let getAddons = () => {
+    let request = new XMLHttpRequest();
     request.open("GET", "./hexaddons.json", false);
     request.send(null)
-    var allAddons = JSON.parse(request.responseText);
+    let allAddons = JSON.parse(request.responseText);
     allAddons.forEach((addon) => {
         if(ADDON_DATA[addon.name] == null){
             ADDON_DATA[addon.name] = addon;
@@ -138,28 +138,26 @@ var getAddons = () => {
     return allAddons;
 }
 
-var getTools = () => {
-    var request = new XMLHttpRequest();
+let getTools = () => {
+    let request = new XMLHttpRequest();
     request.open("GET", "./hextools.json", false);
     request.send(null)
-    var allTools = JSON.parse(request.responseText);
-    return allTools;
+    return JSON.parse(request.responseText);
 }
 
-var getDatapacks = () => {
-    var request = new XMLHttpRequest();
+let getDatapacks = () => {
+    let request = new XMLHttpRequest();
     request.open("GET", "./hexdatapacks.json", false);
     request.send(null)
-    var allDatapacks = JSON.parse(request.responseText);
-    return allDatapacks;
+    return JSON.parse(request.responseText);
 }
 
 // these also want to use modrinth style stuff
-var getResourcePacks = () => {
-    var request = new XMLHttpRequest();
+let getResourcePacks = () => {
+    let request = new XMLHttpRequest();
     request.open("GET", "./hexresourcepacks.json", false);
     request.send(null)
-    var allResourcePacks = JSON.parse(request.responseText);
+    let allResourcePacks = JSON.parse(request.responseText);
     allResourcePacks.forEach((addon) => {
         addon.type = "resourcepack";
         if(RESOURCE_PACK_DATA[addon.name] == null){
@@ -176,11 +174,11 @@ var getResourcePacks = () => {
     return allResourcePacks;
 }
 
-var getModpacks = () => {
-    var request = new XMLHttpRequest();
+let getModpacks = () => {
+    let request = new XMLHttpRequest();
     request.open("GET", "./hexmodpacks.json", false);
     request.send(null)
-    var allModpacks = JSON.parse(request.responseText);
+    let allModpacks = JSON.parse(request.responseText);
     allModpacks.forEach((addon) => {
         addon.type = "modpack";
         if(MODPACK_DATA[addon.name] == null){
@@ -193,9 +191,9 @@ var getModpacks = () => {
     return allModpacks;
 }
 
-var getAuthorData = () => {
+let getAuthorData = () => {
     if(AUTHOR_DISPLAY_DATA) return AUTHOR_DISPLAY_DATA;
-    var request = new XMLHttpRequest();
+    let request = new XMLHttpRequest();
     request.open("GET", "./authordata.json", false);
     request.send(null)
     AUTHOR_DISPLAY_DATA = JSON.parse(request.responseText);
@@ -205,9 +203,9 @@ var getAuthorData = () => {
     return AUTHOR_DISPLAY_DATA;
 }
 
-var getLinkMatchers = () => {
+let getLinkMatchers = () => {
     if(LINK_MATCHERS) return LINK_MATCHERS;
-    var request = new XMLHttpRequest();
+    let request = new XMLHttpRequest();
     request.open("GET", "./linkmatchers.json", false);
     request.send(null)
     LINK_MATCHERS = JSON.parse(request.responseText);
@@ -216,31 +214,31 @@ var getLinkMatchers = () => {
 
 // sort interop addons first by minor or not (so push ones that mostly just add recipes to the bottom) then by download count
 const interopSort = (a, b) => {
-    if(a.minor == b.minor){
-        var aDownloads = a.downloads == null ? 0 : a.downloads;
-        var bDownloads = b.downloads == null ? 0 : b.downloads;
+    if(a.minor === b.minor){
+        let aDownloads = a.downloads == null ? 0 : a.downloads;
+        let bDownloads = b.downloads == null ? 0 : b.downloads;
         return bDownloads - aDownloads;
     }
-    return a.minor == true ? 1 : -1;
+    return a.minor === true ? 1 : -1;
 }
 
 const SORT_FUNCTIONS = {
     featured: (a, b) => {
         // prioritize newly released/updated mods
 
-        var rlyOld = DAY * 10000;
+        let rlyOld = DAY * 10000;
 
-        var aNewness = (Date.now() - a.published_date) || rlyOld;
-        var bNewness = (Date.now() - b.published_date) || rlyOld;
+        let aNewness = (Date.now() - a.published_date) || rlyOld;
+        let bNewness = (Date.now() - b.published_date) || rlyOld;
 
-        var aUpdatedness = (Date.now() - a.updated_date) || rlyOld;
-        var bUpdatedness = (Date.now() - b.updated_date) || rlyOld;
+        let aUpdatedness = (Date.now() - a.updated_date) || rlyOld;
+        let bUpdatedness = (Date.now() - b.updated_date) || rlyOld;
 
-        var isANew = (aNewness < DAY * 30);
-        var isBNew = (bNewness < DAY * 30);
+        let isANew = (aNewness < DAY * 30);
+        let isBNew = (bNewness < DAY * 30);
 
-        var isAUpdated = (aUpdatedness < DAY * 7);
-        var isBUpdated = (bUpdatedness < DAY * 7);
+        let isAUpdated = (aUpdatedness < DAY * 7);
+        let isBUpdated = (bUpdatedness < DAY * 7);
 
         // one or both of these is new, prioritize newer release (ignoring potentially newer updates)
         if(isANew || isBNew) return aNewness - bNewness;
@@ -253,8 +251,8 @@ const SORT_FUNCTIONS = {
     },
 
     downloads: (a, b) => {
-        var aDownloads = a.downloads == null ? 0 : a.downloads;
-        var bDownloads = b.downloads == null ? 0 : b.downloads;
+        let aDownloads = a.downloads == null ? 0 : a.downloads;
+        let bDownloads = b.downloads == null ? 0 : b.downloads;
         return bDownloads - aDownloads;
     },
 
@@ -276,34 +274,34 @@ const SORT_FUNCTIONS = {
 }
 
 // also to resort them
-var displayAddonCards = (type = "addon", sortType = "featured") => {
-    var containerId = ADDON_GRIDS[type];
+let displayAddonCards = (type = "addon", sortType = "featured") => {
+    let containerId = ADDON_GRIDS[type];
     document.getElementById(containerId).innerHTML = "";
-    var addons = [];
-    var dataHolder = DATA_HOLDERS[type];
+    let addons = [];
+    let dataHolder = DATA_HOLDERS[type];
 
     Object.values(dataHolder).forEach((addon) => {
-        if(addon.type == type){
+        if(addon.type === type){
             addons.push(addon);
         }
     });
-    if(type == "interop"){
+    if(type === "interop"){
         addons.sort(interopSort);
     } else {
         addons.sort(SORT_FUNCTIONS[sortType]);
     }
     addons.forEach((addon) => {
-        var card = ADDON_CARD_TYPES[type][addon.name];
+        let card = ADDON_CARD_TYPES[type][addon.name];
         document.getElementById(containerId).innerHTML += card;
     });
 }
 
-var sortAddons = (selectorId, type) => {
+let sortAddons = (selectorId, type) => {
     displayAddonCards(type, document.getElementById(selectorId).value);
 }
 
-var makeLinks = (addon) => {
-    var links = ``;
+let makeLinks = (addon) => {
+    let links = ``;
     if(addon.modrinth_url != null) {
         links += `<a target="_blank" href="${addon.modrinth_url}" class="addonLink modrinthLink">
             <img src="./otherIcons/ModrinthIcon.png" title="Modrinth" alt="Modrinth Icon" class="linkIcon">
@@ -314,13 +312,13 @@ var makeLinks = (addon) => {
             <img src="./otherIcons/CurseforgeIcon.png" title="CurseForge" alt="CurseForge Icon" class="linkIcon">
         </a>`
     }
-    if(addon.release_url != null && addon.type == "modpack") {
+    if(addon.release_url != null && addon.type === "modpack") {
         links += `<a target="_blank" href="${addon.release_url}" class="addonLink releaseLink">
             <img src="./otherIcons/PackwizIcon.png" title="Packwiz" alt="Packwiz Icon" class="linkIcon">
         </a>` // I am quite aware not all modpacks that aren't Modrinth or CurseForge are Packwiz but it feels like a safe fallback
     }
     if(addon.source_url != null){
-        var sourceIcon;
+        let sourceIcon;
         if(addon.source_icon_url){
             sourceIcon = addon.source_icon_url;
         } else {
@@ -349,13 +347,13 @@ var makeLinks = (addon) => {
 const DAY = 1000 * 60 * 60 * 24;
 
 // given an addon object make the card for it
-var genCard = (addon) => {
-    var iconUrl = addon.icon_url;
-    if(iconUrl == null||iconUrl == undefined){
+let genCard = (addon) => {
+    let iconUrl = addon.icon_url;
+    if(iconUrl == null){
         iconUrl = "./otherIcons/hexxy_question.png"
     }
-    var platformIcons = ``;
-    var platformClasses = ``;
+    let platformIcons = ``;
+    let platformClasses = ``;
     if(addon.platforms != null){
         addon.platforms.sort();
         addon.platforms.forEach((platform) => {
@@ -363,11 +361,11 @@ var genCard = (addon) => {
             platformClasses += ` ${platform}`;
         })
     }
-    if((addon.type == "addon"||addon.type == "modpack") && addon.platforms != null && addon.platforms.length > 0){
+    if((addon.type === "addon"||addon.type === "modpack") && addon.platforms != null && addon.platforms.length > 0){
         platformClasses += " filterable"
     }
-    var versionIcons = ``;
-    var versionClasses = ``;
+    let versionIcons = ``;
+    let versionClasses = ``;
     if(addon.game_versions != null){
         addon.game_versions.sort();
         addon.game_versions.forEach((version) => {
@@ -376,34 +374,34 @@ var genCard = (addon) => {
         })
     }
 
-    var platformDivider = "";
-    if(versionIcons != "" && platformIcons != ""){
+    let platformDivider = "";
+    if(versionIcons !== "" && platformIcons !== ""){
         platformDivider = `<div class="platformDivider"></div>`
     }
 
-    var links = makeLinks(addon);
+    let links = makeLinks(addon);
 
-    var banner = "";
+    let banner = "";
 
     if(Date.now() - addon.published_date < DAY * 30){
         banner = `<img src="./otherIcons/new_banner.svg" class="newBanner cardBanner">`;
     } else if(Date.now() - addon.updated_date < DAY * 7){
         // gloopdate banner !!
-        if(addon.name == "Hex Gloop"){
+        if(addon.name === "Hex Gloop"){
             banner = `<img src="./otherIcons/gloopdate_banner.svg" class="updateBanner gloopdateBanner cardBanner">`;
         } else {
             banner = `<img src="./otherIcons/update_banner.svg" class="updateBanner cardBanner">`;
         }
     }
 
-    var bot_notice = "";
+    let bot_notice = "";
 
     if (addon.ai_used) {
         bot_notice = `<img src="./otherIcons/robot.svg" class="botIcon" title="AI Assisted">`;
     }
 
-    var authorStr = "";
-    var authors = []
+    let authorStr = "";
+    let authors = []
     if(addon.authors) authors = authors = authors.concat(addon.authors.map(author => {
         if(getAuthorData()[author]) return getAuthorData()[author]
         return {
@@ -413,7 +411,7 @@ var genCard = (addon) => {
     // console.log(TEAM_DATA[addon.team_id])
     if(TEAM_DATA[addon.team_id]){
         authors = authors.concat(TEAM_DATA[addon.team_id].map(author => {
-            var authData = {
+            let authData = {
                 id: author,
                 display: author,
                 url: `https://modrinth.com/user/${author}`
@@ -433,7 +431,7 @@ var genCard = (addon) => {
         }
     }).join("")
 
-    var card = `
+    let card = `
     <div class="addonCard ${platformClasses} ${versionClasses} ${addon.type}TypeCard" id="${addon.name}Card">
         <div class="addonCardHeader">
             <img src="${iconUrl}" alt="${addon.name} icon" class="addonIcon">
@@ -453,13 +451,13 @@ var genCard = (addon) => {
     return card;
 }
 
-var putCard = (addon, containerId) => {
-    var container = document.getElementById(containerId);
+let putCard = (addon, containerId) => {
+    let container = document.getElementById(containerId);
     container.innerHTML += genCard(addon);
 }
 
-var genToolCard = (tool) => {
-    var card = `
+let genToolCard = (tool) => {
+    let card = `
     <div class="addonCard toolCard" id="${tool.name}Card">
         <div class="addonCardHeader">
             <h3 class="addonTitle"><a href="${tool.link}">${tool.name}</a></h3>
@@ -470,7 +468,7 @@ var genToolCard = (tool) => {
     return card;
 }
 
-var putToolCard = (tool, containerId) => {
-    var container = document.getElementById(containerId);
+let putToolCard = (tool, containerId) => {
+    let container = document.getElementById(containerId);
     container.innerHTML += genToolCard(tool);
 }

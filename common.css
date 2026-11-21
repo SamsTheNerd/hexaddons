@@ -29,7 +29,7 @@ h2{
     text-align: center;
     width: 50vw;
     position: relative;
-    top: 0vw;
+    top: 0;
     left: 25vw;
     display: grid;
     align-content: end;
@@ -49,8 +49,8 @@ h4{
     width: 50vw;
     left: 25vw;
     position: relative;
-    top: 0vw;
-    margin-bottom: 0vw;
+    top: 0;
+    margin-bottom: 0;
     font-weight:  500;
 }
 
@@ -95,7 +95,7 @@ select:hover {
     text-align: center;
     width: 50vw;
     position: relative;
-    top: 0vw;
+    top: 0;
     left: 25vw;
     display: grid;
     align-content: end;
@@ -150,14 +150,12 @@ select:hover {
 }
 
 .tocLinkPContainer{
-    margin: 0;
-    margin-bottom: 1em;
+    margin: 0 0 1em;
 }
 
 .tocLink img {
-    margin-bottom: 1vw;
+    margin: 0.1em 0.1em 1vw;
     height: 4em;
-    margin: 0.1em;
     transition-duration: 0.25s;
     transition-property: height, margin;
 }
@@ -196,7 +194,6 @@ select:hover {
     display: grid;
     width: auto;
     grid-auto-flow: column;
-    justify-items: space-between;
     align-items: start;
 }
 
@@ -420,7 +417,7 @@ select:hover {
 }
 
 .interopCard .addonTitle{
-    left: 0vw;
+    left: 0;
     width: 100%;
     text-align: center;
 }
