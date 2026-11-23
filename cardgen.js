@@ -397,7 +397,7 @@ let genCard = (addon) => {
     let bot_notice = "";
 
     if (addon.ai_used) {
-        bot_notice = `<img src="./otherIcons/robot.svg" class="botIcon" title="AI Assisted">`;
+        bot_notice = `<div class="botNotice" title="AI Assisted"><img src="./otherIcons/robot.svg"><b>AI</b></div>`;
     }
 
     let authorStr = "";

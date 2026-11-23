@@ -371,11 +371,12 @@ select:hover {
     width: 25%;
 }
 
-.botIcon{
+.botNotice{
     position: absolute;
-    right: 8px;
     top: 8px;
-    width: 10%;
+    right: 8px;
+    width: 12.5%;
+    text-align: center;
 }
 
 .linkShelf a {
