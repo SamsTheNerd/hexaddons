@@ -6,7 +6,7 @@
     },
     {
         "name": "Hex Studio",
-        "description": "WIP visual editor and stack simulator for writing hexes in a similar manner to using the actual mod.",
+        "description": "Browser-based visual editor and stack simulator for writing hexes. Compatible with Hex Casting for Minecraft 1.19 only.",
         "link": "https://master-bw3.github.io/Hex-Studio/"
     },
     {
